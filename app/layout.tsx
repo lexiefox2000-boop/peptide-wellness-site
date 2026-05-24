@@ -5,7 +5,7 @@ import { ShieldCheck, Wallet, Menu } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Aurel Peptide Wellness',
-  description: 'Modern peptide wellness without membership fees.',
+  description: 'Modern peptide wellness with clear product pages and fast checkout.',
 };
 
 function Logo() {
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="border-t border-black/5 bg-white/70">
             <div className="container flex flex-wrap items-center gap-4 py-2 text-xs text-[var(--muted)]">
-              <div className="flex items-center gap-2"><ShieldCheck size={14} /> No memberships</div>
+              <div className="flex items-center gap-2"><ShieldCheck size={14} /> Fast ordering</div>
               <div className="flex items-center gap-2"><Wallet size={14} /> Crypto accepted</div>
               <div>Fast guest checkout</div>
               <div>Transparent pricing</div>

@@ -18,7 +18,7 @@ export default function CheckoutPage() {
               <button className="rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm">Crypto via Coinbase Commerce<br /><span className="text-[var(--muted)]">Redirect to hosted crypto checkout with wallet support.</span></button>
             </div>
           </div>
-          <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-soft)] p-5 text-sm text-[var(--muted)]">No memberships. No recurring subscription prompts. Clear order review before payment.</div>
+          <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-soft)] p-5 text-sm text-[var(--muted)]">Clear order review before payment, with a fast guest-friendly flow.</div>
           <button className="mt-8 w-full rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)]">Continue to Payment</button>
         </div>
         <aside className="space-y-4">

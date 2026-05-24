@@ -6,7 +6,7 @@ export default function FaqPage() {
       <div className="container max-w-4xl">
         <div className="eyebrow">FAQ</div>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">Answers that remove friction before checkout</h1>
-        <p className="mt-6 text-lg text-[var(--muted)]">This page is designed to reduce uncertainty around pricing, crypto acceptance, guest checkout, product transparency, and compliance language.</p>
+        <p className="mt-6 text-lg text-[var(--muted)]">This page is designed to reduce uncertainty around pricing, crypto acceptance, guest checkout, product details, and compliance language.</p>
         <div className="mt-10 space-y-4">
           {faqs.concat([
             { q: 'Is Stripe supported?', a: 'Yes. The checkout structure includes a card-first path that can connect to Stripe Checkout or Stripe Payment Links.' },

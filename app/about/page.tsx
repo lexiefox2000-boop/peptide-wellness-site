@@ -8,7 +8,7 @@ export default function AboutPage() {
         </div>
         <div className="space-y-4 text-[var(--muted)]">
           <p>Aurel is positioned as a modern peptide wellness brand with a minimal, medical-adjacent interface and a direct pricing model.</p>
-          <p>The core brand promise is simple: no memberships, no recurring surprise fees, clearer product context, and a checkout flow that respects user intent.</p>
+          <p>The core brand promise is simple: clearer product context, transparent pricing, and a checkout flow that respects user intent.</p>
           <p>The visual language blends soft luxury wellness cues with the clean product discipline users expect from modern telehealth experiences.</p>
         </div>
       </div>

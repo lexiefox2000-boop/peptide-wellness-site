@@ -7,12 +7,12 @@ export default function LandingPage() {
         <div>
           <div className="eyebrow">Educational landing page</div>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">Peptides for Weight Loss, explained with clarity instead of hype</h1>
-          <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">This page mirrors the clean telehealth funnel structure users recognize, but removes membership pressure and keeps pricing, disclaimers, and product context visible from the start.</p>
+          <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">This page mirrors a clean telehealth-style funnel while keeping pricing, disclaimers, and product context visible from the start.</p>
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-6">
             <h2 className="text-xl font-semibold">How this page converts cleanly</h2>
             <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
               <li>Educational framing before the commerce ask.</li>
-              <li>Clear one-time purchase path with guest checkout.</li>
+              <li>Clear purchase path with guest checkout.</li>
               <li>FAQ, ingredient transparency, and compliance disclosures above the fold and throughout the funnel.</li>
             </ul>
           </div>
@@ -21,7 +21,7 @@ export default function LandingPage() {
           <div className="rounded-[1.5rem] bg-[var(--surface-soft)] p-6">
             <div className="text-sm text-[var(--muted)]">Starting at</div>
             <div className="mt-2 text-5xl font-semibold tracking-tight">$349</div>
-            <p className="mt-4 text-sm text-[var(--muted)]">No memberships. No recurring fees. Card and crypto accepted.</p>
+            <p className="mt-4 text-sm text-[var(--muted)]">Card and crypto accepted with a straightforward checkout flow.</p>
             <div className="mt-6 space-y-3">
               <Link href="/checkout" className="block rounded-full bg-[var(--primary)] px-5 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]">Shop this category</Link>
               <Link href="/products/peptide-1" className="block rounded-full border border-black/10 px-5 py-3 text-center text-sm font-medium">View product detail</Link>
