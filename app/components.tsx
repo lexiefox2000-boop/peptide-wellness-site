@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from 'next/link';
 import { faqs, products, testimonials } from '@/lib/data';
 import { ArrowRight, CheckCircle2, CreditCard, Shield, Truck, WalletCards } from 'lucide-react';
