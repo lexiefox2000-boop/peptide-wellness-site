@@ -1,7 +1,22 @@
 import Link from 'next/link';
 import { faqs, products, testimonials } from '@/lib/data';
 import { ArrowRight, CheckCircle2, CreditCard, Shield, Truck, WalletCards } from 'lucide-react';
-
+export function Navbar() {
+return (
+<header className="w-full border-b bg-white">
+<div className="container mx-auto flex items-center justify-between py-4 px-4">
+<Link href="/">
+<Image
+src="/peptidefriendlogo.png"
+alt="Peptide Wellness Logo"
+width={140}
+height={40}
+/>
+</Link>
+</div>
+</header>
+);
+}
 export function Hero() {
   return (
     <section className="section">
