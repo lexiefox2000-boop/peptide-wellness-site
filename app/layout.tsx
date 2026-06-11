@@ -14,7 +14,7 @@ function Logo() {
       <img
         src="/peptidefriend logo.png"
         alt="Peptide Friend logo"
-        className="h-10 w-10 rounded-xl object-contain"
+       className="h-14 w-auto max-w-[200px] object-contain"
       />
       <div>
         <div className="text-lg font-semibold tracking-tight">Peptide Friend</div>
