@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './globals.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -11,14 +12,16 @@ export const metadata: Metadata = {
 function Logo() {
   return (
     <div className="flex items-center gap-3">
-      <svg viewBox="0 0 48 48" className="h-10 w-10 text-[var(--primary)]" aria-label="Aurel logo" fill="none">
-        <rect x="4" y="4" width="40" height="40" rx="14" stroke="currentColor" strokeWidth="2" />
-        <path d="M16 30.5 24 14l8 16.5M19.5 24h9" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+     <Image
+  src="/peptidefriend logo.png"
+  alt="Peptide Friend logo"
+  width={40}
+  height={40}
+  className="h-10 w-10 rounded-xl object-contain"
+/>
       <div>
-        <div className="text-lg font-semibold tracking-tight">Aurel</div>
-        <div className="text-xs text-[var(--muted)]">Peptide wellness</div>
-      </div>
+        <div className="text-lg font-semibold tracking-tight">Peptide Friend</div>
+<div className="text-xs text-[var(--muted)]">Peptide wellness</div>
     </div>
   );
 }
