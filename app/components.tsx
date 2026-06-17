@@ -86,7 +86,13 @@ export function ProductGrid() {
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {products.map((product) => (
             <div key={product.slug} className="card rounded-[1.75rem] p-5">
-              <div className="h-52 rounded-[1.25rem] bg-[linear-gradient(145deg,#f6faf9,#f2ede6)]" />
+              <Image
+  src={product.image}
+  alt={product.name}
+  width={500}
+  height={500}
+  className="h-52 w-full rounded-[1.25rem] object-cover bg-white"
+/>
               <div className="mt-5 flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-xl font-semibold">{product.name}</h3>
