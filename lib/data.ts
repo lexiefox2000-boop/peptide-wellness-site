@@ -30,25 +30,6 @@ export const products = [
     ingredients: ['Bundle contents', 'Suggested schedule', 'Packaging details'],
   }
 ];
-  {
-    slug: 'metabolic-balance',
-    name: 'Metabolic Balance Peptide',
-    dosage: 'Multi-week vial option',
-    price: '$429',
-    benefits: ['Clear labeling', 'Guest checkout', 'Fast fulfillment options'],
-    description: 'Built for shoppers who want a premium interface, visible pricing, and educational support without memberships.',
-    ingredients: ['Compound overview', 'Storage instructions', 'Fulfillment notes'],
-  },
-  {
-    slug: 'recovery-stack',
-    name: 'Recovery & Routine Stack',
-    dosage: 'Wellness bundle',
-    price: '$289',
-    benefits: ['Rounded card UI', 'Trust-centered FAQ', 'Simple reorder path'],
-    description: 'A supporting bundle concept for broader wellness routines with the same transparent checkout experience.',
-    ingredients: ['Bundle contents', 'Suggested schedule', 'Packaging details'],
-  }
-];
 
 export const faqs = [
   {
