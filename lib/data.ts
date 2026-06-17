@@ -4,10 +4,32 @@ export const products = [
     name: 'GLP-1 Wellness Support Kit',
     dosage: 'Starter guided protocol',
     price: '$349',
+    image: '/products/tirz-10mg.png',
     benefits: ['Educational guidance', 'Transparent sourcing', 'One-time purchase'],
     description: 'A premium wellness product page concept designed for education-first shopping. Content stays compliant by focusing on formulation details, care logistics, and informed purchasing.',
     ingredients: ['Active peptide information shown clearly', 'Ancillary supplies listed before checkout', 'Batch and storage details visible'],
   },
+  {
+    slug: 'metabolic-balance',
+    name: 'Metabolic Balance Peptide',
+    dosage: 'Multi-week vial option',
+    price: '$429',
+    image: '/products/reta-40mg.png',
+    benefits: ['Clear labeling', 'Guest checkout', 'Fast fulfillment options'],
+    description: 'Built for shoppers who want a premium interface, visible pricing, and educational support without memberships.',
+    ingredients: ['Compound overview', 'Storage instructions', 'Fulfillment notes'],
+  },
+  {
+    slug: 'recovery-stack',
+    name: 'Recovery & Routine Stack',
+    dosage: 'Wellness bundle',
+    price: '$289',
+    image: '/products/ghk-cu-100mg.png',
+    benefits: ['Rounded card UI', 'Trust-centered FAQ', 'Simple reorder path'],
+    description: 'A supporting bundle concept for broader wellness routines with the same transparent checkout experience.',
+    ingredients: ['Bundle contents', 'Suggested schedule', 'Packaging details'],
+  }
+];
   {
     slug: 'metabolic-balance',
     name: 'Metabolic Balance Peptide',
