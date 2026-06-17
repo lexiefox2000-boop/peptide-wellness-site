@@ -78,10 +78,10 @@ export function ProductGrid() {
       <div className="container">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <div className="eyebrow">Featured products</div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Simple product cards built to convert</h2>
+            <div className="eyebrow">Shop Peptide Friend</div>
+<h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Premium peptide essentials, clearly presented</h2>
           </div>
-          <Link href="/checkout" className="hidden text-sm text-[var(--primary)] md:inline-flex md:items-center md:gap-2">Fast checkout <ArrowRight size={16} /></Link>
+         <Link href="/checkout" className="hidden text-sm text-[var(--primary)] md:inline-flex md:items-center md:gap-2">View checkout <ArrowRight size={16} /></Link>
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {products.map((product) => (
