@@ -23,18 +23,18 @@ export function Hero() {
     <section className="section">
       <div className="container grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
         <div className="fade-up">
-          <div className="eyebrow">Premium peptide wellness</div>
-          <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">Modern Peptide Wellness, Made Simple</h1>
-          <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">A premium peptide storefront with clear product pages, transparent details, and a friction-light checkout experience designed to help customers shop quickly and confidently.</p>
+          <div className="eyebrow">Peptide Friend</div>
+          <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">Premium peptide essentials with a cleaner, faster path to checkout</h1>
+          <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">Shop Peptide Friend’s curated peptide catalog with transparent pricing, clear product presentation, and a modern checkout experience built for convenience.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="#products" className="rounded-full bg-[var(--primary)] px-6 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]">Shop Peptides</Link>
             <Link href="/peptides-weight-loss" className="rounded-full border border-black/10 bg-white px-6 py-3 text-center text-sm font-medium">Learn More</Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-4 text-sm text-[var(--muted)]">
-            <span className="rounded-full bg-white px-4 py-2">Straightforward checkout</span>
-            <span className="rounded-full bg-white px-4 py-2">Crypto + card payment</span>
-            <span className="rounded-full bg-white px-4 py-2">Clear ingredient visibility</span>
-          </div>
+  <span className="rounded-full bg-white px-4 py-2">Transparent pricing</span>
+  <span className="rounded-full bg-white px-4 py-2">Crypto + card checkout</span>
+  <span className="rounded-full bg-white px-4 py-2">Curated peptide catalog</span>
+</div>
         </div>
         <div className="gradient-ring card rounded-[2rem] p-6">
           <div className="rounded-[1.5rem] bg-[var(--surface-soft)] p-5">
