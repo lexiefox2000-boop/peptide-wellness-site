@@ -113,7 +113,12 @@ export function ProductGrid() {
                 {product.benefits.map((benefit) => <li key={benefit} className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[var(--primary)]" /> {benefit}</li>)}
               </ul>
               <div className="mt-6 flex gap-3">
-                <Link href={`/products/${product.slug === 'peptide-1' ? 'peptide-1' : 'peptide-1'}`} className="flex-1 rounded-full border border-black/10 px-4 py-3 text-center text-sm font-medium">View details</Link>
+                <Link
+  href={`/products/${product.slug}`}
+  className="flex-1 rounded-full border border-black/10 px-4 py-3 text-center text-sm font-medium"
+>
+  View details
+</Link>
                 <Link href="/checkout" className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]">Add to Cart</Link>
               </div>
             </div>
