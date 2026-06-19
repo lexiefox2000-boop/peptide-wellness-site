@@ -61,11 +61,21 @@ export function EducationSection() {
       <div className="container grid gap-8 lg:grid-cols-2">
         <div>
           <div className="eyebrow">Why Peptide Friend</div>
-<h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">A more transparent way to shop peptide essentials</h2>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+            A more transparent way to shop peptide essentials
+          </h2>
         </div>
         <div className="space-y-4 text-[var(--muted)]">
-          <p>Peptide Friend is built to make shopping simpler, clearer, and more trustworthy, with clean product presentation, visible pricing, and straightforward product information throughout the browsing experience.</p>
-          <p>From first click to checkout, the experience is designed to help customers compare options quickly, understand product details clearly, and purchase with more confidence.</p>
+          <p>
+            Peptide Friend is built to make shopping simpler, clearer, and more trustworthy,
+            with clean product presentation, visible pricing, and straightforward product
+            information throughout the browsing experience.
+          </p>
+          <p>
+            From first click to checkout, the experience is designed to help customers compare
+            options quickly, understand product details clearly, and purchase with more confidence.
+          </p>
+        </div>
       </div>
     </section>
   );
