@@ -60,7 +60,7 @@ export function EducationSection() {
     <section className="section border-y border-black/5 bg-white/70">
       <div className="container grid gap-8 lg:grid-cols-2">
         <div>
-          <<div className="eyebrow">Why Peptide Friend</div>
+          <div className="eyebrow">Why Peptide Friend</div>
 <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">A more transparent way to shop peptide essentials</h2>
         </div>
         <div className="space-y-4 text-[var(--muted)]">
