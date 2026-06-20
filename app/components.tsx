@@ -38,7 +38,7 @@ export function Hero() {
         </div>
         <div className="gradient-ring card rounded-[2rem] p-6">
           <div className="rounded-[1.5rem] bg-[var(--surface-soft)] p-5">
-            <div className="flex items-center justify-between text-sm text-[var(--muted)]"><span>Featured protocol</span><span>$349</span></div>
+            <div className="flex items-center justify-between text-sm text-[var(--muted)]"><span>Featured product</span><span>$349</span></div>
             <div className="mt-5 rounded-[1.5rem] bg-white p-6">
               <div className="h-64 rounded-[1.25rem] bg-gradient-to-br from-[var(--surface-tint)] via-white to-[var(--surface-soft)]" />
               <h2 className="mt-6 text-2xl font-semibold">Tirzepatide 10mg</h2>
