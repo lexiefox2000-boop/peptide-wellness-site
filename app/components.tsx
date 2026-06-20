@@ -41,7 +41,7 @@ export function Hero() {
             <div className="flex items-center justify-between text-sm text-[var(--muted)]"><span>Featured protocol</span><span>$349</span></div>
             <div className="mt-5 rounded-[1.5rem] bg-white p-6">
               <div className="h-64 rounded-[1.25rem] bg-gradient-to-br from-[var(--surface-tint)] via-white to-[var(--surface-soft)]" />
-              <h2 className="mt-6 text-2xl font-semibold">GLP-1 Wellness Support Kit</h2>
+              <h2 className="mt-6 text-2xl font-semibold">Tirzepatide 10mg</h2>
               <p className="mt-3 text-sm text-[var(--muted)]">Clear product presentation with usage notes, transparent fulfillment details, and a fast path to checkout.</p>
               <div className="mt-5 flex items-center gap-3 text-sm">
                 <span className="rounded-full bg-[var(--accent)] px-3 py-2 text-[var(--primary)]">Fast checkout</span>
