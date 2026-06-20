@@ -183,11 +183,11 @@ export function ProductGrid() {
                   View details
                 </Link>
                 <Link
-                  href="/checkout"
-                  className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
-                >
-                  Add to Cart
-                </Link>
+  href={`/checkout?product=${product.slug}`}
+  className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
+>
+  Add to Cart
+</Link>
               </div>
             </div>
           ))}
