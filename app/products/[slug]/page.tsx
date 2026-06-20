@@ -96,7 +96,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/checkout"
+               href={`/checkout?product=${product.slug}`}
                 className="rounded-full bg-[var(--primary)] px-6 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
               >
                 Add to Cart
