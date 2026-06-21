@@ -7,10 +7,23 @@ type CheckoutPageProps = {
   }>;
 };
 
+function parsePrice(price: string) {
+  return Number(price.replace(/[^0-9.]/g, ""));
+}
+
+function formatPrice(amount: number) {
+  return `$${amount.toFixed(2)}`;
+}
+
 export default async function CheckoutPage({ searchParams }: CheckoutPageProps) {
   const { product: productSlug } = await searchParams;
   const selectedProduct =
     products.find((item) => item.slug === productSlug) ?? products[0];
+
+  const subtotal = parsePrice(selectedProduct.price);
+  const shipping = subtotal >= 300 ? 0 : 18;
+  const tax = Number((subtotal * 0.063).toFixed(2));
+  const total = Number((subtotal + shipping + tax).toFixed(2));
 
   return (
     <div className="section">
@@ -100,7 +113,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
           <div className="card rounded-[2rem] p-6">
             <div className="flex items-center justify-between">
               <span className="font-medium">{selectedProduct.name}</span>
-              <span>{selectedProduct.price}</span>
+              <span>{formatPrice(subtotal)}</span>
             </div>
             <div className="mt-4 text-sm text-[var(--muted)]">
               {selectedProduct.dosage} · One-time purchase
@@ -108,19 +121,19 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             <div className="mt-6 space-y-3 text-sm">
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Subtotal</span>
-                <span>{selectedProduct.price}</span>
+                <span>{formatPrice(subtotal)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Shipping</span>
-                <span>$18</span>
+                <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Estimated tax</span>
-                <span>$22</span>
+                <span>{formatPrice(tax)}</span>
               </div>
               <div className="flex justify-between border-t border-black/5 pt-3 font-medium">
                 <span>Total</span>
-                <span>{selectedProduct.price}</span>
+                <span>{formatPrice(total)}</span>
               </div>
             </div>
           </div>
