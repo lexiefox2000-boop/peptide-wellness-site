@@ -7,43 +7,60 @@ export default function PrivacyPage() {
           Privacy policy
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--muted)]">
-          This page explains what customer information may be collected, how it
-          may be used, and how order-related communication is handled.
+          This page explains what information may be collected through the site,
+          how that information may be used, when it may be shared with service
+          providers, and how order-related communication may be handled.
         </p>
 
         <div className="mt-10 space-y-6">
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Information collected</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              The site may collect customer information such as name, email
-              address, shipping address, billing details, and order-related
-              information submitted through forms or checkout.
+              Information submitted through the site may include a customer
+              name, email address, phone number, shipping address, billing
+              details, order information, and any messages or details provided
+              through forms, checkout, or support communication.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">How information is used</h2>
+            <h2 className="text-xl font-semibold">How information may be used</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Customer information may be used to process orders, provide
-              customer support, send order confirmations, share shipping
-              updates, and improve the overall customer experience.
+              Customer information may be used to process and review orders,
+              provide support, send order confirmations, share shipping updates,
+              respond to inquiries, maintain business records, and improve site
+              operations and customer experience.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Payment processing</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Payment information is processed through third-party payment
-              providers and is not stored directly on the site.
+              Payment information is intended to be handled through third-party
+              payment providers rather than stored directly on the site. Payment
+              processing may therefore be subject to the systems, terms, and
+              privacy practices of the selected payment provider.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Third-party services</h2>
+            <h2 className="text-xl font-semibold">Shipping and service providers</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              The business may use third-party services for payment processing,
-              shipping, email communication, analytics, or customer support as
-              part of operating the site and fulfilling orders.
+              Information may be shared with third-party service providers when
+              reasonably necessary to operate the site, process payments, send
+              emails, provide shipping updates, fulfill orders, perform
+              analytics, or support customer service operations.
+            </p>
+          </div>
+
+          <div className="card rounded-[1.5rem] p-6">
+            <h2 className="text-xl font-semibold">Analytics and site activity</h2>
+            <p className="mt-3 text-sm text-[var(--muted)]">
+              The site may use analytics, performance tools, or similar services
+              to understand traffic, page usage, and general site activity.
+              These tools may collect technical information such as browser
+              type, device information, IP address, referral data, or page
+              interaction details.
             </p>
           </div>
 
@@ -51,18 +68,31 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold">Data sharing</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
               Customer information is not intended to be sold to unrelated third
-              parties. Information may be shared only as needed to complete
-              transactions, provide services, comply with legal obligations, or
-              support normal business operations.
+              parties. Information may be shared only when reasonably needed to
+              complete transactions, operate the site, support business
+              functions, comply with legal obligations, investigate misuse, or
+              protect the rights and security of the business or its users.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Contact</h2>
+            <h2 className="text-xl font-semibold">Customer communication</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Questions related to privacy or customer information can be
-              directed to the business through the contact information listed on
-              the site.
+              Order-related emails or messages may be sent for confirmations,
+              fulfillment updates, shipping notices, service responses, or other
+              communications reasonably connected to a submitted order or
+              customer inquiry.
+            </p>
+          </div>
+
+          <div className="card rounded-[1.5rem] p-6">
+            <h2 className="text-xl font-semibold">Requests and updates</h2>
+            <p className="mt-3 text-sm text-[var(--muted)]">
+              Customers with privacy-related questions, correction requests, or
+              concerns about submitted information may contact the business
+              through the contact information provided on the site. This policy
+              may be updated from time to time to reflect changes in site
+              features, providers, or business practices.
             </p>
           </div>
         </div>
