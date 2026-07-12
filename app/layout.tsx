@@ -1,11 +1,12 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ShieldCheck, Wallet, Menu } from 'lucide-react';
+import "./globals.css";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ShieldCheck, Wallet, Menu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Peptide Friend',
-  description: 'Product catalog with clear listings, visible pricing, and a cleaner ecommerce layout.',
+  title: "Peptide Friend",
+  description:
+    "Product catalog with clear listings, visible pricing, and a cleaner ecommerce layout.",
 };
 
 function Logo() {
@@ -17,14 +18,20 @@ function Logo() {
         className="h-14 w-auto max-w-[200px] object-contain"
       />
       <div>
-        <div className="text-lg font-semibold tracking-tight">Peptide Friend</div>
+        <div className="text-lg font-semibold tracking-tight">
+          Peptide Friend
+        </div>
         <div className="text-xs text-[var(--muted)]">Product catalog</div>
       </div>
     </div>
   );
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
@@ -69,10 +76,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               <div className="flex items-center gap-2">
                 <Wallet size={14} />
-                Optional crypto checkout
+                Alternate payment support
               </div>
-              <div>Checkout setup available</div>
-              <div>Catalog-style pricing</div>
+              <div>Connected catalog and checkout flow</div>
+              <div>Simple product navigation</div>
             </div>
           </div>
         </header>
@@ -84,8 +91,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="md:col-span-2">
               <Logo />
               <p className="mt-4 max-w-xl text-sm text-[var(--muted)]">
-                A product catalog concept focused on clear listings, visible
-                pricing, and a cleaner ecommerce layout.
+                Peptide Friend is structured as a product catalog with clear
+                listings, visible pricing, connected policy pages, and a simpler
+                path from browsing to checkout.
               </p>
             </div>
 
@@ -116,11 +124,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold">Disclosure</h3>
+              <h3 className="text-sm font-semibold">Storefront</h3>
               <p className="mt-4 text-sm text-[var(--muted)]">
-                For catalog design and ecommerce UX demonstration purposes only.
-                All product language, payment flows, and compliance notices
-                should be reviewed before launch.
+                Browse product listings, review item details, access policy
+                pages, and move through checkout in one organized storefront
+                experience.
               </p>
             </div>
           </div>
