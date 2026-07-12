@@ -50,7 +50,7 @@ export function Hero() {
               Browse catalog
             </Link>
             <Link
-              href="/peptides-weight-loss"
+              href="/information"
               className="rounded-full border border-black/10 bg-white px-6 py-3 text-center text-sm font-medium"
             >
               View information page
