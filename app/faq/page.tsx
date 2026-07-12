@@ -6,28 +6,28 @@ export default function FaqPage() {
       <div className="container max-w-4xl">
         <div className="eyebrow">FAQ</div>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-          Common questions about the catalog setup
+          Common questions about the catalog
         </h1>
 
         <p className="mt-6 text-lg text-[var(--muted)]">
-          This page explains the current catalog structure, pricing display, and
-          payment setup options.
+          This page answers common questions about product listings, pricing,
+          shipping information, checkout, and policy access.
         </p>
 
         <div className="mt-10 space-y-4">
           {faqs
             .concat([
               {
-                q: "Can card payments be added?",
-                a: "Yes. A hosted card checkout or payment link can be connected when the final payment flow is ready.",
+                q: "Can I review pricing before checkout?",
+                a: "Yes. Product pricing is displayed directly within the catalog and remains visible as you move into product detail and checkout pages.",
               },
               {
-                q: "How can site content be managed?",
-                a: "Product listings, FAQ entries, and supporting page content can be managed through a simple content or database setup as the project evolves.",
+                q: "Where can I find shipping and refund information?",
+                a: "Shipping, refunds, privacy, and terms are available through the site’s policy pages so key information is easy to access while browsing.",
               },
               {
-                q: "What notices should appear before launch?",
-                a: "Include catalog notices, product handling information, and any final reviewed compliance language on the landing, product, and checkout pages.",
+                q: "How is site content organized?",
+                a: "Product listings, FAQ entries, policy pages, and checkout content are structured to keep the storefront easier to scan and navigate.",
               },
             ])
             .map((faq) => (
