@@ -26,9 +26,9 @@ export default function PrivacyPage() {
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">How information may be used</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Customer information may be used to process and review orders,
-              provide support, send order confirmations, share shipping updates,
-              respond to inquiries, maintain business records, and improve site
+              Customer information may be used to process orders, provide
+              support, send order confirmations, share shipping updates, respond
+              to inquiries, maintain business records, and improve site
               operations and customer experience.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold">Shipping and service providers</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
               Information may be shared with third-party service providers when
-              reasonably necessary to operate the site, process payments, send
+              reasonably needed to operate the site, process payments, send
               emails, provide shipping updates, fulfill orders, perform
               analytics, or support customer service operations.
             </p>
