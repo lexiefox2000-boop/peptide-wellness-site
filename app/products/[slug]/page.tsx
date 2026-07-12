@@ -34,7 +34,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           className="inline-flex items-center gap-2 text-sm text-[var(--primary)]"
         >
           <ArrowLeft size={16} />
-          Back to catalog
+          Back to products
         </Link>
 
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
@@ -53,32 +53,33 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="flex items-center gap-2 font-medium">
                   <ShieldCheck size={16} className="text-[var(--primary)]" />
-                  Clear listing
+                  Product details
                 </div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Visible pricing and a straightforward product-page layout.
+                  Review the product name, dosage, price, and listing details in
+                  one place.
                 </p>
               </div>
 
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="flex items-center gap-2 font-medium">
                   <Truck size={16} className="text-[var(--primary)]" />
-                  Shipping details
+                  Shipping information
                 </div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Shipping information and policy access are available through
-                  the checkout flow.
+                  Shipping, refund, privacy, and terms information is available
+                  before checkout.
                 </p>
               </div>
 
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="flex items-center gap-2 font-medium">
                   <Wallet size={16} className="text-[var(--primary)]" />
-                  Checkout options
+                  Checkout
                 </div>
                 <p className="mt-2 text-[var(--muted)]">
-                  The checkout path supports a clear order summary and payment
-                  selection flow.
+                  Continue with the selected product when you’re ready to place
+                  your order.
                 </p>
               </div>
             </div>
@@ -86,7 +87,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           <div className="space-y-6">
             <div>
-              <div className="text-sm text-[var(--muted)]">Product detail</div>
+              <div className="text-sm text-[var(--muted)]">Product details</div>
               <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
                 {product.name}
               </h1>
@@ -109,13 +110,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                 <div>
                   <div className="text-sm text-[var(--muted)]">
-                    Selected listing
+                    Selected product
                   </div>
                   <div className="mt-2 text-2xl font-semibold">
                     {product.price}
                   </div>
                   <div className="mt-1 text-sm text-[var(--muted)]">
-                    {product.dosage} configuration
+                    {product.dosage}
                   </div>
                 </div>
 
@@ -136,15 +137,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               <div className="mt-5 rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm text-[var(--muted)]">
-                Product pricing, listing details, checkout access, and policy
-                links are available together to make the purchase path easier to
-                review.
+                Review the product details above before continuing to checkout.
               </div>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="card rounded-[1.5rem] p-6">
-                <h2 className="font-semibold">Listing highlights</h2>
+                <h2 className="font-semibold">Important information</h2>
                 <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
                   {product.highlights.map((highlight) => (
                     <li key={highlight} className="flex items-start gap-2">
@@ -159,7 +158,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               <div className="card rounded-[1.5rem] p-6">
-                <h2 className="font-semibold">Reference details</h2>
+                <h2 className="font-semibold">Product details</h2>
                 <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
                   {product.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-2">
@@ -175,16 +174,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
 
             <div className="card rounded-[1.5rem] p-6">
-              <h2 className="font-semibold">Product overview</h2>
+              <h2 className="font-semibold">Before checkout</h2>
               <p className="mt-3 text-sm text-[var(--muted)]">
-                This page presents a cleaner product-detail layout with visible
-                pricing, straightforward product notes, and a more direct route
-                into checkout.
+                Please review the product details, shipping information, and
+                store policies before placing an order.
               </p>
               <p className="mt-3 text-sm text-[var(--muted)]">
-                Shipping, refund, privacy, and terms pages are available through
-                the storefront so visitors can review key information alongside
-                the product listing.
+                Products are listed with pricing and basic details so you can
+                review everything on this page before continuing.
               </p>
             </div>
           </div>
@@ -195,14 +192,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div>
               <div className="eyebrow">Related products</div>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                Continue browsing the catalog
+                You may also like
               </h2>
             </div>
             <Link
               href="/#products"
               className="text-sm font-medium text-[var(--primary)]"
             >
-              View full catalog
+              View all products
             </Link>
           </div>
 
