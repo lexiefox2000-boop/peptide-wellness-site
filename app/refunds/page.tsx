@@ -8,17 +8,16 @@ export default function RefundsPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--muted)]">
           This page explains how order issues, damaged shipments, missing items,
-          cancellations, and refund or replacement requests are reviewed.
+          cancellations, and refund or replacement requests are handled.
         </p>
 
         <div className="mt-10 space-y-6">
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Sales and order status</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              All orders are generally treated as final unless a different
-              resolution is approved in writing. Submission of an order does not
-              automatically create a right to cancellation, return, refund, or
-              replacement.
+              Orders are generally treated as final unless a different
+              resolution is approved. Submitting an order does not automatically
+              create a right to cancellation, return, refund, or replacement.
             </p>
           </div>
 
@@ -26,8 +25,8 @@ export default function RefundsPage() {
             <h2 className="text-xl font-semibold">Damaged or incomplete orders</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
               If an order arrives damaged, incomplete, or with an item issue,
-              the customer should contact support within 48 hours of marked
-              delivery and provide the order details requested for review.
+              customers should contact support within 48 hours of marked
+              delivery and include the order details needed for review.
             </p>
           </div>
 
@@ -43,10 +42,9 @@ export default function RefundsPage() {
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Resolution options</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              If a request is approved, the business may choose an appropriate
-              resolution based on the situation, including replacement, store
-              credit, partial credit, refund, or another corrective option at
-              its discretion.
+              If a request is approved, an appropriate resolution may be offered
+              based on the situation, including replacement, store credit,
+              partial credit, refund, or another corrective option.
             </p>
           </div>
 
@@ -64,8 +62,8 @@ export default function RefundsPage() {
             <p className="mt-3 text-sm text-[var(--muted)]">
               Orders may only be canceled before fulfillment or shipping
               preparation has started. Once an order has entered processing,
-              packing, fulfillment review, or shipment preparation, cancellation
-              may no longer be available.
+              packing, fulfillment, or shipment preparation, cancellation may no
+              longer be available.
             </p>
           </div>
 
@@ -74,7 +72,7 @@ export default function RefundsPage() {
             <p className="mt-3 text-sm text-[var(--muted)]">
               Requests that are incomplete, submitted outside the stated review
               window, unsupported by available order information, or inconsistent
-              with delivery and fulfillment records may be declined.
+              with delivery and fulfillment records may not be approved.
             </p>
           </div>
 
