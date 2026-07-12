@@ -34,21 +34,19 @@ export default function TermsPage() {
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Pricing and order review</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Prices displayed on the site are presented for current review and
-              may be changed at any time before an order is accepted or
-              processed. The business reserves the right to correct listing
-              errors, pricing issues, or inaccurate information without prior
-              notice.
+              Prices displayed on the site may be changed at any time before an
+              order is accepted or processed. The business may also correct
+              listing errors, pricing issues, or inaccurate information when
+              needed.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Orders</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              The business reserves the right to review, limit, refuse, hold, or
-              cancel any order at its discretion, including where order details,
-              payment status, product availability, shipping information, or
-              policy concerns require additional review.
+              Orders may be reviewed, limited, refused, held, or canceled when
+              order details, payment status, product availability, shipping
+              information, or policy concerns require additional review.
             </p>
           </div>
 
@@ -86,7 +84,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold">Updates and changes</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
               These terms may be updated periodically, and the version published
-              on the site at the time of use will control. Continued use of the
+              on the site at the time of use will apply. Continued use of the
               site after updates are posted indicates acceptance of the revised
               terms.
             </p>
