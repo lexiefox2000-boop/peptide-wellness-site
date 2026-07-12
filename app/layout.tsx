@@ -72,14 +72,14 @@ export default function RootLayout({
             <div className="container flex flex-wrap items-center gap-4 py-2 text-xs text-[var(--muted)]">
               <div className="flex items-center gap-2">
                 <ShieldCheck size={14} />
-                Visible pricing
+                Clear product pricing
               </div>
               <div className="flex items-center gap-2">
                 <Wallet size={14} />
-                Alternate payment support
+                Optional alternate payment support
               </div>
-              <div>Connected catalog and checkout flow</div>
-              <div>Simple product navigation</div>
+              <div>Easy product navigation</div>
+              <div>Store information always within reach</div>
             </div>
           </div>
         </header>
@@ -91,9 +91,9 @@ export default function RootLayout({
             <div className="md:col-span-2">
               <Logo />
               <p className="mt-4 max-w-xl text-sm text-[var(--muted)]">
-                Peptide Friend is structured as a product catalog with clear
-                listings, visible pricing, connected policy pages, and a simpler
-                path from browsing to checkout.
+                Peptide Friend is designed to make it easier to browse products,
+                review pricing, access store information, and move through
+                checkout with less friction.
               </p>
             </div>
 
@@ -126,8 +126,8 @@ export default function RootLayout({
             <div>
               <h3 className="text-sm font-semibold">Storefront</h3>
               <p className="mt-4 text-sm text-[var(--muted)]">
-                Browse product listings, review item details, access policy
-                pages, and move through checkout in one organized storefront
+                Browse products, review item details, access store policies, and
+                continue through checkout in a simpler, more organized
                 experience.
               </p>
             </div>
