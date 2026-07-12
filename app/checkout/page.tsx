@@ -27,104 +27,174 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
 
   return (
     <div className="section">
-      <div className="container grid gap-8 lg:grid-cols-[1fr_.9fr]">
+      <div className="container grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
         <div className="card rounded-[2rem] p-6 md:p-8">
-          <div className="eyebrow">Checkout review</div>
+          <div className="eyebrow">Checkout</div>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Simple checkout layout for catalog review
+            Review your order and choose a payment path
           </h1>
+          <p className="mt-4 max-w-2xl text-sm text-[var(--muted)]">
+            Confirm the selected product, shipping details, and preferred payment
+            option before completing the order review.
+          </p>
 
           <div className="mt-6 rounded-[1.5rem] border border-black/5 bg-[var(--surface-soft)] p-4 text-sm">
             <div className="font-medium">Selected product</div>
             <div className="mt-1 text-[var(--muted)]">
               {selectedProduct.name} · {selectedProduct.dosage}
             </div>
-            <div className="mt-3">
+            <div className="mt-3 flex flex-wrap gap-3">
               <Link
                 href={`/products/${selectedProduct.slug}`}
                 className="text-sm font-medium text-[var(--primary)]"
               >
                 Review product details
               </Link>
+              <Link
+                href="/"
+                className="text-sm font-medium text-[var(--muted)]"
+              >
+                Continue browsing
+              </Link>
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <label className="text-sm">
-              First name
-              <input
-                className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                placeholder="Ariana"
-              />
-            </label>
+          <div className="mt-8">
+            <h2 className="text-lg font-semibold">Contact information</h2>
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <label className="text-sm">
+                First name
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="Ariana"
+                />
+              </label>
 
-            <label className="text-sm">
-              Last name
-              <input
-                className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                placeholder="Lopez"
-              />
-            </label>
+              <label className="text-sm">
+                Last name
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="Lopez"
+                />
+              </label>
 
-            <label className="text-sm md:col-span-2">
-              Email
-              <input
-                className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                placeholder="you@example.com"
-              />
-            </label>
+              <label className="text-sm md:col-span-2">
+                Email
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="you@example.com"
+                />
+              </label>
 
-            <label className="text-sm md:col-span-2">
-              Shipping address
-              <input
-                className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                placeholder="123 Example Street"
-              />
-            </label>
+              <label className="text-sm md:col-span-2">
+                Phone
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="(555) 123-4567"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h2 className="text-lg font-semibold">Shipping address</h2>
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <label className="text-sm md:col-span-2">
+                Street address
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="123 Example Street"
+                />
+              </label>
+
+              <label className="text-sm">
+                City
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="Miami"
+                />
+              </label>
+
+              <label className="text-sm">
+                State
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="Florida"
+                />
+              </label>
+
+              <label className="text-sm">
+                ZIP code
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="33101"
+                />
+              </label>
+
+              <label className="text-sm">
+                Country
+                <input
+                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
+                  placeholder="United States"
+                />
+              </label>
+            </div>
           </div>
 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-5">
-            <div className="text-sm font-medium">Payment options</div>
+            <h2 className="text-lg font-semibold">Payment options</h2>
+            <p className="mt-2 text-sm text-[var(--muted)]">
+              Select the preferred path for checkout completion.
+            </p>
+
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <button className="rounded-2xl border border-[var(--primary)] bg-[var(--surface-tint)] px-4 py-4 text-left text-sm">
-                Card payment option
+                Card checkout
                 <br />
                 <span className="text-[var(--muted)]">
-                  A hosted card checkout can be connected for a simpler payment
+                  Connect a hosted card processor for a familiar customer payment
                   flow.
                 </span>
               </button>
 
               <button className="rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm">
-                Crypto payment option
+                Crypto checkout
                 <br />
                 <span className="text-[var(--muted)]">
-                  A hosted crypto checkout can be added as an optional payment
-                  path.
+                  Offer an alternate hosted crypto option for customers who
+                  prefer that payment method.
                 </span>
               </button>
             </div>
           </div>
 
           <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-soft)] p-5 text-sm text-[var(--muted)]">
-            Review the selected product, pricing, and payment options before any
-            final payment setup is enabled.
+            By continuing, the customer confirms the entered contact details,
+            shipping information, and selected order contents for final review.
           </div>
 
-          <button className="mt-8 w-full rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)]">
-            Review payment options
-          </button>
+          <Link
+            href={`/checkout/thank-you?product=${selectedProduct.slug}`}
+            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)]"
+          >
+            Continue to order confirmation
+          </Link>
         </div>
 
         <aside className="space-y-4">
           <div className="card rounded-[2rem] p-6">
-            <div className="flex items-center justify-between">
-              <span className="font-medium">{selectedProduct.name}</span>
-              <span>{formatPrice(subtotal)}</span>
+            <div className="text-sm font-medium text-[var(--muted)]">
+              Order summary
             </div>
 
-            <div className="mt-4 text-sm text-[var(--muted)]">
-              {selectedProduct.dosage}
+            <div className="mt-4 flex items-start justify-between gap-4">
+              <div>
+                <div className="font-medium">{selectedProduct.name}</div>
+                <div className="mt-1 text-sm text-[var(--muted)]">
+                  {selectedProduct.dosage}
+                </div>
+              </div>
+              <div className="text-sm font-medium">{formatPrice(subtotal)}</div>
             </div>
 
             <div className="mt-6 space-y-3 text-sm">
@@ -150,14 +220,36 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             </div>
           </div>
 
-          <div className="card rounded-[1.5rem] p-6 text-sm text-[var(--muted)]">
-            This page is presented as a checkout layout example for catalog
-            review, pricing display, and payment-flow planning.
+          <div className="card rounded-[1.5rem] p-6 text-sm">
+            <div className="font-medium">Checkout notes</div>
+            <div className="mt-3 space-y-2 text-[var(--muted)]">
+              <p>Free shipping is automatically applied on orders over $300.</p>
+              <p>Tax is currently displayed as an estimated checkout value.</p>
+              <p>Hosted payment setup can be connected after layout approval.</p>
+            </div>
           </div>
 
-          <div className="card rounded-[1.5rem] p-6 text-sm text-[var(--muted)]">
-            Final notices, payment setup, fulfillment details, and reviewed
-            compliance language should be confirmed before launch.
+          <div className="card rounded-[1.5rem] p-6 text-sm">
+            <div className="font-medium">Policy access</div>
+            <div className="mt-3 space-y-2 text-[var(--muted)]">
+              <p>
+                Review shipping, refunds, privacy, and terms before launch.
+              </p>
+              <div className="flex flex-wrap gap-3 pt-1">
+                <Link href="/shipping" className="text-[var(--primary)]">
+                  Shipping
+                </Link>
+                <Link href="/refunds" className="text-[var(--primary)]">
+                  Refunds
+                </Link>
+                <Link href="/privacy" className="text-[var(--primary)]">
+                  Privacy
+                </Link>
+                <Link href="/terms" className="text-[var(--primary)]">
+                  Terms
+                </Link>
+              </div>
+            </div>
           </div>
         </aside>
       </div>
