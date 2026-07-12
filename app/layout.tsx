@@ -103,6 +103,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             <div>
+              <h3 className="text-sm font-semibold">Policies</h3>
+              <div className="mt-4 space-y-3 text-sm text-[var(--muted)]">
+                <Link href="/shipping">Shipping</Link>
+                <br />
+                <Link href="/refunds">Refunds</Link>
+                <br />
+                <Link href="/privacy">Privacy</Link>
+                <br />
+                <Link href="/terms">Terms</Link>
+              </div>
+            </div>
+
+            <div>
               <h3 className="text-sm font-semibold">Disclosure</h3>
               <p className="mt-4 text-sm text-[var(--muted)]">
                 For catalog design and ecommerce UX demonstration purposes only.
