@@ -36,11 +36,11 @@ export function Hero() {
         <div className="fade-up">
           <div className="eyebrow">Peptide Friend</div>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
-            Research catalog with clear product listings and visible pricing
+            Product catalog with clear listings and visible pricing
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
             Browse listed products, review vial size and pricing, and move
-            through a cleaner catalog experience with fewer distractions.
+            through a cleaner catalog experience with a simpler page structure.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -58,13 +58,13 @@ export function Hero() {
           </div>
           <div className="mt-8 flex flex-wrap gap-4 text-sm text-[var(--muted)]">
             <span className="rounded-full bg-white px-4 py-2">
-              Research use only
-            </span>
-            <span className="rounded-full bg-white px-4 py-2">
               Visible pricing
             </span>
             <span className="rounded-full bg-white px-4 py-2">
-              Catalog-style presentation
+              Product listings
+            </span>
+            <span className="rounded-full bg-white px-4 py-2">
+              Cleaner presentation
             </span>
           </div>
         </div>
@@ -92,10 +92,10 @@ export function Hero() {
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
                 <span className="rounded-full bg-[var(--accent)] px-3 py-2 text-[var(--primary)]">
-                  Research use only
+                  Price shown upfront
                 </span>
                 <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  Not for human consumption
+                  Reference details included
                 </span>
               </div>
             </div>
@@ -123,9 +123,8 @@ export function EducationSection() {
             in a more readable format.
           </p>
           <p>
-            Product pages should stay neutral, avoid outcome claims, and clearly
-            display research-use-only language throughout the browsing
-            experience.
+            Product pages are designed to keep information clearer, reduce
+            clutter, and present listing details in a more consistent way.
           </p>
         </div>
       </div>
@@ -148,7 +147,7 @@ export function ProductGrid() {
             href="/checkout"
             className="hidden text-sm text-[var(--primary)] md:inline-flex md:items-center md:gap-2"
           >
-            View checkout <ArrowRight size={16} />
+            Review checkout <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -196,7 +195,7 @@ export function ProductGrid() {
                   href={`/checkout?product=${product.slug}`}
                   className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
                 >
-                  Add to cart
+                  Review product
                 </Link>
               </div>
             </div>
@@ -218,7 +217,7 @@ export function HowItWorks() {
       "Check the individual product page for the listing image, name, and additional reference details.",
     ],
     [
-      "Continue",
+      "Review",
       "Move to checkout only after the catalog language, notices, and payment flow are ready for launch.",
     ],
   ];
@@ -256,7 +255,7 @@ export function BenefitsTrust() {
     ],
     [
       "Checkout-ready structure",
-      "The site can support a checkout flow once payment setup and review language are finalized.",
+      "The site can support a checkout layout once payment setup and review language are finalized.",
     ],
     [
       "Cleaner presentation",
@@ -276,8 +275,8 @@ export function BenefitsTrust() {
           <div className="mt-8 space-y-4 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-3">
               <Shield size={18} className="text-[var(--primary)]" />
-              Product pages can keep notices and listing details visible without
-              relying on heavy marketing language.
+              Product pages can keep notices and listing details visible in a
+              simpler format.
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
@@ -286,13 +285,13 @@ export function BenefitsTrust() {
             </div>
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
-              Card and crypto options can be connected through a third-party
-              checkout provider.
+              Card and crypto payment options can be connected later through a
+              third-party provider.
             </div>
             <div className="flex items-center gap-3">
               <WalletCards size={18} className="text-[var(--primary)]" />
               The current layout supports a direct path from listing to product
-              page to checkout.
+              page to checkout review.
             </div>
           </div>
         </div>
@@ -327,7 +326,7 @@ export function TestimonialsFaqCrypto() {
             <p className="mt-3 text-sm text-[var(--muted)]">
               Product pages should be reviewed carefully before launch so the
               final site language, notices, and payment flow all match the
-              intended business setup.
+              intended project setup.
             </p>
           </div>
         </div>
@@ -353,12 +352,11 @@ export function TestimonialsFaqCrypto() {
           <div className="card rounded-[1.5rem] bg-[var(--surface-tint)] p-6">
             <div className="eyebrow">Crypto checkout</div>
             <h3 className="mt-3 text-2xl font-semibold">
-              Optional payment rail for a later phase
+              Optional payment path for a later phase
             </h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              A hosted provider such as Coinbase Commerce can be added later if
-              the project needs a crypto checkout option in addition to standard
-              payment methods.
+              A hosted provider can be added later if the project needs a crypto
+              checkout option in addition to standard payment methods.
             </p>
             <Link
               href="/checkout"
