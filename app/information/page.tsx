@@ -7,20 +7,19 @@ export default function LandingPage() {
         <div>
           <div className="eyebrow">Information page</div>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-            Product information presented in a cleaner, more readable format
+            Product information in a cleaner, more readable format
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
-            This page is structured as an informational layout with clearer
-            navigation, visible pricing context, and room for reviewed product
-            notices.
+            This page organizes product information, pricing context, and key
+            supporting details in a layout that is easier to scan and navigate.
           </p>
 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-6">
-            <h2 className="text-xl font-semibold">What this page is designed to show</h2>
+            <h2 className="text-xl font-semibold">What you can review here</h2>
             <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
-              <li>Clear page structure before any checkout decision.</li>
+              <li>Clear page structure before moving into checkout.</li>
               <li>Visible product context and supporting reference details.</li>
-              <li>Space for reviewed notices, FAQ content, and catalog guidance.</li>
+              <li>Helpful notices, FAQ access, and catalog guidance.</li>
             </ul>
           </div>
         </div>
@@ -32,15 +31,15 @@ export default function LandingPage() {
               Visible pricing
             </div>
             <p className="mt-4 text-sm text-[var(--muted)]">
-              Card and crypto payment options can be added later through hosted
-              checkout tools once the final payment flow is ready.
+              The storefront connects product listings, detail pages, policy
+              access, and checkout in one organized browsing flow.
             </p>
             <div className="mt-6 space-y-3">
               <Link
                 href="/checkout"
                 className="block rounded-full bg-[var(--primary)] px-5 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
               >
-                Review checkout layout
+                Go to checkout
               </Link>
               <Link
                 href="/products/tirzepatide-10mg"
@@ -62,17 +61,16 @@ export default function LandingPage() {
           <div key={item} className="card rounded-[1.5rem] p-6">
             <h3 className="text-xl font-semibold">{item}</h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Each module is designed to present information in a simpler,
-              easier-to-scan format with restrained visual hierarchy.
+              Each section presents information in a simpler, easier-to-scan
+              format with a clear visual hierarchy.
             </p>
           </div>
         ))}
       </div>
 
       <div className="container mt-16 rounded-[2rem] border border-black/5 bg-[var(--surface-tint)] p-8 text-sm text-[var(--muted)]">
-        This page is provided as a catalog and ecommerce UX example. Final
-        product language, notices, and payment setup should be reviewed before
-        launch.
+        Product listings, supporting notices, FAQ content, and checkout access
+        are organized here to make the storefront easier to review and navigate.
       </div>
     </div>
   );
