@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
 
             <nav className="hidden items-center gap-6 text-sm md:flex">
-              <Link href="/peptides-weight-loss">Information</Link>
+              <Link href="/information">Information</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
@@ -94,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="mt-4 space-y-3 text-sm text-[var(--muted)]">
                 <Link href="/">Home</Link>
                 <br />
-                <Link href="/peptides-weight-loss">Information</Link>
+                <Link href="/information">Information</Link>
                 <br />
                 <Link href="/faq">FAQ</Link>
                 <br />
