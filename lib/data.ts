@@ -8,14 +8,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for Tirzepatide 10mg with product image, vial size, and visible pricing.',
+      'Tirzepatide 10mg listing with a 10mg vial, product image, and visible price.',
     details: [
       '10mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -27,14 +27,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for Tirzepatide 40mg with product image, vial size, and visible pricing.',
+      'Tirzepatide 40mg listing with a 40mg vial, product image, and visible price.',
     details: [
       '40mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -46,14 +46,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for Retatrutide 10mg with product image, vial size, and visible pricing.',
+      'Retatrutide 10mg listing with a 10mg vial, product image, and visible price.',
     details: [
       '10mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -65,14 +65,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for Retatrutide 40mg with product image, vial size, and visible pricing.',
+      'Retatrutide 40mg listing with a 40mg vial, product image, and visible price.',
     details: [
       '40mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -84,14 +84,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for Sermorelin 10mg with product image, vial size, and visible pricing.',
+      'Sermorelin 10mg listing with a 10mg vial, product image, and visible price.',
     details: [
       '10mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -103,14 +103,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for GHK-CU 100mg with product image, vial size, and visible pricing.',
+      'GHK-CU 100mg listing with a 100mg vial, product image, and visible price.',
     details: [
       '100mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -122,14 +122,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for NAD+ 500mg with product image, vial size, and visible pricing.',
+      'NAD+ 500mg listing with a 500mg vial, product image, and visible price.',
     details: [
       '500mg vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
   {
@@ -141,14 +141,14 @@ export const products = [
     highlights: [
       'Research use only',
       'Not for human consumption',
-      'Price shown upfront',
+      'Visible pricing',
     ],
     description:
-      'Catalog listing for Bac Water 10ml with product image, volume, and visible pricing.',
+      'Bac Water 10ml listing with a 10ml vial, product image, and visible price.',
     details: [
       '10ml vial',
-      'Single product listing',
-      'Label and image shown for reference',
+      'Product image shown',
+      'Pricing displayed clearly',
     ],
   },
 ];
@@ -156,27 +156,27 @@ export const products = [
 export const faqs = [
   {
     q: 'Is pricing shown on the site?',
-    a: 'Yes. Each product listing shows its displayed price directly on the catalog and product pages.',
+    a: 'Yes. Each product listing shows its price directly on the catalog and product pages.',
   },
   {
     q: 'How long does order processing take?',
-    a: 'Orders are generally processed within 1 to 3 business days unless a different timeframe is posted on the site or shown during checkout review.',
+    a: 'Orders are generally processed within 1 to 3 business days unless a different timeframe is posted on the site or shown during checkout.',
   },
   {
     q: 'Will I receive tracking information?',
-    a: 'If tracking is available for the shipment, shipping confirmation and tracking details may be sent by email once the order has been prepared for shipment.',
+    a: 'If tracking is available for the shipment, shipping confirmation and tracking details may be sent by email once the order is prepared for shipment.',
   },
   {
     q: 'Can I change my shipping address after ordering?',
-    a: 'Address changes may be requested before an order enters fulfillment. After processing or shipment preparation begins, address changes may no longer be possible.',
+    a: 'Address changes may be requested before an order enters fulfillment. After processing or shipment preparation begins, changes may no longer be possible.',
   },
   {
     q: 'What if an order arrives damaged or incomplete?',
-    a: 'Customers should contact support within 48 hours of marked delivery and provide the order details and any requested photos so the issue can be reviewed.',
+    a: 'Customers should contact support within 48 hours of marked delivery and provide order details and any requested photos so the issue can be reviewed.',
   },
   {
     q: 'Are refunds or replacements available?',
-    a: 'Approved order issues may be resolved through a replacement, store credit, partial credit, refund, or another corrective option depending on the situation.',
+    a: 'Approved order issues may be resolved with a replacement, store credit, partial credit, refund, or another appropriate option depending on the situation.',
   },
   {
     q: 'Can the site support card or crypto payments?',
