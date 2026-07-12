@@ -156,19 +156,35 @@ export const products = [
 export const faqs = [
   {
     q: 'Is pricing shown on the site?',
-    a: 'Yes. Each product listing shows its current displayed price directly on the site.',
+    a: 'Yes. Each product listing shows its displayed price directly on the catalog and product pages.',
   },
   {
-    q: 'Can I pay with crypto?',
-    a: 'The site can be configured to support a crypto checkout option through a third-party provider.',
+    q: 'How long does order processing take?',
+    a: 'Orders are generally processed within 1 to 3 business days unless a different timeframe is posted on the site or shown during checkout review.',
   },
   {
-    q: 'How are products described?',
-    a: 'Product pages use neutral catalog language and should avoid claims about diagnosis, treatment, outcomes, or human use.',
+    q: 'Will I receive tracking information?',
+    a: 'If tracking is available for the shipment, shipping confirmation and tracking details may be sent by email once the order has been prepared for shipment.',
   },
   {
-    q: 'What notices should appear on product pages?',
-    a: 'Each product page should clearly display research-use-only language and avoid instructions or claims that imply personal use.',
+    q: 'Can I change my shipping address after ordering?',
+    a: 'Address changes may be requested before an order enters fulfillment. After processing or shipment preparation begins, address changes may no longer be possible.',
+  },
+  {
+    q: 'What if an order arrives damaged or incomplete?',
+    a: 'Customers should contact support within 48 hours of marked delivery and provide the order details and any requested photos so the issue can be reviewed.',
+  },
+  {
+    q: 'Are refunds or replacements available?',
+    a: 'Approved order issues may be resolved through a replacement, store credit, partial credit, refund, or another corrective option depending on the situation.',
+  },
+  {
+    q: 'Can the site support card or crypto payments?',
+    a: 'Yes. The checkout flow can support standard card payments and may also support a crypto option through a hosted third-party provider.',
+  },
+  {
+    q: 'How are products described on the site?',
+    a: 'Product pages use neutral catalog language, visible listing details, and research-use notices without implying personal use or treatment claims.',
   },
 ];
 
