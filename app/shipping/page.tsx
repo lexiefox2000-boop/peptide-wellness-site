@@ -7,63 +7,87 @@ export default function ShippingPage() {
           Shipping policy
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--muted)]">
-          This page outlines order processing, shipping timelines, delivery
-          expectations, and customer responsibilities related to shipping.
+          This page explains how order processing, shipping updates, delivery
+          timing, and shipping-related support are handled for submitted orders.
         </p>
 
         <div className="mt-10 space-y-6">
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Order processing</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Orders are typically processed within 1 to 3 business days unless
-              otherwise noted on the site or during periods of higher order
-              volume.
+              Orders are generally processed within 1 to 3 business days unless
+              a different timeframe is posted on the site, shown during
+              checkout, or affected by higher-than-normal order volume.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Shipping confirmation</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Customers will receive shipping confirmation and tracking details
-              by email once an order has been fulfilled and prepared for
-              shipment.
+              Once an order has been packed and prepared for shipment, a shipping
+              confirmation email may be sent with tracking information if
+              tracking is available for the selected shipment.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Delivery timing</h2>
+            <h2 className="text-xl font-semibold">Transit and delivery timing</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Delivery timelines may vary depending on destination, shipping
-              carrier, weather conditions, holidays, and overall carrier
-              performance.
+              Delivery timing can vary based on destination, carrier operations,
+              weekends, holidays, weather conditions, and other shipping network
+              delays outside normal processing control.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Customer responsibility</h2>
+            <h2 className="text-xl font-semibold">Address accuracy</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Customers are responsible for providing an accurate shipping
-              address and contact information at checkout. The business is not
-              responsible for delays or delivery issues caused by incorrect
-              shipping details submitted by the customer.
+              Customers are responsible for entering a complete and accurate
+              shipping address, email address, and contact information at
+              checkout. Delays, returned packages, or failed delivery attempts
+              caused by incorrect customer-submitted information may require
+              additional review before reshipment or replacement is considered.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Address changes</h2>
+            <h2 className="text-xl font-semibold">Address changes after ordering</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              If an order has not yet shipped, customers may contact support to
-              request an address correction. Once an order has been fulfilled or
-              shipped, address changes may no longer be possible.
+              If an order has not yet entered fulfillment, customers may contact
+              support to request a shipping-address correction. After an order
+              has been processed or shipped, address changes may not be possible.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Marked as delivered</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              If a package is marked as delivered by the carrier, any delivery
-              issues may need to be reviewed directly with the shipping carrier
-              and through support on a case-by-case basis.
+              If a package is marked as delivered by the shipping carrier but is
+              not immediately located, customers should first check around the
+              delivery location, confirm the address used at checkout, and
+              contact the carrier when appropriate. Support requests for
+              delivered-package issues may be reviewed on a case-by-case basis.
+            </p>
+          </div>
+
+          <div className="card rounded-[1.5rem] p-6">
+            <h2 className="text-xl font-semibold">Shipping delays</h2>
+            <p className="mt-3 text-sm text-[var(--muted)]">
+              Shipping dates and delivery estimates are provided as general
+              guidance and are not guaranteed unless explicitly stated
+              otherwise. Unexpected delays can occur during processing,
+              handoff, carrier transit, or final delivery.
+            </p>
+          </div>
+
+          <div className="card rounded-[1.5rem] p-6">
+            <h2 className="text-xl font-semibold">Support</h2>
+            <p className="mt-3 text-sm text-[var(--muted)]">
+              For shipping-related questions, customers should contact support
+              as soon as possible and include the order details needed for
+              review. The business may evaluate shipment issues, address errors,
+              and carrier-delivery concerns based on the available order and
+              tracking information.
             </p>
           </div>
         </div>
