@@ -45,8 +45,8 @@ export default function ShippingPage() {
               Customers are responsible for entering a complete and accurate
               shipping address, email address, and contact information at
               checkout. Delays, returned packages, or failed delivery attempts
-              caused by incorrect customer-submitted information may require
-              additional review before reshipment or replacement is considered.
+              caused by incorrect customer-submitted information may affect
+              reshipment or replacement options.
             </p>
           </div>
 
