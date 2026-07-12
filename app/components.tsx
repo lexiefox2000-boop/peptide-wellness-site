@@ -136,64 +136,102 @@ export function ProductGrid() {
   return (
     <section id="products" className="section">
       <div className="container">
-        <div className="flex items-end justify-between gap-6">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="eyebrow">Product listings</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
               Current catalog
             </h2>
+            <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
+              Browse current listings with visible pricing, dosage details, and
+              a more direct path into product pages and checkout review.
+            </p>
           </div>
+
           <Link
             href="/checkout"
-            className="hidden text-sm text-[var(--primary)] md:inline-flex md:items-center md:gap-2"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)]"
           >
             Review checkout <ArrowRight size={16} />
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
-            <div key={product.slug} className="card rounded-[1.75rem] p-5">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={500}
-                height={500}
-                className="h-52 w-full rounded-[1.25rem] bg-white object-cover"
-              />
+            <div
+              key={product.slug}
+              className="card flex h-full flex-col rounded-[1.75rem] p-5"
+            >
+              <Link
+                href={`/products/${product.slug}`}
+                className="block rounded-[1.5rem] bg-[var(--surface-soft)] p-4"
+              >
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={500}
+                  height={500}
+                  className="mx-auto h-52 w-auto object-contain"
+                />
+              </Link>
 
               <div className="mt-5 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-xl font-semibold">{product.name}</h3>
+                  <div className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+                    Product listing
+                  </div>
+                  <h3 className="mt-2 text-xl font-semibold">{product.name}</h3>
                   <p className="mt-2 text-sm text-[var(--muted)]">
                     {product.dosage}
                   </p>
                 </div>
-                <div className="text-sm font-medium">{product.price}</div>
+
+                <div className="rounded-full bg-[var(--accent)] px-3 py-2 text-sm font-medium text-[var(--primary)]">
+                  {product.price}
+                </div>
               </div>
 
-              <ul className="mt-5 space-y-2 text-sm text-[var(--muted)]">
-                {product.highlights.map((highlight) => (
-                  <li key={highlight} className="flex items-center gap-2">
+              <p className="mt-4 text-sm text-[var(--muted)]">
+                {product.description}
+              </p>
+
+              <div className="mt-5 space-y-2">
+                {product.highlights.slice(0, 2).map((highlight) => (
+                  <div
+                    key={highlight}
+                    className="flex items-start gap-2 text-sm text-[var(--muted)]"
+                  >
                     <CheckCircle2
                       size={16}
-                      className="text-[var(--primary)]"
+                      className="mt-0.5 text-[var(--primary)]"
                     />
                     <span>{highlight}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
-              <div className="mt-6 flex gap-3">
+              <div className="mt-6 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
+                  Visible pricing
+                </span>
+                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
+                  Detail page
+                </span>
+                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
+                  Checkout ready
+                </span>
+              </div>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <Link
                   href={`/products/${product.slug}`}
-                  className="flex-1 rounded-full border border-black/10 px-4 py-3 text-center text-sm font-medium"
+                  className="rounded-full border border-black/10 bg-white px-4 py-3 text-center text-sm font-medium"
                 >
                   View details
                 </Link>
                 <Link
                   href={`/checkout?product=${product.slug}`}
-                  className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
+                  className="rounded-full bg-[var(--primary)] px-4 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
                 >
                   Review product
                 </Link>
