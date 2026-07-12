@@ -6,16 +6,16 @@ export const products = [
     price: '$100',
     image: '/products/tirz10mg.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'Tirzepatide 10mg listing with a 10mg vial, product image, and visible price.',
+      'Tirzepatide in a 10mg vial with pricing and product details available before checkout.',
     details: [
       '10mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -25,16 +25,16 @@ export const products = [
     price: '$300',
     image: '/products/tirz40mg.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'Tirzepatide 40mg listing with a 40mg vial, product image, and visible price.',
+      'Tirzepatide in a 40mg vial with pricing and product details available before checkout.',
     details: [
       '40mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -44,16 +44,16 @@ export const products = [
     price: '$150',
     image: '/products/reta10mg.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'Retatrutide 10mg listing with a 10mg vial, product image, and visible price.',
+      'Retatrutide in a 10mg vial with pricing and product details available before checkout.',
     details: [
       '10mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -63,16 +63,16 @@ export const products = [
     price: '$450',
     image: '/products/reta40mg.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'Retatrutide 40mg listing with a 40mg vial, product image, and visible price.',
+      'Retatrutide in a 40mg vial with pricing and product details available before checkout.',
     details: [
       '40mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -82,16 +82,16 @@ export const products = [
     price: '$100',
     image: '/products/semorelin10mg.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'Sermorelin 10mg listing with a 10mg vial, product image, and visible price.',
+      'Sermorelin in a 10mg vial with pricing and product details available before checkout.',
     details: [
       '10mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -101,16 +101,16 @@ export const products = [
     price: '$100',
     image: '/products/ghkcu100mg.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'GHK-CU 100mg listing with a 100mg vial, product image, and visible price.',
+      'GHK-CU in a 100mg vial with pricing and product details available before checkout.',
     details: [
       '100mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -120,16 +120,16 @@ export const products = [
     price: '$40',
     image: '/products/NAD500MG.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'NAD+ 500mg listing with a 500mg vial, product image, and visible price.',
+      'NAD+ in a 500mg vial with pricing and product details available before checkout.',
     details: [
       '500mg vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
   {
@@ -139,16 +139,16 @@ export const products = [
     price: '$10',
     image: '/products/bacwater10ml.png',
     highlights: [
-      'Research use only',
-      'Not for human consumption',
-      'Visible pricing',
+      'For research use only',
+      'Not for human or veterinary use',
+      'Price shown before checkout',
     ],
     description:
-      'Bac Water 10ml listing with a 10ml vial, product image, and visible price.',
+      'Bac Water in a 10ml vial with pricing and product details available before checkout.',
     details: [
       '10ml vial',
-      'Product image shown',
-      'Pricing displayed clearly',
+      'Product image included',
+      'Pricing shown on the page',
     ],
   },
 ];
@@ -156,35 +156,35 @@ export const products = [
 export const faqs = [
   {
     q: 'Is pricing shown on the site?',
-    a: 'Yes. Each product listing shows its price directly on the catalog and product pages.',
+    a: 'Yes. Each product listing includes pricing on the catalog and product pages.',
   },
   {
     q: 'How long does order processing take?',
-    a: 'Orders are generally processed within 1 to 3 business days unless a different timeframe is posted on the site or shown during checkout.',
+    a: 'Orders are generally processed within 1 to 3 business days unless a different timeframe is shown during checkout or elsewhere on the site.',
   },
   {
     q: 'Will I receive tracking information?',
-    a: 'If tracking is available for the shipment, shipping confirmation and tracking details may be sent by email once the order is prepared for shipment.',
+    a: 'If tracking is available for the shipment, tracking details may be sent by email once the order has been prepared and shipped.',
   },
   {
     q: 'Can I change my shipping address after ordering?',
-    a: 'Address changes may be requested before an order enters fulfillment. After processing or shipment preparation begins, changes may no longer be possible.',
+    a: 'Address changes may be requested before an order enters fulfillment. Once processing or shipment preparation begins, changes may no longer be possible.',
   },
   {
     q: 'What if an order arrives damaged or incomplete?',
-    a: 'Customers should contact support within 48 hours of marked delivery and provide order details and any requested photos so the issue can be reviewed.',
+    a: 'Please contact support within 48 hours of delivery and include your order details along with any requested photos so the issue can be reviewed.',
   },
   {
     q: 'Are refunds or replacements available?',
-    a: 'Approved order issues may be resolved with a replacement, store credit, partial credit, refund, or another appropriate option depending on the situation.',
+    a: 'Approved order issues may be resolved with a replacement, store credit, partial credit, refund, or another appropriate solution depending on the situation.',
   },
   {
     q: 'Can the site support card or crypto payments?',
-    a: 'Yes. The checkout flow can support standard card payments and may also support a crypto option through a hosted third-party provider.',
+    a: 'Yes. Checkout may support standard card payments as well as a crypto payment option, depending on availability.',
   },
   {
     q: 'How are products described on the site?',
-    a: 'Product pages use neutral catalog language, visible listing details, and research-use notices without implying personal use or treatment claims.',
+    a: 'Product pages include basic listing details, pricing, and research-use notices so customers can review key information before checkout.',
   },
 ];
 
