@@ -36,12 +36,12 @@ export function Hero() {
         <div className="fade-up">
           <div className="eyebrow">Peptide Friend</div>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
-            Clear product listings, visible pricing, and a simpler catalog flow
+            Clear product listings with visible pricing and simple navigation
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
-            Browse product pages with more readable listing details, review
-            pricing upfront, and move from catalog to checkout through a cleaner
-            storefront structure.
+            Browse the catalog, review product details, and move through a
+            cleaner storefront experience with pricing, policy access, and
+            checkout pages that are easier to follow.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -63,19 +63,20 @@ export function Hero() {
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
               <div className="font-medium">Visible pricing</div>
               <p className="mt-2 text-[var(--muted)]">
-                Product prices are shown directly in the browsing flow.
+                Product prices are displayed directly in the browsing flow.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
               <div className="font-medium">Clear product pages</div>
               <p className="mt-2 text-[var(--muted)]">
-                Each listing links into a cleaner product-detail layout.
+                Each listing links to a cleaner product-detail page.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Checkout-ready path</div>
+              <div className="font-medium">Simple checkout flow</div>
               <p className="mt-2 text-[var(--muted)]">
-                Catalog, checkout, and policy pages are structured for review.
+                Catalog, checkout, and policy pages are connected in one easier
+                path.
               </p>
             </div>
           </div>
@@ -154,7 +155,7 @@ export function EducationSection() {
         <div>
           <div className="eyebrow">Catalog overview</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            A cleaner way to review listed products
+            A cleaner way to browse listed products
           </h2>
         </div>
 
@@ -165,9 +166,9 @@ export function EducationSection() {
             listing details across the storefront.
           </p>
           <p>
-            The goal is to make the browsing experience easier to scan while
-            keeping product detail pages, checkout flow, and policy access more
-            connected.
+            The site is designed to make browsing easier to scan while keeping
+            product pages, checkout flow, and policy access connected in a more
+            organized way.
           </p>
         </div>
       </div>
@@ -187,7 +188,7 @@ export function ProductGrid() {
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
               Browse current listings with visible pricing, dosage details, and
-              a more direct path into product pages and checkout review.
+              a direct path into product pages and checkout.
             </p>
           </div>
 
@@ -195,7 +196,7 @@ export function ProductGrid() {
             href="/checkout"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)]"
           >
-            Review checkout <ArrowRight size={16} />
+            Go to checkout <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -261,7 +262,7 @@ export function ProductGrid() {
                   Detail page
                 </span>
                 <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  Checkout ready
+                  Easy checkout
                 </span>
               </div>
 
@@ -298,8 +299,8 @@ export function HowItWorks() {
       "Use the product page to review the listing image, dosage, highlights, and reference notes in a clearer layout.",
     ],
     [
-      "Review checkout",
-      "Move into the checkout flow once the product, notices, and policy structure are ready for final review.",
+      "Checkout",
+      "Move from the selected product into a simpler checkout path with connected policy access.",
     ],
   ];
 
@@ -336,12 +337,12 @@ export function BenefitsTrust() {
       "Product name, dosage, image, and supporting details are grouped in a more consistent format.",
     ],
     [
-      "Checkout-ready structure",
-      "The site can support a clearer checkout review flow once payment setup and final messaging are confirmed.",
+      "Simple checkout flow",
+      "The site supports a cleaner checkout path with connected order summary and policy access.",
     ],
     [
       "Policy access",
-      "Shipping, refund, privacy, and terms pages are available through the site structure for easier review.",
+      "Shipping, refund, privacy, and terms pages are available through the site structure for easier reference.",
     ],
   ];
 
@@ -357,23 +358,22 @@ export function BenefitsTrust() {
           <div className="mt-8 space-y-4 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-3">
               <Shield size={18} className="text-[var(--primary)]" />
-              Product pages can present listing details and notices in a simpler
+              Product pages present listing details and notices in a simpler
               format.
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
-              Catalog and checkout structure can be reviewed step by step before
-              launch.
+              Shipping details and policy pages are easier to access from the
+              storefront flow.
             </div>
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
-              Card and crypto payment options can be connected later through a
-              hosted provider.
+              Checkout supports a clearer order summary and payment-path layout.
             </div>
             <div className="flex items-center gap-3">
               <WalletCards size={18} className="text-[var(--primary)]" />
               The site supports a direct route from catalog to product page to
-              checkout review.
+              checkout.
             </div>
           </div>
         </div>
@@ -397,18 +397,18 @@ export function TestimonialsFaqCrypto() {
       <div className="container grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
         <div className="space-y-6">
           <div>
-            <div className="eyebrow">Site notes</div>
+            <div className="eyebrow">Common questions</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-              Questions visitors may have before checkout review
+              Helpful information before checkout
             </h2>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h3 className="text-xl font-semibold">Before launch</h3>
+            <h3 className="text-xl font-semibold">Clear store information</h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Product pages, checkout flow, policy pages, payment handling, and
-              final customer-facing notices should all be reviewed together so
-              the live storefront matches the intended workflow.
+              Product pages, shipping details, refund terms, privacy terms, and
+              checkout information are all available through the site so visitors
+              can review key details in one place.
             </p>
           </div>
         </div>
@@ -432,19 +432,20 @@ export function TestimonialsFaqCrypto() {
           </div>
 
           <div className="card rounded-[1.5rem] bg-[var(--surface-tint)] p-6">
-            <div className="eyebrow">Crypto checkout</div>
+            <div className="eyebrow">Payment options</div>
             <h3 className="mt-3 text-2xl font-semibold">
-              Optional payment path for a later phase
+              Standard checkout with optional alternate payment support
             </h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              A hosted provider can be added later if the project needs a crypto
-              checkout option alongside standard payment methods.
+              The checkout flow is structured to support a standard payment path
+              and can also include an alternate hosted payment option where
+              needed.
             </p>
             <Link
               href="/checkout"
               className="mt-5 inline-flex rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-[var(--primary-foreground)]"
             >
-              Review checkout flow
+              Go to checkout
             </Link>
           </div>
         </div>
@@ -460,13 +461,12 @@ export function FinalCta() {
         <div className="card rounded-[2rem] bg-[linear-gradient(135deg,#ffffff,#edf7fc)] p-8 md:p-12">
           <div className="eyebrow">Catalog review</div>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
-            Review the catalog, product pages, and checkout structure in one
-            cleaner flow
+            Browse the catalog, review product pages, and continue to checkout
           </h2>
           <p className="mt-4 max-w-2xl text-[var(--muted)]">
-            Browse listings, open product detail pages, check policy access, and
-            confirm the storefront language before enabling final payment
-            options.
+            Explore listings, open product detail pages, and move through the
+            storefront with visible pricing, policy access, and a simpler
+            checkout path.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -479,7 +479,7 @@ export function FinalCta() {
               href="/checkout"
               className="rounded-full border border-black/10 bg-white px-6 py-3 text-center text-sm font-medium"
             >
-              Review checkout
+              Go to checkout
             </Link>
           </div>
         </div>
