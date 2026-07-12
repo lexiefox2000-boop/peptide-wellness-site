@@ -32,16 +32,18 @@ export function Hero() {
 
   return (
     <section className="section">
-      <div className="container grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
+      <div className="container grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
         <div className="fade-up">
           <div className="eyebrow">Peptide Friend</div>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
-            Product catalog with clear listings and visible pricing
+            Clear product listings, visible pricing, and a simpler catalog flow
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
-            Browse listed products, review vial size and pricing, and move
-            through a cleaner catalog experience with a simpler page structure.
+            Browse product pages with more readable listing details, review
+            pricing upfront, and move from catalog to checkout through a cleaner
+            storefront structure.
           </p>
+
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="#products"
@@ -53,18 +55,40 @@ export function Hero() {
               href="/information"
               className="rounded-full border border-black/10 bg-white px-6 py-3 text-center text-sm font-medium"
             >
-              View information page
+              View information
             </Link>
           </div>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-[1.25rem] bg-white p-4 text-sm">
+              <div className="font-medium">Visible pricing</div>
+              <p className="mt-2 text-[var(--muted)]">
+                Product prices are shown directly in the browsing flow.
+              </p>
+            </div>
+            <div className="rounded-[1.25rem] bg-white p-4 text-sm">
+              <div className="font-medium">Clear product pages</div>
+              <p className="mt-2 text-[var(--muted)]">
+                Each listing links into a cleaner product-detail layout.
+              </p>
+            </div>
+            <div className="rounded-[1.25rem] bg-white p-4 text-sm">
+              <div className="font-medium">Checkout-ready path</div>
+              <p className="mt-2 text-[var(--muted)]">
+                Catalog, checkout, and policy pages are structured for review.
+              </p>
+            </div>
+          </div>
+
           <div className="mt-8 flex flex-wrap gap-4 text-sm text-[var(--muted)]">
-            <span className="rounded-full bg-white px-4 py-2">
-              Visible pricing
-            </span>
             <span className="rounded-full bg-white px-4 py-2">
               Product listings
             </span>
             <span className="rounded-full bg-white px-4 py-2">
-              Cleaner presentation
+              Detail pages
+            </span>
+            <span className="rounded-full bg-white px-4 py-2">
+              Policy access
             </span>
           </div>
         </div>
@@ -75,6 +99,7 @@ export function Hero() {
               <span>Featured listing</span>
               <span>{featured.price}</span>
             </div>
+
             <div className="mt-5 rounded-[1.5rem] bg-white p-6">
               <Image
                 src={featured.image}
@@ -90,13 +115,29 @@ export function Hero() {
               <p className="mt-3 text-sm text-[var(--muted)]">
                 {featured.description}
               </p>
+
               <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
                 <span className="rounded-full bg-[var(--accent)] px-3 py-2 text-[var(--primary)]">
                   Price shown upfront
                 </span>
                 <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  Reference details included
+                  Product detail page available
                 </span>
+              </div>
+
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href={`/products/${featured.slug}`}
+                  className="rounded-full border border-black/10 px-5 py-3 text-center text-sm font-medium"
+                >
+                  View details
+                </Link>
+                <Link
+                  href={`/checkout?product=${featured.slug}`}
+                  className="rounded-full bg-[var(--primary)] px-5 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
+                >
+                  Review product
+                </Link>
               </div>
             </div>
           </div>
@@ -116,15 +157,17 @@ export function EducationSection() {
             A cleaner way to review listed products
           </h2>
         </div>
+
         <div className="space-y-4 text-[var(--muted)]">
           <p>
             Peptide Friend is structured as a simple product catalog with
-            visible pricing, product images, and basic listing details presented
-            in a more readable format.
+            visible pricing, clearer product imagery, and more consistent
+            listing details across the storefront.
           </p>
           <p>
-            Product pages are designed to keep information clearer, reduce
-            clutter, and present listing details in a more consistent way.
+            The goal is to make the browsing experience easier to scan while
+            keeping product detail pages, checkout flow, and policy access more
+            connected.
           </p>
         </div>
       </div>
@@ -248,15 +291,15 @@ export function HowItWorks() {
   const steps = [
     [
       "Browse",
-      "Review the listed products, vial sizes, and displayed prices in the catalog.",
+      "Review listed products, visible prices, and core details directly from the catalog.",
     ],
     [
       "Open details",
-      "Check the individual product page for the listing image, name, and additional reference details.",
+      "Use the product page to review the listing image, dosage, highlights, and reference notes in a clearer layout.",
     ],
     [
-      "Review",
-      "Move to checkout only after the catalog language, notices, and payment flow are ready for launch.",
+      "Review checkout",
+      "Move into the checkout flow once the product, notices, and policy structure are ready for final review.",
     ],
   ];
 
@@ -267,6 +310,7 @@ export function HowItWorks() {
         <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
           Simple browsing from listing to checkout
         </h2>
+
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {steps.map(([title, copy], index) => (
             <div key={title} className="card rounded-[1.5rem] p-6">
@@ -285,19 +329,19 @@ export function BenefitsTrust() {
   const items = [
     [
       "Visible pricing",
-      "Each listing shows its displayed price directly on the catalog page.",
+      "Each listing shows its displayed price directly on the catalog page for faster scanning.",
     ],
     [
       "Clear listing structure",
-      "Product name, vial size, image, and reference details are grouped in a simpler layout.",
+      "Product name, dosage, image, and supporting details are grouped in a more consistent format.",
     ],
     [
       "Checkout-ready structure",
-      "The site can support a checkout layout once payment setup and review language are finalized.",
+      "The site can support a clearer checkout review flow once payment setup and final messaging are confirmed.",
     ],
     [
-      "Cleaner presentation",
-      "The storefront is designed to feel more organized, readable, and easier to scan.",
+      "Policy access",
+      "Shipping, refund, privacy, and terms pages are available through the site structure for easier review.",
     ],
   ];
 
@@ -307,14 +351,14 @@ export function BenefitsTrust() {
         <div>
           <div className="eyebrow">Storefront structure</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Built around readability, organization, and simpler product review
+            Built around readability, organization, and easier review
           </h2>
 
           <div className="mt-8 space-y-4 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-3">
               <Shield size={18} className="text-[var(--primary)]" />
-              Product pages can keep notices and listing details visible in a
-              simpler format.
+              Product pages can present listing details and notices in a simpler
+              format.
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
@@ -324,12 +368,12 @@ export function BenefitsTrust() {
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
               Card and crypto payment options can be connected later through a
-              third-party provider.
+              hosted provider.
             </div>
             <div className="flex items-center gap-3">
               <WalletCards size={18} className="text-[var(--primary)]" />
-              The current layout supports a direct path from listing to product
-              page to checkout review.
+              The site supports a direct route from catalog to product page to
+              checkout review.
             </div>
           </div>
         </div>
@@ -355,16 +399,16 @@ export function TestimonialsFaqCrypto() {
           <div>
             <div className="eyebrow">Site notes</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-              Common questions about the current setup
+              Questions visitors may have before checkout review
             </h2>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h3 className="text-xl font-semibold">Important</h3>
+            <h3 className="text-xl font-semibold">Before launch</h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Product pages should be reviewed carefully before launch so the
-              final site language, notices, and payment flow all match the
-              intended project setup.
+              Product pages, checkout flow, policy pages, payment handling, and
+              final customer-facing notices should all be reviewed together so
+              the live storefront matches the intended workflow.
             </p>
           </div>
         </div>
@@ -394,7 +438,7 @@ export function TestimonialsFaqCrypto() {
             </h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
               A hosted provider can be added later if the project needs a crypto
-              checkout option in addition to standard payment methods.
+              checkout option alongside standard payment methods.
             </p>
             <Link
               href="/checkout"
@@ -416,11 +460,13 @@ export function FinalCta() {
         <div className="card rounded-[2rem] bg-[linear-gradient(135deg,#ffffff,#edf7fc)] p-8 md:p-12">
           <div className="eyebrow">Catalog review</div>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
-            Review the current catalog, product pages, and checkout structure
+            Review the catalog, product pages, and checkout structure in one
+            cleaner flow
           </h2>
           <p className="mt-4 max-w-2xl text-[var(--muted)]">
-            Browse the listings, open product detail pages, and confirm the
-            catalog language before turning on final payment options.
+            Browse listings, open product detail pages, check policy access, and
+            confirm the storefront language before enabling final payment
+            options.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
