@@ -29,9 +29,9 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
     <div className="section">
       <div className="container grid gap-8 lg:grid-cols-[1fr_.9fr]">
         <div className="card rounded-[2rem] p-6 md:p-8">
-          <div className="eyebrow">Checkout</div>
+          <div className="eyebrow">Checkout review</div>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Fast, transparent, guest-friendly checkout
+            Simple checkout layout for catalog review
           </h1>
 
           <div className="mt-6 rounded-[1.5rem] border border-black/5 bg-[var(--surface-soft)] p-4 text-sm">
@@ -57,6 +57,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 placeholder="Ariana"
               />
             </label>
+
             <label className="text-sm">
               Last name
               <input
@@ -64,6 +65,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 placeholder="Lopez"
               />
             </label>
+
             <label className="text-sm md:col-span-2">
               Email
               <input
@@ -71,11 +73,12 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 placeholder="you@example.com"
               />
             </label>
+
             <label className="text-sm md:col-span-2">
               Shipping address
               <input
                 className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                placeholder="123 Wellness Ave"
+                placeholder="123 Example Street"
               />
             </label>
           </div>
@@ -84,28 +87,32 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             <div className="text-sm font-medium">Payment options</div>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <button className="rounded-2xl border border-[var(--primary)] bg-[var(--surface-tint)] px-4 py-4 text-left text-sm">
-                Card via Stripe
+                Card payment option
                 <br />
                 <span className="text-[var(--muted)]">
-                  Use Stripe Checkout or Payment Links for the fastest setup.
+                  A hosted card checkout can be connected for a simpler payment
+                  flow.
                 </span>
               </button>
+
               <button className="rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm">
-                Crypto via Coinbase Commerce
+                Crypto payment option
                 <br />
                 <span className="text-[var(--muted)]">
-                  Redirect to hosted crypto checkout with wallet support.
+                  A hosted crypto checkout can be added as an optional payment
+                  path.
                 </span>
               </button>
             </div>
           </div>
 
           <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-soft)] p-5 text-sm text-[var(--muted)]">
-            Clear order review before payment, with a fast guest-friendly flow.
+            Review the selected product, pricing, and payment options before any
+            final payment setup is enabled.
           </div>
 
           <button className="mt-8 w-full rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)]">
-            Continue to Payment
+            Review payment options
           </button>
         </div>
 
@@ -115,22 +122,27 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
               <span className="font-medium">{selectedProduct.name}</span>
               <span>{formatPrice(subtotal)}</span>
             </div>
+
             <div className="mt-4 text-sm text-[var(--muted)]">
-              {selectedProduct.dosage} · One-time purchase
+              {selectedProduct.dosage}
             </div>
+
             <div className="mt-6 space-y-3 text-sm">
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Subtotal</span>
                 <span>{formatPrice(subtotal)}</span>
               </div>
+
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Shipping</span>
                 <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
               </div>
+
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Estimated tax</span>
                 <span>{formatPrice(tax)}</span>
               </div>
+
               <div className="flex justify-between border-t border-black/5 pt-3 font-medium">
                 <span>Total</span>
                 <span>{formatPrice(total)}</span>
@@ -139,14 +151,13 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
           </div>
 
           <div className="card rounded-[1.5rem] p-6 text-sm text-[var(--muted)]">
-            Checkout integration notes: store order records in Supabase, route
-            card payments through Stripe, and keep crypto as a clean alternative
-            rather than a disruptive upsell.
+            This page is presented as a checkout layout example for catalog
+            review, pricing display, and payment-flow planning.
           </div>
 
           <div className="card rounded-[1.5rem] p-6 text-sm text-[var(--muted)]">
-            Compliance note: include final order disclaimers, fulfillment
-            timing, and product handling details directly above the pay action.
+            Final notices, payment setup, fulfillment details, and reviewed
+            compliance language should be confirmed before launch.
           </div>
         </aside>
       </div>
