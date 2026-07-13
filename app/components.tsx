@@ -60,20 +60,20 @@ export function Hero() {
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
               <div className="font-medium">Current lineup</div>
               <p className="mt-2 text-[var(--muted)]">
-                Browse the catalog in one place.
+                Browse the full catalog in one place.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Visible pricing</div>
+              <div className="font-medium">Prices up front</div>
               <p className="mt-2 text-[var(--muted)]">
                 Review listed prices before checkout.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Product pages</div>
+              <div className="font-medium">Pepe keeps it tidy</div>
               <p className="mt-2 text-[var(--muted)]">
-                View vial size, price, and product details near the top of each
-                listing.
+                Size, price, and listing details are easy to spot on each
+                product page.
               </p>
             </div>
           </div>
@@ -86,11 +86,11 @@ export function Hero() {
                 Peptide Friend
               </div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Peptides, clearly listed.
+                Cute mascot, serious catalog.
               </h2>
               <p className="mt-3 text-sm text-[var(--muted)]">
-                Current listings with product pages, vial sizes, and visible
-                pricing.
+                Pepe keeps the lineup friendly while product pages stay clear,
+                calm, and easy to browse.
               </p>
             </div>
 
@@ -143,18 +143,19 @@ export function EducationSection() {
         <div>
           <div className="eyebrow">About Peptide Friend</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            A peptide catalog with listed products and visible pricing
+            A friendly peptide catalog with prices shown
           </h2>
         </div>
 
         <div className="space-y-4 text-[var(--muted)]">
           <p>
-            Peptide Friend presents the current lineup with individual product
-            pages, listed vial sizes, and pricing shown on each listing.
+            Peptide Friend brings the current lineup together with individual
+            product pages, listed vial sizes, and pricing shown on each
+            listing.
           </p>
           <p>
-            Store policies, FAQ content, and contact information remain easy to
-            reach while browsing.
+            Pepe adds personality to the brand, while product details, store
+            policies, FAQ content, and contact information stay straightforward.
           </p>
         </div>
       </div>
@@ -170,7 +171,7 @@ export function ProductGrid() {
           <div>
             <div className="eyebrow">Products</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-              Shop the current lineup
+              The current lineup
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
               Browse current listings with product names, vial sizes, pricing,
@@ -284,7 +285,7 @@ export function HowItWorks() {
       <div className="container">
         <div className="eyebrow">How ordering works</div>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-          Three straightforward steps
+          Three simple steps
         </h2>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -308,15 +309,15 @@ export function BenefitsTrust() {
       "Each listing includes the product name, vial size, and price.",
     ],
     [
-      "Pricing shown",
-      "Customers can review listed pricing before checkout.",
+      "Prices shown",
+      "Review listed pricing before moving to checkout.",
     ],
     [
       "Direct product pages",
       "Each product page keeps the selected item, size, and price easy to review.",
     ],
     [
-      "Store policies available",
+      "Store policies",
       "Shipping, refund, privacy, and terms pages remain easy to access.",
     ],
   ];
@@ -325,9 +326,9 @@ export function BenefitsTrust() {
     <section className="section">
       <div className="container grid gap-8 lg:grid-cols-[1fr_1.1fr]">
         <div>
-          <div className="eyebrow">Why customers choose Peptide Friend</div>
+          <div className="eyebrow">Why people like Peptide Friend</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Clear listings, visible pricing, and key information kept close
+            Clear listings, prices up front, and a little Pepe personality
           </h2>
 
           <div className="mt-8 space-y-4 text-sm text-[var(--muted)]">
@@ -337,8 +338,7 @@ export function BenefitsTrust() {
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
-              Shipping and store policy information remains available while
-              browsing.
+              Shipping and store policy information stay close while browsing.
             </div>
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
@@ -346,7 +346,7 @@ export function BenefitsTrust() {
             </div>
             <div className="flex items-center gap-3">
               <WalletCards size={18} className="text-[var(--primary)]" />
-              Hosted payment options can be connected to checkout.
+              Checkout options can be added here when the store is ready.
             </div>
           </div>
         </div>
@@ -372,16 +372,16 @@ export function TestimonialsFaqCrypto() {
           <div>
             <div className="eyebrow">Questions before ordering</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-              Review product and store details before checkout
+              Product details and store information in one place
             </h2>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h3 className="text-xl font-semibold">Store information in one place</h3>
+            <h3 className="text-xl font-semibold">Pepe keeps things easy to find</h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
               Product pages, shipping information, refund terms, privacy
-              details, and checkout information remain available throughout the
-              site.
+              details, and checkout information stay available throughout the
+              store.
             </p>
           </div>
         </div>
@@ -407,11 +407,11 @@ export function TestimonialsFaqCrypto() {
           <div className="card rounded-[1.5rem] bg-[var(--surface-tint)] p-6">
             <div className="eyebrow">Payment options</div>
             <h3 className="mt-3 text-2xl font-semibold">
-              Hosted payment options can be connected at checkout
+              Checkout options can be added here
             </h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Card and alternate payment links can be connected to the selected
-              product at checkout.
+              Card or alternate payment methods can be added to checkout when
+              the store is ready.
             </p>
             <Link
               href="/checkout"
@@ -433,11 +433,11 @@ export function FinalCta() {
         <div className="card rounded-[2rem] bg-[linear-gradient(135deg,#ffffff,#edf7fc)] p-8 md:p-12">
           <div className="eyebrow">Peptide Friend</div>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
-            View the lineup and continue to checkout
+            Browse the lineup and say hi to Pepe
           </h2>
           <p className="mt-4 max-w-2xl text-[var(--muted)]">
-            Browse current product listings, open individual product pages, and
-            review key details before checkout.
+            Review current listings, open product pages, and check the details
+            before checkout.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
