@@ -6,7 +6,7 @@ import { ShieldCheck, Wallet, Menu } from "lucide-react";
 export const metadata: Metadata = {
   title: "Peptide Friend",
   description:
-    "Product catalog with clear listings, visible pricing, and a cleaner ecommerce layout.",
+    "Peptide catalog with listed products, visible pricing, and store information available before checkout.",
 };
 
 function Logo() {
@@ -21,7 +21,7 @@ function Logo() {
         <div className="text-lg font-semibold tracking-tight">
           Peptide Friend
         </div>
-        <div className="text-xs text-[var(--muted)]">Product catalog</div>
+        <div className="text-xs text-[var(--muted)]">Peptides, clearly listed.</div>
       </div>
     </div>
   );
@@ -41,7 +41,7 @@ export default function RootLayout({
 
         <header className="sticky top-0 z-50 border-b border-black/5 bg-[rgba(251,250,247,.82)] backdrop-blur-xl">
           <div className="container flex items-center justify-between py-4">
-            <Link href="/">
+            <Link href="/" aria-label="Peptide Friend home">
               <Logo />
             </Link>
 
@@ -72,14 +72,14 @@ export default function RootLayout({
             <div className="container flex flex-wrap items-center gap-4 py-2 text-xs text-[var(--muted)]">
               <div className="flex items-center gap-2">
                 <ShieldCheck size={14} />
-                Clear product pricing
+                Pricing shown on product listings
               </div>
               <div className="flex items-center gap-2">
                 <Wallet size={14} />
-                Optional alternate payment support
+                Hosted payment options available
               </div>
-              <div>Easy product navigation</div>
-              <div>Store information always within reach</div>
+              <div>Product pages with listed size and price</div>
+              <div>Store policies available before checkout</div>
             </div>
           </div>
         </header>
@@ -91,9 +91,11 @@ export default function RootLayout({
             <div className="md:col-span-2">
               <Logo />
               <p className="mt-4 max-w-xl text-sm text-[var(--muted)]">
-                Peptide Friend is designed to make it easier to browse products,
-                review pricing, access store information, and move through
-                checkout with less friction.
+                Peptide Friend presents listed products, visible pricing, and
+                store information in one place before checkout.
+              </p>
+              <p className="mt-3 max-w-xl text-sm text-[var(--muted)]">
+                For research use only. Not for human or veterinary use.
               </p>
             </div>
 
@@ -124,11 +126,10 @@ export default function RootLayout({
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold">Storefront</h3>
+              <h3 className="text-sm font-semibold">Peptide Friend</h3>
               <p className="mt-4 text-sm text-[var(--muted)]">
-                Browse products, review item details, access store policies, and
-                continue through checkout in a simpler, more organized
-                experience.
+                Shop current listings, review product details, and view pricing
+                before continuing to checkout.
               </p>
             </div>
           </div>
