@@ -85,17 +85,7 @@ export function Hero() {
 
         <div className="card rounded-[2rem] p-6 md:p-8">
           <div className="rounded-[1.75rem] bg-[linear-gradient(135deg,#f8fcff,#edf7fc)] p-6 md:p-8">
-            <div className="flex justify-center">
-              <Image
-                src="/peptidefriendlogo.png"
-                alt="Peptide Friend logo"
-                width={220}
-                height={70}
-                className="h-auto w-auto max-w-[220px]"
-              />
-            </div>
-
-            <div className="mt-6 text-center">
+            <div className="text-center">
               <div className="text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
                 Peptide Friend
               </div>
@@ -472,3 +462,4 @@ export function FinalCta() {
     </section>
   );
 }
+</query>
