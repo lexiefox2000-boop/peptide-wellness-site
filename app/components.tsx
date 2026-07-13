@@ -77,10 +77,6 @@ export function Hero() {
               </p>
             </div>
           </div>
-
-          <p className="mt-6 text-sm text-[var(--muted)]">
-            For research use only. Not for human or veterinary use.
-          </p>
         </div>
 
         <div className="card rounded-[2rem] p-6 md:p-8">
@@ -462,3 +458,4 @@ export function FinalCta() {
     </section>
   );
 }
+</query>
