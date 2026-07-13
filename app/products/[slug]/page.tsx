@@ -111,30 +111,54 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="card rounded-[1.5rem] p-6">
                 <h2 className="font-semibold">Product details</h2>
                 <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
-                  {product.details.map((detail) => (
-                    <li key={detail} className="flex items-start gap-2">
-                      <CheckCircle2
-                        size={16}
-                        className="mt-0.5 text-[var(--primary)]"
-                      />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 text-[var(--primary)]"
+                    />
+                    <span>{product.dosage}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 text-[var(--primary)]"
+                    />
+                    <span>Price shown on product page</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 text-[var(--primary)]"
+                    />
+                    <span>Listed before checkout</span>
+                  </li>
                 </ul>
               </div>
 
               <div className="card rounded-[1.5rem] p-6">
-                <h2 className="font-semibold">Listing information</h2>
+                <h2 className="font-semibold">Order notes</h2>
                 <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-2">
-                      <CheckCircle2
-                        size={16}
-                        className="mt-0.5 text-[var(--primary)]"
-                      />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 text-[var(--primary)]"
+                    />
+                    <span>Included in the current catalog</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 text-[var(--primary)]"
+                    />
+                    <span>Continue to checkout from this page</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 text-[var(--primary)]"
+                    />
+                    <span>Research-use notice shown on listing</span>
+                  </li>
                 </ul>
               </div>
             </div>
