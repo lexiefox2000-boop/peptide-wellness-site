@@ -6,7 +6,7 @@ import { ShieldCheck, Wallet, Menu } from "lucide-react";
 export const metadata: Metadata = {
   title: "Peptide Friend",
   description:
-    "Peptide catalog with listed products, visible pricing, and store information available before checkout.",
+    "Peptide catalog with listed products, pricing, and store information.",
 };
 
 function Logo() {
@@ -21,7 +21,9 @@ function Logo() {
         <div className="text-lg font-semibold tracking-tight">
           Peptide Friend
         </div>
-        <div className="text-xs text-[var(--muted)]">Peptides, clearly listed.</div>
+        <div className="text-xs text-[var(--muted)]">
+          Peptides, clearly listed.
+        </div>
       </div>
     </div>
   );
@@ -76,10 +78,10 @@ export default function RootLayout({
               </div>
               <div className="flex items-center gap-2">
                 <Wallet size={14} />
-                Hosted payment options available
+                Checkout options shown at checkout
               </div>
-              <div>Product pages with listed size and price</div>
-              <div>Store policies available before checkout</div>
+              <div>Product pages show size and price</div>
+              <div>Shipping, refunds, privacy, and terms available</div>
             </div>
           </div>
         </header>
@@ -91,8 +93,8 @@ export default function RootLayout({
             <div className="md:col-span-2">
               <Logo />
               <p className="mt-4 max-w-xl text-sm text-[var(--muted)]">
-                Peptide Friend presents listed products, visible pricing, and
-                store information in one place before checkout.
+                Peptide Friend lists products, prices, and store information in
+                one place.
               </p>
               <p className="mt-3 max-w-xl text-sm text-[var(--muted)]">
                 For research use only. Not for human or veterinary use.
@@ -129,7 +131,7 @@ export default function RootLayout({
               <h3 className="text-sm font-semibold">Peptide Friend</h3>
               <p className="mt-4 text-sm text-[var(--muted)]">
                 Shop current listings, review product details, and view pricing
-                before continuing to checkout.
+                before checkout.
               </p>
             </div>
           </div>
