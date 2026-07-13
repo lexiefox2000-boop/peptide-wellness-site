@@ -31,27 +31,30 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
         <div className="card rounded-[2rem] p-6 md:p-8">
           <div className="eyebrow">Checkout</div>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Review your order and choose a payment path
+            Review your order details
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-[var(--muted)]">
-            Confirm the selected product, shipping details, and preferred payment
-            option before completing the order review.
+            Confirm the selected product, contact information, shipping details,
+            and payment option before completing checkout.
           </p>
 
           <div className="mt-6 rounded-[1.5rem] border border-black/5 bg-[var(--surface-soft)] p-4 text-sm">
             <div className="font-medium">Selected product</div>
-            <div className="mt-1 text-[var(--muted)]">
+            <div className="mt-2 text-[var(--muted)]">
               {selectedProduct.name} · {selectedProduct.dosage}
+            </div>
+            <div className="mt-3 text-base font-semibold">
+              {selectedProduct.price}
             </div>
             <div className="mt-3 flex flex-wrap gap-3">
               <Link
                 href={`/products/${selectedProduct.slug}`}
                 className="text-sm font-medium text-[var(--primary)]"
               >
-                Review product details
+                Review product page
               </Link>
               <Link
-                href="/"
+                href="/#products"
                 className="text-sm font-medium text-[var(--muted)]"
               >
                 Continue browsing
@@ -144,7 +147,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-5">
             <h2 className="text-lg font-semibold">Payment options</h2>
             <p className="mt-2 text-sm text-[var(--muted)]">
-              Select the preferred path for checkout completion.
+              Choose the preferred payment option for this order.
             </p>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
@@ -152,8 +155,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 Card checkout
                 <br />
                 <span className="text-[var(--muted)]">
-                  Connect a hosted card processor for a familiar customer payment
-                  flow.
+                  Continue through a hosted card payment page for this order.
                 </span>
               </button>
 
@@ -161,8 +163,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 Crypto checkout
                 <br />
                 <span className="text-[var(--muted)]">
-                  Offer an alternate hosted crypto option for customers who
-                  prefer that payment method.
+                  Continue through an alternate hosted payment option.
                 </span>
               </button>
             </div>
@@ -172,6 +173,10 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             By continuing, the customer confirms the entered contact details,
             shipping information, and selected order contents for final review.
           </div>
+
+          <p className="mt-5 text-sm text-[var(--muted)]">
+            For research use only. Not for human or veterinary use.
+          </p>
 
           <Link
             href={`/checkout/thank-you?product=${selectedProduct.slug}`}
@@ -224,8 +229,8 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             <div className="font-medium">Checkout notes</div>
             <div className="mt-3 space-y-2 text-[var(--muted)]">
               <p>Free shipping is automatically applied on orders over $300.</p>
-              <p>Tax is currently displayed as an estimated checkout value.</p>
-              <p>Hosted payment setup can be connected after layout approval.</p>
+              <p>Tax is displayed as an estimated checkout value.</p>
+              <p>The selected product and pricing remain visible during checkout.</p>
             </div>
           </div>
 
@@ -233,7 +238,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             <div className="font-medium">Policy access</div>
             <div className="mt-3 space-y-2 text-[var(--muted)]">
               <p>
-                Review shipping, refunds, privacy, and terms before launch.
+                Review shipping, refunds, privacy, and terms information before placing an order.
               </p>
               <div className="flex flex-wrap gap-3 pt-1">
                 <Link href="/shipping" className="text-[var(--primary)]">
