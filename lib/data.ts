@@ -10,13 +10,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "Tirzepatide listed in a 10mg vial with pricing and product details shown on the page.",
-    details: [
-      "10mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "Tirzepatide listed in a 10mg vial.",
+    details: ["10mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "tirzepatide-40mg",
@@ -29,13 +24,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "Tirzepatide listed in a 40mg vial with pricing and product details shown on the page.",
-    details: [
-      "40mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "Tirzepatide listed in a 40mg vial.",
+    details: ["40mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "retatrutide-10mg",
@@ -48,13 +38,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "Retatrutide listed in a 10mg vial with pricing and product details shown on the page.",
-    details: [
-      "10mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "Retatrutide listed in a 10mg vial.",
+    details: ["10mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "retatrutide-40mg",
@@ -67,13 +52,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "Retatrutide listed in a 40mg vial with pricing and product details shown on the page.",
-    details: [
-      "40mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "Retatrutide listed in a 40mg vial.",
+    details: ["40mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "sermorelin-10mg",
@@ -86,13 +66,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "Sermorelin listed in a 10mg vial with pricing and product details shown on the page.",
-    details: [
-      "10mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "Sermorelin listed in a 10mg vial.",
+    details: ["10mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "ghk-cu-100mg",
@@ -105,13 +80,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "GHK-CU listed in a 100mg vial with pricing and product details shown on the page.",
-    details: [
-      "100mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "GHK-CU listed in a 100mg vial.",
+    details: ["100mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "nad-500mg",
@@ -124,13 +94,8 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "NAD+ listed in a 500mg vial with pricing and product details shown on the page.",
-    details: [
-      "500mg vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "NAD+ listed in a 500mg vial.",
+    details: ["500mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
     slug: "bac-water-10ml",
@@ -143,20 +108,15 @@ export const products = [
       "Not for human or veterinary use",
       "Price shown before checkout",
     ],
-    description:
-      "Bac Water listed in a 10ml vial with pricing and product details shown on the page.",
-    details: [
-      "10ml vial",
-      "Pricing shown on the product page",
-      "Product listing available before checkout",
-    ],
+    description: "Bac Water listed in a 10ml vial.",
+    details: ["10ml vial", "Price shown on product page", "Listed before checkout"],
   },
 ];
 
 export const faqs = [
   {
     q: "Is pricing shown on the site?",
-    a: "Yes. Pricing is shown on product listings and on individual product pages.",
+    a: "Yes. Pricing is shown on product listings and individual product pages.",
   },
   {
     q: "How long does order processing take?",
@@ -180,11 +140,11 @@ export const faqs = [
   },
   {
     q: "Can checkout support card or crypto payments?",
-    a: "Yes. Hosted payment options may include standard card checkout as well as a crypto payment option, depending on availability.",
+    a: "Hosted payment options may include standard card checkout as well as a crypto payment option, depending on availability.",
   },
   {
     q: "How are products presented on the site?",
-    a: "Product pages include basic listing details, pricing, and research-use notices so key information can be reviewed before checkout.",
+    a: "Product pages include basic listing details, pricing, and research-use notices before checkout.",
   },
 ];
 
