@@ -6,12 +6,12 @@ export default function FaqPage() {
       <div className="container max-w-4xl">
         <div className="eyebrow">FAQ</div>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-          Common questions about the catalog
+          Frequently asked questions
         </h1>
 
         <p className="mt-6 text-lg text-[var(--muted)]">
-          This page answers common questions about product listings, pricing,
-          shipping information, checkout, and policy access.
+          Find answers to common questions about pricing, shipping, checkout,
+          product information, and store policies.
         </p>
 
         <div className="mt-10 space-y-4">
@@ -19,15 +19,11 @@ export default function FaqPage() {
             .concat([
               {
                 q: "Can I review pricing before checkout?",
-                a: "Yes. Product pricing is displayed directly within the catalog and remains visible as you move into product detail and checkout pages.",
+                a: "Yes. Product pricing is shown on the catalog and product pages before checkout.",
               },
               {
                 q: "Where can I find shipping and refund information?",
-                a: "Shipping, refunds, privacy, and terms are available through the site’s policy pages so key information is easy to access while browsing.",
-              },
-              {
-                q: "How is site content organized?",
-                a: "Product listings, FAQ entries, policy pages, and checkout content are structured to keep the storefront easier to scan and navigate.",
+                a: "Shipping, refund, privacy, and terms information is available through the site’s policy pages.",
               },
             ])
             .map((faq) => (
