@@ -28,17 +28,15 @@ export function Navbar() {
 }
 
 export function Hero() {
-  const featured = products[0];
-
   return (
     <section className="section">
-      <div className="container grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
-        <div className="fade-up">
+      <div className="container">
+        <div className="fade-up max-w-4xl">
           <div className="eyebrow">Peptide Friend</div>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
             Peptides, clearly listed.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
+          <p className="mt-6 max-w-3xl text-lg text-[var(--muted)]">
             Shop Tirzepatide, Retatrutide, Sermorelin, GHK-CU, NAD+, and Bac
             Water with pricing and product details shown before checkout.
           </p>
@@ -62,20 +60,19 @@ export function Hero() {
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
               <div className="font-medium">Current lineup</div>
               <p className="mt-2 text-[var(--muted)]">
-                View product listings for the current catalog in one place.
+                Browse the catalog in one place.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
               <div className="font-medium">Visible pricing</div>
               <p className="mt-2 text-[var(--muted)]">
-                Review listed prices before opening a product page or checkout.
+                Review listed prices before checkout.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Essential details</div>
+              <div className="font-medium">Product pages</div>
               <p className="mt-2 text-[var(--muted)]">
-                Product pages keep vial size, price, and listing details close
-                at hand.
+                View vial size, price, and product details near the top of each listing.
               </p>
             </div>
           </div>
@@ -99,60 +96,6 @@ export function Hero() {
             For research use only. Not for human or veterinary use.
           </p>
         </div>
-
-        <div className="gradient-ring card rounded-[2rem] p-6">
-          <div className="rounded-[1.5rem] bg-[var(--surface-soft)] p-5">
-            <div className="flex items-center justify-between text-sm text-[var(--muted)]">
-              <span>Featured product</span>
-              <span>{featured.price}</span>
-            </div>
-
-            <div className="mt-5 rounded-[1.5rem] bg-white p-6">
-              <Image
-                src={featured.image}
-                alt={featured.name}
-                width={500}
-                height={500}
-                className="h-64 w-full rounded-[1.25rem] bg-white object-cover"
-              />
-              <h2 className="mt-6 text-2xl font-semibold">{featured.name}</h2>
-              <p className="mt-2 text-sm text-[var(--muted)]">
-                {featured.dosage}
-              </p>
-              <p className="mt-3 text-sm text-[var(--muted)]">
-                {featured.description}
-              </p>
-
-              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
-                <span className="rounded-full bg-[var(--accent)] px-3 py-2 text-[var(--primary)]">
-                  {featured.price}
-                </span>
-                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  {featured.dosage}
-                </span>
-              </div>
-
-              <p className="mt-4 text-xs text-[var(--muted)]">
-                Research use only. Not for human or veterinary use.
-              </p>
-
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href={`/products/${featured.slug}`}
-                  className="rounded-full border border-black/10 px-5 py-3 text-center text-sm font-medium"
-                >
-                  View details
-                </Link>
-                <Link
-                  href={`/checkout?product=${featured.slug}`}
-                  className="rounded-full bg-[var(--primary)] px-5 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
-                >
-                  Continue to checkout
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -165,18 +108,18 @@ export function EducationSection() {
         <div>
           <div className="eyebrow">About Peptide Friend</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            A product catalog built around listed details and visible pricing
+            A peptide catalog with listed products and visible pricing
           </h2>
         </div>
 
         <div className="space-y-4 text-[var(--muted)]">
           <p>
-            Peptide Friend presents the current product lineup with individual
-            product pages, listed vial sizes, and pricing shown before checkout.
+            Peptide Friend presents the current lineup with individual product
+            pages, listed vial sizes, and pricing shown before checkout.
           </p>
           <p>
-            Store policies, FAQ content, and contact information stay close by
-            so customers can review the essentials while placing an order.
+            Store policies, FAQ content, and contact information remain easy to
+            reach while browsing.
           </p>
         </div>
       </div>
@@ -229,10 +172,7 @@ export function ProductGrid() {
 
               <div className="mt-5 flex items-start justify-between gap-4">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-                    Product
-                  </div>
-                  <h3 className="mt-2 text-xl font-semibold">{product.name}</h3>
+                  <h3 className="text-xl font-semibold">{product.name}</h3>
                   <p className="mt-2 text-sm text-[var(--muted)]">
                     {product.dosage}
                   </p>
@@ -260,18 +200,6 @@ export function ProductGrid() {
                     <span>{highlight}</span>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
-                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  {product.dosage}
-                </span>
-                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  Price shown
-                </span>
-                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  Product details
-                </span>
               </div>
 
               <p className="mt-4 text-xs text-[var(--muted)]">
@@ -303,7 +231,7 @@ export function ProductGrid() {
 export function HowItWorks() {
   const steps = [
     [
-      "Browse the lineup",
+      "Browse products",
       "Start with the product grid to compare current listings, vial sizes, and pricing.",
     ],
     [
@@ -341,20 +269,20 @@ export function HowItWorks() {
 export function BenefitsTrust() {
   const items = [
     [
-      "Listed details at a glance",
-      "Each listing includes the product name, vial size, price, and a direct path to the full product page.",
+      "Listed products",
+      "Each listing includes the product name, vial size, and price.",
     ],
     [
-      "Pricing shown before checkout",
-      "Customers can review listed pricing before moving into checkout.",
+      "Pricing shown",
+      "Customers can review listed pricing before checkout.",
     ],
     [
       "Direct product pages",
       "Each product page keeps the selected item, size, and price easy to review.",
     ],
     [
-      "Store policies within reach",
-      "Shipping, refund, privacy, and terms pages remain available while browsing.",
+      "Store policies available",
+      "Shipping, refund, privacy, and terms pages remain easy to access.",
     ],
   ];
 
@@ -374,7 +302,7 @@ export function BenefitsTrust() {
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
-              Shipping and store policy information stays available while browsing.
+              Shipping and store policy information remains available while browsing.
             </div>
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
@@ -382,7 +310,7 @@ export function BenefitsTrust() {
             </div>
             <div className="flex items-center gap-3">
               <WalletCards size={18} className="text-[var(--primary)]" />
-              Card and alternate payment options can be added through hosted links.
+              Hosted payment options can be connected to checkout.
             </div>
           </div>
         </div>
@@ -417,7 +345,7 @@ export function TestimonialsFaqCrypto() {
             <p className="mt-3 text-sm text-[var(--muted)]">
               Product pages, shipping information, refund terms, privacy
               details, and checkout information remain available throughout the
-              site so key details are easy to review before placing an order.
+              site.
             </p>
           </div>
         </div>
@@ -443,11 +371,11 @@ export function TestimonialsFaqCrypto() {
           <div className="card rounded-[1.5rem] bg-[var(--surface-tint)] p-6">
             <div className="eyebrow">Payment options</div>
             <h3 className="mt-3 text-2xl font-semibold">
-              Checkout can connect to hosted payment options
+              Hosted payment options can be connected at checkout
             </h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Hosted card and alternate payment links can be connected to the
-              selected product at checkout.
+              Card and alternate payment links can be connected to the selected
+              product at checkout.
             </p>
             <Link
               href="/checkout"
