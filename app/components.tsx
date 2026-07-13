@@ -30,8 +30,8 @@ export function Navbar() {
 export function Hero() {
   return (
     <section className="section">
-      <div className="container">
-        <div className="fade-up max-w-4xl">
+      <div className="container grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
+        <div className="fade-up">
           <div className="eyebrow">Peptide Friend</div>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
             Peptides, clearly listed.
@@ -72,29 +72,78 @@ export function Hero() {
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
               <div className="font-medium">Product pages</div>
               <p className="mt-2 text-[var(--muted)]">
-                View vial size, price, and product details near the top of each listing.
+                View vial size, price, and product details near the top of each
+                listing.
               </p>
             </div>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-4 text-sm text-[var(--muted)]">
-            <span className="rounded-full bg-white px-4 py-2">
-              Tirzepatide
-            </span>
-            <span className="rounded-full bg-white px-4 py-2">
-              Retatrutide
-            </span>
-            <span className="rounded-full bg-white px-4 py-2">
-              Sermorelin
-            </span>
-            <span className="rounded-full bg-white px-4 py-2">GHK-CU</span>
-            <span className="rounded-full bg-white px-4 py-2">NAD+</span>
-            <span className="rounded-full bg-white px-4 py-2">Bac Water</span>
           </div>
 
           <p className="mt-6 text-sm text-[var(--muted)]">
             For research use only. Not for human or veterinary use.
           </p>
+        </div>
+
+        <div className="card rounded-[2rem] p-6 md:p-8">
+          <div className="rounded-[1.75rem] bg-[linear-gradient(135deg,#f8fcff,#edf7fc)] p-6 md:p-8">
+            <div className="flex justify-center">
+              <Image
+                src="/peptidefriendlogo.png"
+                alt="Peptide Friend logo"
+                width={220}
+                height={70}
+                className="h-auto w-auto max-w-[220px]"
+              />
+            </div>
+
+            <div className="mt-6 text-center">
+              <div className="text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
+                Peptide Friend
+              </div>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+                Peptides, clearly listed.
+              </h2>
+              <p className="mt-3 text-sm text-[var(--muted)]">
+                Current listings with product pages, vial sizes, and visible
+                pricing.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-[var(--muted)]">
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+                Tirzepatide
+              </span>
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+                Retatrutide
+              </span>
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+                Sermorelin
+              </span>
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+                GHK-CU
+              </span>
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+                NAD+
+              </span>
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+                Bac Water
+              </span>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <Link
+                href="#products"
+                className="rounded-full bg-[var(--primary)] px-5 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
+              >
+                View products
+              </Link>
+              <Link
+                href="/checkout"
+                className="rounded-full border border-black/10 bg-white px-5 py-3 text-center text-sm font-medium"
+              >
+                Go to checkout
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -115,7 +164,7 @@ export function EducationSection() {
         <div className="space-y-4 text-[var(--muted)]">
           <p>
             Peptide Friend presents the current lineup with individual product
-            pages, listed vial sizes, and pricing shown before checkout.
+            pages, listed vial sizes, and pricing shown on each listing.
           </p>
           <p>
             Store policies, FAQ content, and contact information remain easy to
@@ -203,7 +252,7 @@ export function ProductGrid() {
               </div>
 
               <p className="mt-4 text-xs text-[var(--muted)]">
-                Research use only. Not for human or veterinary use.
+                For research use only. Not for human or veterinary use.
               </p>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -236,7 +285,7 @@ export function HowItWorks() {
     ],
     [
       "Open the product page",
-      "Review the selected product, listed size, price, and product details before checkout.",
+      "Review the selected product, listed size, price, and product details.",
     ],
     [
       "Continue to checkout",
@@ -302,7 +351,8 @@ export function BenefitsTrust() {
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
-              Shipping and store policy information remains available while browsing.
+              Shipping and store policy information remains available while
+              browsing.
             </div>
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
