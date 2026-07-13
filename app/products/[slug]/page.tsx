@@ -2,13 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products, faqs } from "@/lib/data";
-import {
-  CheckCircle2,
-  ArrowLeft,
-  ShieldCheck,
-  Truck,
-  Wallet,
-} from "lucide-react";
+import { CheckCircle2, ArrowLeft } from "lucide-react";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -38,61 +32,26 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </Link>
 
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="space-y-4">
-            <div className="card rounded-[1.75rem] p-6">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={900}
-                height={900}
-                className="w-full rounded-[1.5rem] bg-white object-cover"
-              />
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
-                <div className="flex items-center gap-2 font-medium">
-                  <ShieldCheck size={16} className="text-[var(--primary)]" />
-                  Listed details
-                </div>
-                <p className="mt-2 text-[var(--muted)]">
-                  Review the product name, listed size, price, and product details in one place.
-                </p>
-              </div>
-
-              <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
-                <div className="flex items-center gap-2 font-medium">
-                  <Truck size={16} className="text-[var(--primary)]" />
-                  Store information
-                </div>
-                <p className="mt-2 text-[var(--muted)]">
-                  Shipping, refund, privacy, and terms information is available before checkout.
-                </p>
-              </div>
-
-              <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
-                <div className="flex items-center gap-2 font-medium">
-                  <Wallet size={16} className="text-[var(--primary)]" />
-                  Checkout
-                </div>
-                <p className="mt-2 text-[var(--muted)]">
-                  Continue with this selected product when you are ready.
-                </p>
-              </div>
-            </div>
+          <div className="card rounded-[1.75rem] p-6">
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={900}
+              height={900}
+              className="w-full rounded-[1.5rem] bg-white object-cover"
+            />
           </div>
 
           <div className="space-y-6">
             <div>
-              <div className="text-sm text-[var(--muted)]">Peptide Friend product</div>
-              <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
+              <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
                 {product.name}
               </h1>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4">
                   <div className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">
-                    Listed size
+                    Size
                   </div>
                   <div className="mt-2 text-2xl font-semibold">
                     {product.dosage}
@@ -121,19 +80,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="card rounded-[1.5rem] p-6">
               <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                 <div>
-                  <div className="text-sm text-[var(--muted)]">
-                    Selected product
-                  </div>
-                  <div className="mt-2 text-2xl font-semibold">
-                    {product.name}
-                  </div>
-                  <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
-                    <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                      {product.dosage}
-                    </span>
-                    <span className="rounded-full bg-[var(--accent)] px-3 py-2 font-medium text-[var(--primary)]">
-                      {product.price}
-                    </span>
+                  <div className="text-2xl font-semibold">{product.price}</div>
+                  <div className="mt-2 text-sm text-[var(--muted)]">
+                    {product.name} · {product.dosage}
                   </div>
                 </div>
 
@@ -153,27 +102,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
               </div>
 
-              <div className="mt-5 rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm text-[var(--muted)]">
-                Review the listed size, price, and product details above before continuing.
-              </div>
+              <p className="mt-4 text-sm text-[var(--muted)]">
+                Review the listed size, price, and product details before checkout.
+              </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="card rounded-[1.5rem] p-6">
-                <h2 className="font-semibold">Important information</h2>
-                <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-2">
-                      <CheckCircle2
-                        size={16}
-                        className="mt-0.5 text-[var(--primary)]"
-                      />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               <div className="card rounded-[1.5rem] p-6">
                 <h2 className="font-semibold">Product details</h2>
                 <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
@@ -188,19 +122,21 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   ))}
                 </ul>
               </div>
-            </div>
 
-            <div className="card rounded-[1.5rem] p-6">
-              <h2 className="font-semibold">Before checkout</h2>
-              <p className="mt-3 text-sm text-[var(--muted)]">
-                Please review the product details, shipping information, and store policies before placing an order.
-              </p>
-              <p className="mt-3 text-sm text-[var(--muted)]">
-                This product is listed with pricing and catalog details on this page for review before checkout.
-              </p>
-              <p className="mt-3 text-sm text-[var(--muted)]">
-                For research use only. Not for human or veterinary use.
-              </p>
+              <div className="card rounded-[1.5rem] p-6">
+                <h2 className="font-semibold">Listing information</h2>
+                <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
+                  {product.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-2">
+                      <CheckCircle2
+                        size={16}
+                        className="mt-0.5 text-[var(--primary)]"
+                      />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
