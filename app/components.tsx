@@ -14,7 +14,7 @@ export function Navbar() {
   return (
     <header className="w-full border-b bg-white">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link href="/">
+        <Link href="/" aria-label="Peptide Friend home">
           <Image
             src="/peptidefriendlogo.png"
             alt="Peptide Friend logo"
@@ -54,29 +54,28 @@ export function Hero() {
               href="/information"
               className="rounded-full border border-black/10 bg-white px-6 py-3 text-center text-sm font-medium"
             >
-              View information
+              Store information
             </Link>
           </div>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Product lineup</div>
+              <div className="font-medium">Current lineup</div>
               <p className="mt-2 text-[var(--muted)]">
-                Browse peptide products with individual listings and direct
-                product pages.
+                View product listings for the current catalog in one place.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Pricing shown upfront</div>
+              <div className="font-medium">Visible pricing</div>
               <p className="mt-2 text-[var(--muted)]">
-                Review pricing before moving into product pages or checkout.
+                Review listed prices before opening a product page or checkout.
               </p>
             </div>
             <div className="rounded-[1.25rem] bg-white p-4 text-sm">
-              <div className="font-medium">Straightforward ordering</div>
+              <div className="font-medium">Essential details</div>
               <p className="mt-2 text-[var(--muted)]">
-                Move from product selection to checkout with key details still
-                easy to review.
+                Product pages keep vial size, price, and listing details close
+                at hand.
               </p>
             </div>
           </div>
@@ -95,6 +94,10 @@ export function Hero() {
             <span className="rounded-full bg-white px-4 py-2">NAD+</span>
             <span className="rounded-full bg-white px-4 py-2">Bac Water</span>
           </div>
+
+          <p className="mt-6 text-sm text-[var(--muted)]">
+            For research use only. Not for human or veterinary use.
+          </p>
         </div>
 
         <div className="gradient-ring card rounded-[2rem] p-6">
@@ -129,6 +132,10 @@ export function Hero() {
                 </span>
               </div>
 
+              <p className="mt-4 text-xs text-[var(--muted)]">
+                Research use only. Not for human or veterinary use.
+              </p>
+
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href={`/products/${featured.slug}`}
@@ -158,20 +165,18 @@ export function EducationSection() {
         <div>
           <div className="eyebrow">About Peptide Friend</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            A straightforward peptide catalog with pricing shown upfront
+            A product catalog built around listed details and visible pricing
           </h2>
         </div>
 
         <div className="space-y-4 text-[var(--muted)]">
           <p>
-            Peptide Friend brings product listings, pricing, and basic store
-            information together in one place so customers can review the lineup
-            before checkout.
+            Peptide Friend presents the current product lineup with individual
+            product pages, listed vial sizes, and pricing shown before checkout.
           </p>
           <p>
-            Product pages, FAQ content, and policy pages stay easy to reach
-            while browsing, making it simpler to review important details before
-            placing an order.
+            Store policies, FAQ content, and contact information stay close by
+            so customers can review the essentials while placing an order.
           </p>
         </div>
       </div>
@@ -269,6 +274,10 @@ export function ProductGrid() {
                 </span>
               </div>
 
+              <p className="mt-4 text-xs text-[var(--muted)]">
+                Research use only. Not for human or veterinary use.
+              </p>
+
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <Link
                   href={`/products/${product.slug}`}
@@ -298,21 +307,21 @@ export function HowItWorks() {
       "Start with the product grid to compare current listings, vial sizes, and pricing.",
     ],
     [
-      "Review product details",
-      "Open the product page to review the selected item, listing details, and key notes before checkout.",
+      "Open the product page",
+      "Review the selected product, listed size, price, and product details before checkout.",
     ],
     [
       "Continue to checkout",
-      "Move into checkout with the selected product and order summary ready to review.",
+      "Move forward with the selected item and review the order summary before payment.",
     ],
   ];
 
   return (
     <section className="section border-y border-black/5 bg-white/70">
       <div className="container">
-        <div className="eyebrow">How it works</div>
+        <div className="eyebrow">How ordering works</div>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-          From product selection to checkout in three steps
+          Three straightforward steps
         </h2>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -332,20 +341,20 @@ export function HowItWorks() {
 export function BenefitsTrust() {
   const items = [
     [
-      "Clear product listings",
-      "Each listing includes the product name, vial size, pricing, and a direct path to the full product page.",
+      "Listed details at a glance",
+      "Each listing includes the product name, vial size, price, and a direct path to the full product page.",
     ],
     [
-      "Pricing before checkout",
-      "Customers can review pricing before moving into checkout.",
+      "Pricing shown before checkout",
+      "Customers can review listed pricing before moving into checkout.",
     ],
     [
-      "Simple ordering flow",
-      "Product pages and checkout are connected so ordering feels direct and easy to follow.",
+      "Direct product pages",
+      "Each product page keeps the selected item, size, and price easy to review.",
     ],
     [
-      "Store information available",
-      "Shipping, refund, privacy, and terms pages remain easy to access while browsing.",
+      "Store policies within reach",
+      "Shipping, refund, privacy, and terms pages remain available while browsing.",
     ],
   ];
 
@@ -355,25 +364,25 @@ export function BenefitsTrust() {
         <div>
           <div className="eyebrow">Why customers choose Peptide Friend</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Product details, pricing, and store information kept easy to review
+            Clear listings, visible pricing, and key information kept close
           </h2>
 
           <div className="mt-8 space-y-4 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-3">
               <Shield size={18} className="text-[var(--primary)]" />
-              Product pages present essential listing details in one place.
+              Product pages keep essential listing details near the top.
             </div>
             <div className="flex items-center gap-3">
               <Truck size={18} className="text-[var(--primary)]" />
-              Shipping and policy information stays easy to access.
+              Shipping and store policy information stays available while browsing.
             </div>
             <div className="flex items-center gap-3">
               <CreditCard size={18} className="text-[var(--primary)]" />
-              Checkout includes a clear order summary before completion.
+              Checkout keeps the selected item and order summary in view.
             </div>
             <div className="flex items-center gap-3">
               <WalletCards size={18} className="text-[var(--primary)]" />
-              Customers can move from product page to checkout without extra steps.
+              Card and alternate payment options can be added through hosted links.
             </div>
           </div>
         </div>
@@ -399,7 +408,7 @@ export function TestimonialsFaqCrypto() {
           <div>
             <div className="eyebrow">Questions before ordering</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-              Review important details before checkout
+              Review product and store details before checkout
             </h2>
           </div>
 
@@ -407,8 +416,8 @@ export function TestimonialsFaqCrypto() {
             <h3 className="text-xl font-semibold">Store information in one place</h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
               Product pages, shipping information, refund terms, privacy
-              details, and checkout information are available throughout the
-              site so customers can review key details before placing an order.
+              details, and checkout information remain available throughout the
+              site so key details are easy to review before placing an order.
             </p>
           </div>
         </div>
@@ -434,11 +443,11 @@ export function TestimonialsFaqCrypto() {
           <div className="card rounded-[1.5rem] bg-[var(--surface-tint)] p-6">
             <div className="eyebrow">Payment options</div>
             <h3 className="mt-3 text-2xl font-semibold">
-              Standard checkout with card and alternate payment support
+              Checkout can connect to hosted payment options
             </h3>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Review the selected product and continue through checkout with the
-              available payment option.
+              Hosted card and alternate payment links can be connected to the
+              selected product at checkout.
             </p>
             <Link
               href="/checkout"
@@ -460,11 +469,11 @@ export function FinalCta() {
         <div className="card rounded-[2rem] bg-[linear-gradient(135deg,#ffffff,#edf7fc)] p-8 md:p-12">
           <div className="eyebrow">Peptide Friend</div>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
-            Browse the lineup and continue when you’re ready
+            View the lineup and continue to checkout
           </h2>
           <p className="mt-4 max-w-2xl text-[var(--muted)]">
-            Explore current peptide listings, open product pages, and review key
-            details before checkout.
+            Browse current product listings, open individual product pages, and
+            review key details before checkout.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
