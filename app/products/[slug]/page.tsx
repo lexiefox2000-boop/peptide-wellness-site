@@ -53,22 +53,20 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="flex items-center gap-2 font-medium">
                   <ShieldCheck size={16} className="text-[var(--primary)]" />
-                  Product details
+                  Listed details
                 </div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Review the product name, dosage, price, and listing details in
-                  one place.
+                  Review the product name, listed size, price, and product details in one place.
                 </p>
               </div>
 
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="flex items-center gap-2 font-medium">
                   <Truck size={16} className="text-[var(--primary)]" />
-                  Shipping information
+                  Store information
                 </div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Shipping, refund, privacy, and terms information is available
-                  before checkout.
+                  Shipping, refund, privacy, and terms information is available before checkout.
                 </p>
               </div>
 
@@ -78,8 +76,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   Checkout
                 </div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Continue with the selected product when you’re ready to place
-                  your order.
+                  Continue with this selected product when you are ready.
                 </p>
               </div>
             </div>
@@ -87,22 +84,37 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           <div className="space-y-6">
             <div>
-              <div className="text-sm text-[var(--muted)]">Product details</div>
+              <div className="text-sm text-[var(--muted)]">Peptide Friend product</div>
               <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
                 {product.name}
               </h1>
 
-              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
-                <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
-                  {product.dosage}
-                </span>
-                <span className="rounded-full bg-[var(--accent)] px-3 py-2 text-[var(--primary)]">
-                  {product.price}
-                </span>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4">
+                  <div className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">
+                    Listed size
+                  </div>
+                  <div className="mt-2 text-2xl font-semibold">
+                    {product.dosage}
+                  </div>
+                </div>
+
+                <div className="rounded-[1.25rem] bg-[var(--accent)] p-4">
+                  <div className="text-xs uppercase tracking-[0.16em] text-[var(--primary)]/70">
+                    Price
+                  </div>
+                  <div className="mt-2 text-2xl font-semibold text-[var(--primary)]">
+                    {product.price}
+                  </div>
+                </div>
               </div>
 
               <p className="mt-5 max-w-2xl text-[var(--muted)]">
                 {product.description}
+              </p>
+
+              <p className="mt-4 text-sm text-[var(--muted)]">
+                For research use only. Not for human or veterinary use.
               </p>
             </div>
 
@@ -113,10 +125,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     Selected product
                   </div>
                   <div className="mt-2 text-2xl font-semibold">
-                    {product.price}
+                    {product.name}
                   </div>
-                  <div className="mt-1 text-sm text-[var(--muted)]">
-                    {product.dosage}
+                  <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
+                    <span className="rounded-full bg-[var(--surface-soft)] px-3 py-2">
+                      {product.dosage}
+                    </span>
+                    <span className="rounded-full bg-[var(--accent)] px-3 py-2 font-medium text-[var(--primary)]">
+                      {product.price}
+                    </span>
                   </div>
                 </div>
 
@@ -137,7 +154,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               <div className="mt-5 rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm text-[var(--muted)]">
-                Review the product details above before continuing to checkout.
+                Review the listed size, price, and product details above before continuing.
               </div>
             </div>
 
@@ -176,12 +193,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="card rounded-[1.5rem] p-6">
               <h2 className="font-semibold">Before checkout</h2>
               <p className="mt-3 text-sm text-[var(--muted)]">
-                Please review the product details, shipping information, and
-                store policies before placing an order.
+                Please review the product details, shipping information, and store policies before placing an order.
               </p>
               <p className="mt-3 text-sm text-[var(--muted)]">
-                Products are listed with pricing and basic details so you can
-                review everything on this page before continuing.
+                This product is listed with pricing and catalog details on this page for review before checkout.
+              </p>
+              <p className="mt-3 text-sm text-[var(--muted)]">
+                For research use only. Not for human or veterinary use.
               </p>
             </div>
           </div>
@@ -192,7 +210,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div>
               <div className="eyebrow">Related products</div>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                You may also like
+                More from the catalog
               </h2>
             </div>
             <Link
@@ -234,7 +252,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="card rounded-[1.75rem] p-6 md:p-8">
           <div className="eyebrow">FAQ</div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-            Common questions
+            Questions before ordering
           </h2>
 
           <div className="mt-6 space-y-3">
