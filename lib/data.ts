@@ -84,7 +84,7 @@ export const products = [
 export const faqs = [
   {
     q: "Where can I see product details?",
-    a: "Choose any product to view its available size and price.",
+    a: "Tap any product to see the available size and price."
   },
   {
     q: "How long does order processing take?",
