@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               alt={product.name}
               width={900}
               height={900}
-              className="w-full rounded-[1.5rem] bg-white object-cover"
+              className="mx-auto h-[420px] w-full rounded-[1.5rem] bg-white object-contain md:h-[560px]"
             />
           </div>
 
@@ -194,7 +194,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     alt={item.name}
                     width={500}
                     height={500}
-                    className="mx-auto h-44 w-auto object-contain"
+                    className="mx-auto h-56 w-full object-contain"
                   />
                 </div>
                 <div className="mt-4 font-medium">{item.name}</div>

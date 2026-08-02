@@ -13,7 +13,7 @@ function Logo() {
   return (
     <div className="flex items-center gap-3">
       <img
-        src="/peptidefriend logo.png"
+        src="/peptidefriendlogo.png"
         alt="Peptide Friend logo"
         className="h-14 w-auto max-w-[200px] object-contain"
       />
@@ -22,7 +22,7 @@ function Logo() {
           Peptide Friend
         </div>
         <div className="text-xs text-[var(--muted)]">
-          Peptides, clearly listed.
+          Simple, clear, easy to browse.
         </div>
       </div>
     </div>
@@ -60,14 +60,21 @@ export default function RootLayout({
               </Link>
             </nav>
 
-            <div className="flex items-center gap-3 md:hidden">
-              <button
-                className="rounded-full border border-black/10 p-2"
+            <details className="relative md:hidden">
+              <summary
+                className="flex cursor-pointer list-none items-center rounded-full border border-black/10 p-2"
                 aria-label="Open menu"
               >
                 <Menu size={18} />
-              </button>
-            </div>
+              </summary>
+              <nav className="absolute right-0 mt-3 w-52 rounded-2xl border border-black/10 bg-white p-3 shadow-lg">
+                <Link className="block rounded-xl px-3 py-2 text-sm" href="/information">Information</Link>
+                <Link className="block rounded-xl px-3 py-2 text-sm" href="/faq">FAQ</Link>
+                <Link className="block rounded-xl px-3 py-2 text-sm" href="/about">About</Link>
+                <Link className="block rounded-xl px-3 py-2 text-sm" href="/contact">Contact</Link>
+                <Link className="mt-1 block rounded-xl bg-[var(--primary)] px-3 py-2 text-sm text-white" href="/checkout">Checkout</Link>
+              </nav>
+            </details>
           </div>
 
           <div className="border-t border-black/5 bg-white/70">

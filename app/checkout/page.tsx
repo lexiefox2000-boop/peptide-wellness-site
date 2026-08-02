@@ -34,9 +34,17 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             Review your order details
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-[var(--muted)]">
-            Confirm the selected product, contact information, shipping details,
-            and payment option before completing checkout.
+            Preview the selected product and order details. Online payments are
+            not enabled yet while provider setup and required approvals are being finalized.
           </p>
+
+          <div className="mt-6 rounded-[1.5rem] border border-[var(--primary)]/30 bg-[var(--surface-tint)] p-5 text-sm">
+            <div className="font-medium">Checkout is currently in preview mode</div>
+            <p className="mt-2 text-[var(--muted)]">
+              No payment will be collected from this page until an approved payment
+              provider is connected and the checkout flow is activated.
+            </p>
+          </div>
 
           <div className="mt-6 rounded-[1.5rem] border border-black/5 bg-[var(--surface-soft)] p-4 text-sm">
             <div className="font-medium">Selected product</div>
@@ -151,7 +159,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             </p>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
-              <button className="rounded-2xl border border-[var(--primary)] bg-[var(--surface-tint)] px-4 py-4 text-left text-sm">
+              <button disabled className="cursor-not-allowed rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm opacity-70">
                 Card checkout
                 <br />
                 <span className="text-[var(--muted)]">
@@ -159,7 +167,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 </span>
               </button>
 
-              <button className="rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm">
+              <button disabled className="cursor-not-allowed rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm opacity-70">
                 Crypto checkout
                 <br />
                 <span className="text-[var(--muted)]">
@@ -178,12 +186,13 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             For research use only. Not for human or veterinary use.
           </p>
 
-          <Link
-            href={`/checkout/thank-you?product=${selectedProduct.slug}`}
-            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)]"
+          <button
+            type="button"
+            disabled
+            className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)] opacity-60"
           >
-            Continue to order confirmation
-          </Link>
+            Payment setup pending
+          </button>
         </div>
 
         <aside className="space-y-4">
