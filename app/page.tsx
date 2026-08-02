@@ -1,14 +1,12 @@
-import { BenefitsTrust, EducationSection, FinalCta, Hero, HowItWorks, ProductGrid, TestimonialsFaqCrypto } from './components';
+import { Hero, ProductGrid, AboutSimple, FaqSimple, FinalCta } from './components';
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <EducationSection />
       <ProductGrid />
-      <HowItWorks />
-      <BenefitsTrust />
-      <TestimonialsFaqCrypto />
+      <AboutSimple />
+      <FaqSimple />
       <FinalCta />
     </>
   );
