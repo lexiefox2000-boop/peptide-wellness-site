@@ -10,7 +10,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "Tirzepatide listed in a 10mg vial.",
+    description: "Tirzepatide 10mg vial, clearly labeled and listed with current pricing.",
     details: ["10mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -24,7 +24,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "Tirzepatide listed in a 40mg vial.",
+    description: "Tirzepatide 40mg vial, clearly labeled and listed with current pricing.",
     details: ["40mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -38,7 +38,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "Retatrutide listed in a 10mg vial.",
+    description: "Retatrutide 10mg vial, clearly labeled and listed with current pricing.",
     details: ["10mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -52,7 +52,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "Retatrutide listed in a 40mg vial.",
+    description: "Retatrutide 40mg vial, clearly labeled and listed with current pricing.",
     details: ["40mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -66,7 +66,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "Sermorelin listed in a 10mg vial.",
+    description: "Sermorelin 10mg vial, clearly labeled and listed with current pricing.",
     details: ["10mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -80,7 +80,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "GHK-CU listed in a 100mg vial.",
+    description: "GHK-CU 100mg vial, clearly labeled and listed with current pricing.",
     details: ["100mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -94,7 +94,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "NAD+ listed in a 500mg vial.",
+    description: "NAD+ 500mg vial, clearly labeled and listed with current pricing.",
     details: ["500mg vial", "Price shown on product page", "Listed before checkout"],
   },
   {
@@ -108,7 +108,7 @@ export const products = [
       "Price shown on product page",
       "Included in the current catalog",
     ],
-    description: "Bac Water listed in a 10ml vial.",
+    description: "Bac Water 10ml vial, clearly labeled and listed with current pricing.",
     details: ["10ml vial", "Price shown on product page", "Listed before checkout"],
   },
 ];
@@ -139,8 +139,8 @@ export const faqs = [
     a: "Approved order issues may be addressed with a replacement, store credit, partial credit, refund, or another appropriate resolution depending on the situation.",
   },
   {
-    q: "Can checkout support card or crypto payments?",
-    a: "Hosted payment options may include standard card checkout as well as a crypto payment option, depending on availability.",
+    q: "Which payment methods will be available?",
+    a: "Available payment methods will be displayed only after the store has completed setup and approval with its payment providers.",
   },
   {
     q: "What information is included on product pages?",
