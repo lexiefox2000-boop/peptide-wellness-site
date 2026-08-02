@@ -8,8 +8,7 @@ export default function ContactPage() {
             Contact Peptide Friend
           </h1>
           <p className="mt-6 text-[var(--muted)]">
-            Use this page for general questions, order support, policy
-            questions, or business inquiries.
+            Use this page for general questions, store information, policy questions, or business inquiries.
           </p>
 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-6 text-sm text-[var(--muted)]">
@@ -46,7 +45,7 @@ export default function ContactPage() {
               Topic
               <select className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none">
                 <option>General question</option>
-                <option>Order support</option>
+                <option>Store information</option>
                 <option>Business inquiry</option>
                 <option>Policy question</option>
               </select>
@@ -67,11 +66,11 @@ export default function ContactPage() {
           </div>
 
           <p className="mt-4 text-sm text-[var(--muted)]">
-            For research use only. Not for human or veterinary use.
+            Form delivery still needs to be connected to the final support inbox before launch.
           </p>
 
-          <button className="mt-6 rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-medium text-[var(--primary-foreground)]">
-            Send message
+          <button type="button" disabled className="mt-6 cursor-not-allowed rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-medium text-[var(--primary-foreground)] opacity-60">
+            Contact form setup pending
           </button>
         </form>
       </div>

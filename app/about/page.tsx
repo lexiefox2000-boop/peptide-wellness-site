@@ -11,18 +11,13 @@ export default function AboutPage() {
 
         <div className="space-y-4 text-[var(--muted)]">
           <p>
-            Peptide Friend is an online catalog for peptide products, with
-            product pages that show pricing, dosage, and basic item details
-            before checkout.
+            Peptide Friend is a modern product catalog built around clarity: dedicated product pages, visible vial sizes, current catalog pricing, and easy access to store information.
           </p>
           <p>
-            The site is designed to make it easier to browse products, review
-            store information, and place an order without unnecessary steps or
-            distracting promotional language.
+            The experience is intentionally simple. Visitors can browse the lineup, compare listings, review policies, and find support information without unnecessary clutter.
           </p>
           <p>
-            Product listings, policy pages, and checkout are organized so
-            visitors can review key details in one place before ordering.
+            Online ordering will be activated only after the business, fulfillment, and payment setup is complete.
           </p>
         </div>
       </div>
@@ -31,15 +26,15 @@ export default function AboutPage() {
         {[
           [
             "Clear product information",
-            "Each product page includes pricing, dosage, and basic listing details so customers can review the essentials before checkout.",
+            "Each product page includes pricing, dosage, and basic listing details so customers can review the essentials on the product page.",
           ],
           [
             "Store information within reach",
             "Shipping, refund, privacy, and terms pages are easy to access while browsing and before placing an order.",
           ],
           [
-            "Straightforward ordering",
-            "Customers can move from product pages to checkout with a simple order summary and standard payment options.",
+            "Ready for the next step",
+            "The catalog is structured so an approved ordering flow can be connected later without redesigning the customer experience.",
           ],
         ].map(([title, copy]) => (
           <div key={title} className="card rounded-[1.5rem] p-6">

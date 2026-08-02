@@ -183,7 +183,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
           </div>
 
           <p className="mt-5 text-sm text-[var(--muted)]">
-            For research use only. Not for human or veterinary use.
+            Online ordering is not currently active.
           </p>
 
           <button

@@ -7,18 +7,17 @@ export default function LandingPage() {
         <div>
           <div className="eyebrow">Information</div>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-            Information before you place an order
+            Store information, all in one place
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
-            Use this page to review general store information, product page
-            details, and important notes before continuing to checkout.
+            Review how the catalog is organized, where to find policies, and the current status of online ordering.
           </p>
 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-6">
             <h2 className="text-xl font-semibold">What you can review here</h2>
             <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
               <li>General information about how products are listed on the site.</li>
-              <li>Pricing visibility before checkout.</li>
+              <li>Current catalog pricing on product pages.</li>
               <li>Access to FAQ, shipping, refund, privacy, and terms pages.</li>
             </ul>
           </div>
@@ -26,21 +25,19 @@ export default function LandingPage() {
 
         <div className="card rounded-[2rem] p-6">
           <div className="rounded-[1.5rem] bg-[var(--surface-soft)] p-6">
-            <div className="text-sm text-[var(--muted)]">Before checkout</div>
+            <div className="text-sm text-[var(--muted)]">Store status</div>
             <div className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
-              Review key details in one place
+              Catalog live. Ordering pending.
             </div>
             <p className="mt-4 text-sm text-[var(--muted)]">
-              Product pages include pricing, dosage, and basic listing details,
-              while policy pages and FAQ answers stay easy to access during
-              browsing.
+              Product pages and policies are available now. Online ordering will be activated only after the business, fulfillment, and payment setup is complete.
             </p>
             <div className="mt-6 space-y-3">
               <Link
-                href="/checkout"
+                href="/#products"
                 className="block rounded-full bg-[var(--primary)] px-5 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
               >
-                Go to checkout
+                Browse products
               </Link>
               <Link
                 href="/products/tirzepatide-10mg"
@@ -57,11 +54,11 @@ export default function LandingPage() {
         {[
           [
             "Product pages",
-            "Each product page shows the product name, dosage, price, and basic details before checkout.",
+            "Each product page shows the product name, dosage, price, and basic details on the site.",
           ],
           [
             "Store policies",
-            "Shipping, refund, privacy, and terms information is available to review before placing an order.",
+            "Shipping, refund, privacy, and terms information is available to review while browsing.",
           ],
           [
             "FAQ and support",
@@ -77,7 +74,7 @@ export default function LandingPage() {
 
       <div className="container mt-16 rounded-[2rem] border border-black/5 bg-[var(--surface-tint)] p-8 text-sm text-[var(--muted)]">
         Please review product details, store policies, and checkout information
-        before placing an order.
+        while browsing.
       </div>
     </div>
   );

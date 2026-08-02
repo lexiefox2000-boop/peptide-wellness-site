@@ -73,7 +73,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </p>
 
               <p className="mt-4 text-sm text-[var(--muted)]">
-                For research use only. Not for human or veterinary use.
+                Online ordering is not currently active. Product availability and fulfillment details will be shown when setup is complete.
               </p>
             </div>
 
@@ -88,10 +88,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Link
-                    href={`/checkout?product=${product.slug}`}
+                    href="/information"
                     className="rounded-full bg-[var(--primary)] px-6 py-3 text-center text-sm font-medium text-[var(--primary-foreground)]"
                   >
-                    Continue to checkout
+                    Store information
                   </Link>
                   <Link
                     href="/#products"
@@ -103,7 +103,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               <p className="mt-4 text-sm text-[var(--muted)]">
-                Review the listed size, price, and product details before checkout.
+                Review the listed vial size, current catalog price, and store information before ordering is activated.
               </p>
             </div>
 
@@ -130,7 +130,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       size={16}
                       className="mt-0.5 text-[var(--primary)]"
                     />
-                    <span>Listed before checkout</span>
+                    <span>Current catalog listing</span>
                   </li>
                 </ul>
               </div>
@@ -150,14 +150,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       size={16}
                       className="mt-0.5 text-[var(--primary)]"
                     />
-                    <span>Continue to checkout from this page</span>
+                    <span>Store information from this page</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2
                       size={16}
                       className="mt-0.5 text-[var(--primary)]"
                     />
-                    <span>Research-use notice shown on listing</span>
+                    <span>Ordering status shown clearly on listing</span>
                   </li>
                 </ul>
               </div>
@@ -212,7 +212,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="card rounded-[1.75rem] p-6 md:p-8">
           <div className="eyebrow">FAQ</div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-            Questions before ordering
+            Questions about the store
           </h2>
 
           <div className="mt-6 space-y-3">

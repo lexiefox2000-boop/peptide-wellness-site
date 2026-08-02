@@ -22,7 +22,7 @@ function Logo() {
           Peptide Friend
         </div>
         <div className="text-xs text-[var(--muted)]">
-          Simple, clear, easy to browse.
+          Modern catalog. Clear details.
         </div>
       </div>
     </div>
@@ -53,10 +53,10 @@ export default function RootLayout({
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
               <Link
-                href="/checkout"
+                href="/#products"
                 className="rounded-full bg-[var(--primary)] px-4 py-2 text-[var(--primary-foreground)]"
               >
-                Checkout
+                View products
               </Link>
             </nav>
 
@@ -72,7 +72,7 @@ export default function RootLayout({
                 <Link className="block rounded-xl px-3 py-2 text-sm" href="/faq">FAQ</Link>
                 <Link className="block rounded-xl px-3 py-2 text-sm" href="/about">About</Link>
                 <Link className="block rounded-xl px-3 py-2 text-sm" href="/contact">Contact</Link>
-                <Link className="mt-1 block rounded-xl bg-[var(--primary)] px-3 py-2 text-sm text-white" href="/checkout">Checkout</Link>
+                <Link className="mt-1 block rounded-xl bg-[var(--primary)] px-3 py-2 text-sm text-white" href="/#products">View products</Link>
               </nav>
             </details>
           </div>
@@ -85,7 +85,7 @@ export default function RootLayout({
               </div>
               <div className="flex items-center gap-2">
                 <Wallet size={14} />
-                Checkout options shown at checkout
+                Online ordering activates after setup
               </div>
               <div>Product pages show size and price</div>
               <div>Shipping, refunds, privacy, and terms available</div>
@@ -104,7 +104,7 @@ export default function RootLayout({
                 one place.
               </p>
               <p className="mt-3 max-w-xl text-sm text-[var(--muted)]">
-                For research use only. Not for human or veterinary use.
+                Online ordering is not currently active. Availability and fulfillment information will be updated when setup is complete.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function RootLayout({
                 <br />
                 <Link href="/faq">FAQ</Link>
                 <br />
-                <Link href="/checkout">Checkout</Link>
+                <Link href="/#products">Products</Link>
               </div>
             </div>
 
@@ -137,8 +137,7 @@ export default function RootLayout({
             <div>
               <h3 className="text-sm font-semibold">Peptide Friend</h3>
               <p className="mt-4 text-sm text-[var(--muted)]">
-                Shop current listings, review product details, and view pricing
-                before checkout.
+                Browse current listings, review product details, and find store information in one place.
               </p>
             </div>
           </div>

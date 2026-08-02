@@ -10,16 +10,15 @@ export default function FaqPage() {
         </h1>
 
         <p className="mt-6 text-lg text-[var(--muted)]">
-          Find answers to common questions about pricing, shipping, checkout,
-          product information, and store policies.
+          Find answers to common questions about product information, catalog pricing, shipping, store status, and policies.
         </p>
 
         <div className="mt-10 space-y-4">
           {faqs
             .concat([
               {
-                q: "Can I review pricing before checkout?",
-                a: "Yes. Product pricing is shown on the catalog and product pages before checkout.",
+                q: "Where can I review current pricing?",
+                a: "Current catalog pricing is shown on the catalog and individual product pages.",
               },
               {
                 q: "Where can I find shipping and refund information?",

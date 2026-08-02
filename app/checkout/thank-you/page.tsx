@@ -67,7 +67,7 @@ export default async function ThankYouPage({
           </div>
 
           <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-tint)] p-5 text-sm text-[var(--muted)]">
-            For research use only. Not for human or veterinary use.
+            Online ordering is not currently active.
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
