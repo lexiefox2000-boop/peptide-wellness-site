@@ -7,13 +7,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl">
           <div className="eyebrow">About Peptide Friend</div>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-            Welcome to Peptide Friend.
+            Everybody needs a Peptide Friend.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-[var(--muted)]">
-            We created Peptide Friend to make shopping feel simple, modern, and approachable.
+            Peptide Friend was created to make the shopping experience feel simpler, friendlier, and a lot less intimidating.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            Browse the collection, find what you need, and reach out anytime you have a question.
+            Browse the collection, pick what you&apos;re looking for, and if you have a question, ask a friend.
           </p>
           <Link
             href="/#products"

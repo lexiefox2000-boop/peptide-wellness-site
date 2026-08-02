@@ -41,7 +41,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
 
           <div>
-            <div className="eyebrow">Peptide Friend</div>
+            <div className="eyebrow">Good pick</div>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">
               {product.name}
             </h1>
@@ -50,16 +50,20 @@ export default async function ProductPage({ params }: ProductPageProps) {
               {product.price}
             </div>
 
-            <Link
-              href="/#products"
-              className="mt-8 inline-flex rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-medium text-[var(--primary-foreground)]"
-            >
-              Shop products
-            </Link>
-
-            <p className="mt-4 max-w-md text-xs text-[var(--muted)]">
-              Online checkout will be added once payment setup is complete.
-            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href={`/checkout?product=${product.slug}`}
+                className="inline-flex justify-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-medium text-[var(--primary-foreground)]"
+              >
+                Continue to checkout
+              </Link>
+              <Link
+                href="/#products"
+                className="inline-flex justify-center rounded-full border border-black/10 bg-white px-7 py-3.5 text-sm font-medium"
+              >
+                Keep shopping
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -67,7 +71,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="flex items-end justify-between gap-4">
             <div>
               <div className="eyebrow">More products</div>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight">You may also like</h2>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight">More from your friend</h2>
             </div>
             <Link href="/#products" className="text-sm font-medium text-[var(--primary)]">
               View all

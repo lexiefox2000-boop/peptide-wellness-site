@@ -1,29 +1,26 @@
 import Link from "next/link";
 import { products } from "@/lib/data";
+import { CreditCard, WalletCards, LockKeyhole } from "lucide-react";
 
 type CheckoutPageProps = {
-  searchParams: Promise<{
-    product?: string;
-  }>;
+  searchParams: Promise<{ product?: string }>;
 };
 
 function parsePrice(price: string) {
   return Number(price.replace(/[^0-9.]/g, ""));
 }
 
-function formatPrice(amount: number) {
+function money(amount: number) {
   return `$${amount.toFixed(2)}`;
 }
 
 export default async function CheckoutPage({ searchParams }: CheckoutPageProps) {
   const { product: productSlug } = await searchParams;
-  const selectedProduct =
-    products.find((item) => item.slug === productSlug) ?? products[0];
+  const product = products.find((item) => item.slug === productSlug) ?? products[0];
 
-  const subtotal = parsePrice(selectedProduct.price);
+  const subtotal = parsePrice(product.price);
   const shipping = subtotal >= 300 ? 0 : 18;
-  const tax = Number((subtotal * 0.063).toFixed(2));
-  const total = Number((subtotal + shipping + tax).toFixed(2));
+  const total = subtotal + shipping;
 
   return (
     <div className="section">
@@ -31,240 +28,137 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
         <div className="card rounded-[2rem] p-6 md:p-8">
           <div className="eyebrow">Checkout</div>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Review your order details
+            Your picks look good.
           </h1>
-          <p className="mt-4 max-w-2xl text-sm text-[var(--muted)]">
-            Preview the selected product and order details. Online payments are
-            not enabled yet while provider setup and required approvals are being finalized.
-          </p>
-
-          <div className="mt-6 rounded-[1.5rem] border border-[var(--primary)]/30 bg-[var(--surface-tint)] p-5 text-sm">
-            <div className="font-medium">Checkout is currently in preview mode</div>
-            <p className="mt-2 text-[var(--muted)]">
-              No payment will be collected from this page until an approved payment
-              provider is connected and the checkout flow is activated.
-            </p>
-          </div>
-
-          <div className="mt-6 rounded-[1.5rem] border border-black/5 bg-[var(--surface-soft)] p-4 text-sm">
-            <div className="font-medium">Selected product</div>
-            <div className="mt-2 text-[var(--muted)]">
-              {selectedProduct.name} · {selectedProduct.dosage}
-            </div>
-            <div className="mt-3 text-base font-semibold">
-              {selectedProduct.price}
-            </div>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <Link
-                href={`/products/${selectedProduct.slug}`}
-                className="text-sm font-medium text-[var(--primary)]"
-              >
-                Review product page
-              </Link>
-              <Link
-                href="/#products"
-                className="text-sm font-medium text-[var(--muted)]"
-              >
-                Continue browsing
-              </Link>
-            </div>
-          </div>
 
           <div className="mt-8">
-            <h2 className="text-lg font-semibold">Contact information</h2>
+            <h2 className="text-lg font-semibold">Contact</h2>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <label className="text-sm">
                 First name
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="Ariana"
-                />
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="given-name" />
               </label>
-
               <label className="text-sm">
                 Last name
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="Lopez"
-                />
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="family-name" />
               </label>
-
               <label className="text-sm md:col-span-2">
                 Email
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="you@example.com"
-                />
+                <input type="email" className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="email" />
               </label>
-
               <label className="text-sm md:col-span-2">
                 Phone
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="(555) 123-4567"
-                />
+                <input type="tel" className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="tel" />
               </label>
             </div>
           </div>
 
           <div className="mt-8">
-            <h2 className="text-lg font-semibold">Shipping address</h2>
+            <h2 className="text-lg font-semibold">Shipping</h2>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <label className="text-sm md:col-span-2">
-                Street address
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="123 Example Street"
-                />
+                Address
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="street-address" />
               </label>
-
               <label className="text-sm">
                 City
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="Miami"
-                />
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="address-level2" />
               </label>
-
               <label className="text-sm">
                 State
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="Florida"
-                />
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="address-level1" />
               </label>
-
               <label className="text-sm">
-                ZIP code
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="33101"
-                />
+                ZIP
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" autoComplete="postal-code" />
               </label>
-
               <label className="text-sm">
                 Country
-                <input
-                  className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none"
-                  placeholder="United States"
-                />
+                <input className="mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none" defaultValue="United States" autoComplete="country-name" />
               </label>
             </div>
           </div>
 
-          <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-5">
-            <h2 className="text-lg font-semibold">Payment options</h2>
-            <p className="mt-2 text-sm text-[var(--muted)]">
-              Choose the preferred payment option for this order.
-            </p>
+          <div className="mt-8">
+            <h2 className="text-lg font-semibold">Payment</h2>
+            <p className="mt-2 text-sm text-[var(--muted)]">Pick your payment method.</p>
 
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
-              <button disabled className="cursor-not-allowed rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm opacity-70">
-                Card checkout
-                <br />
-                <span className="text-[var(--muted)]">
-                  Continue through a hosted card payment page for this order.
-                </span>
-              </button>
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <div className="rounded-[1.5rem] border-2 border-[var(--primary)]/25 bg-[var(--surface-tint)] p-5">
+                <div className="flex items-center gap-3">
+                  <CreditCard size={20} className="text-[var(--primary)]" />
+                  <div className="font-semibold">Card</div>
+                </div>
+                <p className="mt-2 text-sm text-[var(--muted)]">
+                  Credit or debit card
+                </p>
+                <button
+                  disabled
+                  className="mt-5 w-full cursor-not-allowed rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-white opacity-55"
+                >
+                  Pay by card
+                </button>
+              </div>
 
-              <button disabled className="cursor-not-allowed rounded-2xl border border-black/10 bg-[var(--surface-soft)] px-4 py-4 text-left text-sm opacity-70">
-                Crypto checkout
-                <br />
-                <span className="text-[var(--muted)]">
-                  Continue through an alternate hosted payment option.
-                </span>
-              </button>
+              <div className="rounded-[1.5rem] border border-black/10 bg-white p-5">
+                <div className="flex items-center gap-3">
+                  <WalletCards size={20} className="text-[var(--primary)]" />
+                  <div className="font-semibold">Crypto</div>
+                </div>
+                <p className="mt-2 text-sm text-[var(--muted)]">
+                  Pay with supported cryptocurrency
+                </p>
+                <button
+                  disabled
+                  className="mt-5 w-full cursor-not-allowed rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium opacity-55"
+                >
+                  Pay with crypto
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-4 flex items-start gap-2 text-xs text-[var(--muted)]">
+              <LockKeyhole size={14} className="mt-0.5 shrink-0" />
+              <span>
+                Payment buttons are intentionally inactive until the approved payment providers are connected.
+              </span>
             </div>
           </div>
-
-          <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-soft)] p-5 text-sm text-[var(--muted)]">
-            By continuing, the customer confirms the entered contact details,
-            shipping information, and selected order contents for final review.
-          </div>
-
-          <p className="mt-5 text-sm text-[var(--muted)]">
-            Online ordering is not currently active.
-          </p>
-
-          <button
-            type="button"
-            disabled
-            className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-medium text-[var(--primary-foreground)] opacity-60"
-          >
-            Payment setup pending
-          </button>
         </div>
 
         <aside className="space-y-4">
           <div className="card rounded-[2rem] p-6">
-            <div className="text-sm font-medium text-[var(--muted)]">
-              Order summary
-            </div>
-
-            <div className="mt-4 flex items-start justify-between gap-4">
+            <div className="text-sm text-[var(--muted)]">Order summary</div>
+            <div className="mt-5 flex items-start justify-between gap-4">
               <div>
-                <div className="font-medium">{selectedProduct.name}</div>
-                <div className="mt-1 text-sm text-[var(--muted)]">
-                  {selectedProduct.dosage}
-                </div>
+                <div className="font-semibold">{product.name}</div>
+                <div className="mt-1 text-sm text-[var(--muted)]">{product.dosage}</div>
               </div>
-              <div className="text-sm font-medium">{formatPrice(subtotal)}</div>
+              <div className="font-semibold">{product.price}</div>
             </div>
 
-            <div className="mt-6 space-y-3 text-sm">
+            <div className="mt-6 space-y-3 border-t border-black/5 pt-5 text-sm">
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Subtotal</span>
-                <span>{formatPrice(subtotal)}</span>
+                <span>{money(subtotal)}</span>
               </div>
-
               <div className="flex justify-between">
                 <span className="text-[var(--muted)]">Shipping</span>
-                <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
+                <span>{shipping === 0 ? "Free" : money(shipping)}</span>
               </div>
-
-              <div className="flex justify-between">
-                <span className="text-[var(--muted)]">Estimated tax</span>
-                <span>{formatPrice(tax)}</span>
-              </div>
-
-              <div className="flex justify-between border-t border-black/5 pt-3 font-medium">
+              <div className="flex justify-between border-t border-black/5 pt-3 text-base font-semibold">
                 <span>Total</span>
-                <span>{formatPrice(total)}</span>
+                <span>{money(total)}</span>
               </div>
             </div>
           </div>
 
-          <div className="card rounded-[1.5rem] p-6 text-sm">
-            <div className="font-medium">Checkout notes</div>
-            <div className="mt-3 space-y-2 text-[var(--muted)]">
-              <p>Free shipping is automatically applied on orders over $300.</p>
-              <p>Tax is displayed as an estimated checkout value.</p>
-              <p>The selected product and pricing remain visible during checkout.</p>
-            </div>
-          </div>
-
-          <div className="card rounded-[1.5rem] p-6 text-sm">
-            <div className="font-medium">Policy access</div>
-            <div className="mt-3 space-y-2 text-[var(--muted)]">
-              <p>
-                Review shipping, refunds, privacy, and terms information before placing an order.
-              </p>
-              <div className="flex flex-wrap gap-3 pt-1">
-                <Link href="/shipping" className="text-[var(--primary)]">
-                  Shipping
-                </Link>
-                <Link href="/refunds" className="text-[var(--primary)]">
-                  Refunds
-                </Link>
-                <Link href="/privacy" className="text-[var(--primary)]">
-                  Privacy
-                </Link>
-                <Link href="/terms" className="text-[var(--primary)]">
-                  Terms
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Link
+            href={`/products/${product.slug}`}
+            className="block text-center text-sm font-medium text-[var(--primary)]"
+          >
+            Keep shopping
+          </Link>
         </aside>
       </div>
     </div>

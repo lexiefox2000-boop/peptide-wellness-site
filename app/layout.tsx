@@ -18,7 +18,7 @@ function Logo() {
       />
       <div>
         <div className="text-lg font-semibold tracking-tight">Peptide Friend</div>
-        <div className="text-xs text-[var(--muted)]">Simple. Modern. Friendly.</div>
+        <div className="text-xs text-[var(--muted)]">Everybody needs a Peptide Friend.</div>
       </div>
     </div>
   );
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container grid gap-8 md:grid-cols-3">
             <div>
               <Logo />
-              <p className="mt-4 text-sm text-[var(--muted)]">Questions? We&apos;re here to help.</p>
+              <p className="mt-4 text-sm text-[var(--muted)]">Questions? Ask a friend.</p>
             </div>
 
             <div>

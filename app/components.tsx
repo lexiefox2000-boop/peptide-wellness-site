@@ -17,7 +17,7 @@ export function Navbar() {
           />
           <div>
             <div className="text-lg font-semibold leading-tight">Peptide Friend</div>
-            <div className="text-xs text-[var(--muted)]">Simple. Modern. Friendly.</div>
+            <div className="text-xs text-[var(--muted)]">Everybody needs a Peptide Friend.</div>
           </div>
         </Link>
 
@@ -52,10 +52,10 @@ export function Hero() {
         <div className="fade-up">
           <div className="eyebrow">Welcome to Peptide Friend</div>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
-            Simple products. Straightforward shopping.
+            Meet your Peptide Friend.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-[var(--muted)]">
-            Find what you&apos;re looking for without the clutter.
+            Peptides can be complicated. Shopping doesn&apos;t have to be.
           </p>
           <div className="mt-8">
             <Link
@@ -77,10 +77,10 @@ export function Hero() {
               className="mx-auto h-32 w-32 object-contain md:h-40 md:w-40"
             />
             <h2 className="mt-5 text-3xl font-semibold tracking-tight">
-              Your Peptide Friend.
+              A friend in the peptide world.
             </h2>
             <p className="mx-auto mt-3 max-w-sm text-sm text-[var(--muted)]">
-              Easy to browse. Easy to find. Easy to come back to.
+              Cute name. Simple shop. We&apos;ll take it from here.
             </p>
             <Link
               href="#products"
@@ -100,7 +100,7 @@ export function ProductGrid() {
     <section id="products" className="section border-y border-black/5 bg-white/70">
       <div className="container">
         <div>
-          <div className="eyebrow">Shop</div>
+          <div className="eyebrow">The lineup</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
             Products
           </h2>
@@ -154,15 +154,14 @@ export function AboutSimple() {
     <section className="section">
       <div className="container grid gap-8 lg:grid-cols-2 lg:items-center">
         <div>
-          <div className="eyebrow">About Peptide Friend</div>
+          <div className="eyebrow">About us</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Welcome to Peptide Friend.
+            Everybody needs a Peptide Friend.
           </h2>
         </div>
         <div>
           <p className="max-w-xl text-lg leading-relaxed text-[var(--muted)]">
-            We keep things simple: a clean shopping experience, responsive support,
-            and products that are easy to find.
+            We&apos;re here to make the experience feel a little friendlier: simple shopping, clear information, and real support when you need it.
           </p>
           <Link
             href="/about"
@@ -182,11 +181,11 @@ export function FaqSimple() {
     <section className="section border-y border-black/5 bg-white/75">
       <div className="container grid gap-8 lg:grid-cols-[.75fr_1.25fr]">
         <div>
-          <div className="eyebrow">FAQ</div>
+          <div className="eyebrow">Need a hand?</div>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
             Questions?
           </h2>
-          <p className="mt-4 text-[var(--muted)]">We&apos;re here to help.</p>
+          <p className="mt-4 text-[var(--muted)]">No awkward questions. Just reach out.</p>
           <Link
             href="/contact"
             className="mt-6 inline-flex rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium"
