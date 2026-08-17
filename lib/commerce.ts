@@ -20,3 +20,18 @@ export function getOrderAmounts(productSlug: string) {
 
   return { product, subtotal, shipping, total };
 }
+
+export function isCheckoutAllowed(productSlug: string) {
+  const configured = process.env.NOWPAYMENTS_ALLOWED_PRODUCTS?.trim();
+  if (!configured) return false;
+  if (configured === "*") return true;
+
+  const allowed = new Set(
+    configured
+      .split(",")
+      .map((value) => value.trim())
+      .filter(Boolean),
+  );
+
+  return allowed.has(productSlug);
+}

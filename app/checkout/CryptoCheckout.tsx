@@ -67,7 +67,7 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
   async function startBitcoinCheckout() {
     setError("");
     if (!checkoutEligible) {
-      setError("This product is not currently available for online checkout.");
+      setError("Bitcoin checkout is not active for this product yet.");
       return;
     }
 
@@ -173,7 +173,7 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
         className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50"
       >
         {loading && <LoaderCircle size={16} className="animate-spin" />}
-        {checkoutEligible ? (loading ? "Creating payment…" : "Pay with Bitcoin") : "Currently unavailable"}
+        {checkoutEligible ? (loading ? "Creating payment…" : "Pay with Bitcoin") : "Payment activation pending"}
       </button>
 
       {error && <p className="mt-3 text-xs text-red-600">{error}</p>}

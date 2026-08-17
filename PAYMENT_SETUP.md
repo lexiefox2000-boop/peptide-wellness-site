@@ -50,3 +50,5 @@ After one eligible product and all environment variables are configured:
 5. Confirm the payment status updates on the checkout page.
 6. Confirm the NOWPayments IPN updates `orders.payment_status` in Supabase.
 7. Only then announce checkout as live.
+
+- `NOWPAYMENTS_ALLOWED_PRODUCTS` = comma-separated approved product slugs; `*` only if the whole catalog is approved

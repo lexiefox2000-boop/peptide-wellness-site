@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
-import { getOrderAmounts } from "@/lib/commerce";
+import { getOrderAmounts, isCheckoutAllowed } from "@/lib/commerce";
 import { createNowPayment } from "@/lib/nowpayments";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
@@ -31,10 +31,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Product not found." }, { status: 404 });
     }
 
-    // This is deliberately enforced server-side. UI changes alone cannot bypass it.
-    if (!order.product.checkoutEligible) {
+    // Production allowlist is enforced server-side. UI changes alone cannot bypass it.
+    if (!isCheckoutAllowed(order.product.slug)) {
       return NextResponse.json(
-        { error: "This product is not currently available for online checkout." },
+        { error: "Bitcoin checkout is not active for this product yet." },
         { status: 403 },
       );
     }

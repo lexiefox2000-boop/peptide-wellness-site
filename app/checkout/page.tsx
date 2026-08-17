@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { products } from "@/lib/data";
-import { getOrderAmounts } from "@/lib/commerce";
+import { getOrderAmounts, isCheckoutAllowed } from "@/lib/commerce";
 import { CreditCard, LockKeyhole } from "lucide-react";
 import CryptoCheckout from "./CryptoCheckout";
 
@@ -16,6 +16,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
   const { product: productSlug } = await searchParams;
   const product = products.find((item) => item.slug === productSlug) ?? products[0];
   const amounts = getOrderAmounts(product.slug)!;
+  const checkoutAllowed = isCheckoutAllowed(product.slug);
 
   return (
     <div className="section">
@@ -58,13 +59,13 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                 <button disabled className="mt-5 w-full cursor-not-allowed rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-white opacity-55">Card payments coming next</button>
               </div>
 
-              <CryptoCheckout productSlug={product.slug} productName={product.name} checkoutEligible={product.checkoutEligible} />
+              <CryptoCheckout productSlug={product.slug} productName={product.name} checkoutEligible={checkoutAllowed} />
             </div>
 
-            {!product.checkoutEligible && (
+            {!checkoutAllowed && (
               <div className="mt-4 flex items-start gap-2 rounded-2xl bg-amber-50 p-4 text-xs text-amber-900">
                 <LockKeyhole size={14} className="mt-0.5 shrink-0" />
-                <span>This item is displayed in the catalog but online checkout is currently disabled for it.</span>
+                <span>Bitcoin checkout is ready and will activate once the production payment settings are enabled for this product.</span>
               </div>
             )}
           </div>
