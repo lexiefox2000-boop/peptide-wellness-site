@@ -67,7 +67,7 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
   async function startBitcoinCheckout() {
     setError("");
     if (!checkoutEligible) {
-      setError("Bitcoin checkout is not active for this product yet.");
+      setError("Bitcoin payment is temporarily unavailable. Please try again shortly.");
       return;
     }
 
@@ -95,10 +95,10 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
         body: JSON.stringify({ ...values, productSlug }),
       });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || "Unable to start Bitcoin checkout.");
+      if (!response.ok) throw new Error(data.error || "We couldn’t start your payment. Nothing has been charged. Please try again.");
       setPayment(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Unable to start Bitcoin checkout.");
+      setError(err instanceof Error ? err.message : "We couldn’t start your payment. Nothing has been charged. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -114,7 +114,7 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
             <WalletCards size={22} className="text-[var(--primary)]" />
           )}
           <div>
-            <div className="font-semibold">Bitcoin payment</div>
+            <div className="font-semibold">Your Bitcoin payment is ready.</div>
             <div className="text-xs text-[var(--muted)]">{statusLabel}</div>
           </div>
         </div>
@@ -144,14 +144,14 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
             </div>
 
             <p className="text-xs leading-relaxed text-[var(--muted)]">
-              Send Bitcoin only to this address. The payment status on this page updates automatically after NOWPayments detects the transaction.
+              Send the exact BTC amount to the address above. We’ll update this page automatically once your payment is confirmed.
             </p>
           </div>
         )}
 
         {payment.status === "finished" && (
           <div className="mt-5 rounded-2xl bg-emerald-50 p-4 text-sm text-emerald-900">
-            Payment received for {productName}. Your order reference is {payment.orderId.slice(0, 8).toUpperCase()}.
+            Payment received 🎉 Your order is confirmed. Order #{payment.orderId.slice(0, 8).toUpperCase()}.
           </div>
         )}
       </div>
@@ -164,23 +164,23 @@ export default function CryptoCheckout({ productSlug, productName, checkoutEligi
         <WalletCards size={20} className="text-[var(--primary)]" />
         <div className="font-semibold">Bitcoin</div>
       </div>
-      <p className="mt-2 text-sm text-[var(--muted)]">Pay securely in BTC through NOWPayments.</p>
+      <p className="mt-2 text-sm text-[var(--muted)]">Pay securely with BTC.</p>
 
       <button
         type="button"
-        disabled={loading || !checkoutEligible}
+        disabled={loading}
         onClick={startBitcoinCheckout}
         className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50"
       >
         {loading && <LoaderCircle size={16} className="animate-spin" />}
-        {checkoutEligible ? (loading ? "Creating payment…" : "Pay with Bitcoin") : "Payment activation pending"}
+        {loading ? "Preparing payment…" : "Pay with Bitcoin"}
       </button>
 
       {error && <p className="mt-3 text-xs text-red-600">{error}</p>}
 
       <div className="mt-4 flex items-start gap-2 text-xs text-[var(--muted)]">
         <LockKeyhole size={14} className="mt-0.5 shrink-0" />
-        <span>Payment is created server-side. Store API credentials are never exposed in the browser.</span>
+        <span>Secure payment. Your order details stay protected.</span>
       </div>
     </div>
   );

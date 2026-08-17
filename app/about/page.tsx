@@ -10,10 +10,10 @@ export default function AboutPage() {
             Everybody needs a Peptide Friend.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-[var(--muted)]">
-            Peptide Friend was created to make the shopping experience feel simpler, friendlier, and a lot less intimidating.
+            Peptides can feel complicated. We’re here to make finding what you’re looking for simpler, friendlier, and a lot less intimidating.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            Browse the collection, pick what you&apos;re looking for, and if you have a question, ask a friend.
+            Explore the collection at your own pace. And if you have a question along the way, ask a friend. That’s what we’re here for.
           </p>
           <Link
             href="/#products"

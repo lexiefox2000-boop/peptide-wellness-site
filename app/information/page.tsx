@@ -10,27 +10,27 @@ export default function LandingPage() {
             Store information, all in one place
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--muted)]">
-            Review how the catalog is organized, where to find policies, and the current status of online ordering.
+            Everything you need to browse with confidence — product details, store policies, shipping information, and answers to common questions.
           </p>
 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-white p-6">
             <h2 className="text-xl font-semibold">What you can review here</h2>
             <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
-              <li>General information about how products are listed on the site.</li>
-              <li>Current catalog pricing on product pages.</li>
-              <li>Access to FAQ, shipping, refund, privacy, and terms pages.</li>
+              <li>Helpful product information in one easy-to-browse collection.</li>
+              <li>Clear product details and current pricing.</li>
+              <li>Easy access to FAQs, shipping, refunds, privacy, and store terms.</li>
             </ul>
           </div>
         </div>
 
         <div className="card rounded-[2rem] p-6">
           <div className="rounded-[1.5rem] bg-[var(--surface-soft)] p-6">
-            <div className="text-sm text-[var(--muted)]">Store status</div>
+            <div className="text-sm text-[var(--muted)]">Good to know</div>
             <div className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
-              Catalog live. Ordering pending.
+              Everything in one place.
             </div>
             <p className="mt-4 text-sm text-[var(--muted)]">
-              Product pages and policies are available now. Online ordering will be activated only after the business, fulfillment, and payment setup is complete.
+              Browse the collection, review store policies, and find answers to common questions whenever you need them.
             </p>
             <div className="mt-6 space-y-3">
               <Link
@@ -43,7 +43,7 @@ export default function LandingPage() {
                 href="/products/tirzepatide-10mg"
                 className="block rounded-full border border-black/10 px-5 py-3 text-center text-sm font-medium"
               >
-                View a product page
+                Explore a product
               </Link>
             </div>
           </div>
@@ -54,15 +54,15 @@ export default function LandingPage() {
         {[
           [
             "Product pages",
-            "Each product page shows the product name, dosage, price, and basic details on the site.",
+            "Find product details, available options, and pricing in one clean place.",
           ],
           [
             "Store policies",
-            "Shipping, refund, privacy, and terms information is available to review while browsing.",
+            "Shipping, refunds, privacy, and terms are easy to find whenever you need them.",
           ],
           [
             "FAQ and support",
-            "Common questions and contact options are available if you need more information before ordering.",
+            "Still wondering about something? Browse the FAQs or ask a Peptide Friend.",
           ],
         ].map(([title, copy]) => (
           <div key={title} className="card rounded-[1.5rem] p-6">
@@ -73,8 +73,7 @@ export default function LandingPage() {
       </div>
 
       <div className="container mt-16 rounded-[2rem] border border-black/5 bg-[var(--surface-tint)] p-8 text-sm text-[var(--muted)]">
-        Please review product details, store policies, and checkout information
-        while browsing.
+        Questions along the way? We’re here to help.
       </div>
     </div>
   );

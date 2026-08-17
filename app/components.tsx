@@ -161,7 +161,7 @@ export function AboutSimple() {
         </div>
         <div>
           <p className="max-w-xl text-lg leading-relaxed text-[var(--muted)]">
-            We&apos;re here to make the experience feel a little friendlier: simple shopping, clear information, and real support when you need it.
+            Peptides can feel complicated. We&apos;re here to make finding what you&apos;re looking for simpler, friendlier, and a lot less intimidating.
           </p>
           <Link
             href="/about"
@@ -185,7 +185,7 @@ export function FaqSimple() {
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
             Questions?
           </h2>
-          <p className="mt-4 text-[var(--muted)]">No awkward questions. Just reach out.</p>
+          <p className="mt-4 text-[var(--muted)]">Product question? Order question? Just curious? Ask away.</p>
           <Link
             href="/contact"
             className="mt-6 inline-flex rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium"
@@ -214,7 +214,7 @@ export function FinalCta() {
         <div className="card rounded-[2rem] bg-[linear-gradient(135deg,#ffffff,#edf7fc)] p-8 text-center md:p-12">
           <div className="eyebrow">Peptide Friend</div>
           <h2 className="mx-auto mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
-            Find your product.
+            Find what you’re looking for.
           </h2>
           <Link
             href="#products"

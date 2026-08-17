@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { products } from "@/lib/data";
 import { getOrderAmounts, isCheckoutAllowed } from "@/lib/commerce";
-import { CreditCard, LockKeyhole } from "lucide-react";
+import { CreditCard } from "lucide-react";
 import CryptoCheckout from "./CryptoCheckout";
 
 type CheckoutPageProps = {
@@ -50,24 +50,19 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
 
           <div className="mt-8">
             <h2 className="text-lg font-semibold">Payment</h2>
-            <p className="mt-2 text-sm text-[var(--muted)]">Choose your payment method.</p>
+            <p className="mt-2 text-sm text-[var(--muted)]">Choose how you’d like to pay.</p>
 
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="rounded-[1.5rem] border-2 border-[var(--primary)]/25 bg-[var(--surface-tint)] p-5">
                 <div className="flex items-center gap-3"><CreditCard size={20} className="text-[var(--primary)]" /><div className="font-semibold">Card</div></div>
                 <p className="mt-2 text-sm text-[var(--muted)]">Credit or debit card</p>
-                <button disabled className="mt-5 w-full cursor-not-allowed rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-white opacity-55">Card payments coming next</button>
+                <button disabled className="mt-5 w-full cursor-not-allowed rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-white opacity-55">Pay with card</button>
               </div>
 
               <CryptoCheckout productSlug={product.slug} productName={product.name} checkoutEligible={checkoutAllowed} />
             </div>
 
-            {!checkoutAllowed && (
-              <div className="mt-4 flex items-start gap-2 rounded-2xl bg-amber-50 p-4 text-xs text-amber-900">
-                <LockKeyhole size={14} className="mt-0.5 shrink-0" />
-                <span>Bitcoin checkout is ready and will activate once the production payment settings are enabled for this product.</span>
-              </div>
-            )}
+
           </div>
         </div>
 

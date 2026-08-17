@@ -20,11 +20,10 @@ export default async function ThankYouPage({
         <div className="card rounded-[2rem] p-8 md:p-10">
           <div className="eyebrow">Order received</div>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Thank you — your order request has been submitted
+            Thank you — we’ve got your order.
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-[var(--muted)]">
-            Your order request has been received along with the selected product
-            and checkout details.
+            Your order has been received. Keep your order details handy, and we’ll take it from here.
           </p>
 
           <div className="mt-8 rounded-[1.5rem] border border-black/5 bg-[var(--surface-soft)] p-5">
@@ -43,32 +42,26 @@ export default async function ThankYouPage({
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="font-medium">Step 1</div>
                 <p className="mt-2 text-[var(--muted)]">
-                  The submitted order details are reviewed along with the
-                  selected product information.
+                  We receive your order details and get everything ready for the next step.
                 </p>
               </div>
 
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="font-medium">Step 2</div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Shipping and order information are confirmed based on the
-                  details provided at checkout.
+                  Your shipping details are used to prepare your order for fulfillment.
                 </p>
               </div>
 
               <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-4 text-sm">
                 <div className="font-medium">Step 3</div>
                 <p className="mt-2 text-[var(--muted)]">
-                  Any follow-up updates can be sent through the store’s support
-                  contact or order email process.
+                  Need help along the way? Reach out through our Contact page and a Peptide Friend will help.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 rounded-[1.5rem] bg-[var(--surface-tint)] p-5 text-sm text-[var(--muted)]">
-            Online ordering is not currently active.
-          </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
