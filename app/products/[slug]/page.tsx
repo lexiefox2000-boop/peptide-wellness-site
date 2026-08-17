@@ -51,12 +51,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href={`/checkout?product=${product.slug}`}
-                className="inline-flex justify-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-medium text-[var(--primary-foreground)]"
-              >
-                Continue to checkout
-              </Link>
+              {product.checkoutEligible ? (
+                <Link
+                  href={`/checkout?product=${product.slug}`}
+                  className="inline-flex justify-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-medium text-[var(--primary-foreground)]"
+                >
+                  Continue to checkout
+                </Link>
+              ) : (
+                <span className="inline-flex cursor-not-allowed justify-center rounded-full bg-black/5 px-7 py-3.5 text-sm font-medium text-[var(--muted)]">
+                  Currently unavailable
+                </span>
+              )}
               <Link
                 href="/#products"
                 className="inline-flex justify-center rounded-full border border-black/10 bg-white px-7 py-3.5 text-sm font-medium"

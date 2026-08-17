@@ -1,4 +1,20 @@
-export const products = [
+export type StoreProduct = {
+  slug: string;
+  name: string;
+  dosage: string;
+  price: string;
+  image: string;
+  highlights: string[];
+  description: string;
+  details: string[];
+  /**
+   * Server-enforced commerce switch. Keep false until the business has
+   * confirmed this specific item is authorized for direct online sale.
+   */
+  checkoutEligible: boolean;
+};
+
+export const products: StoreProduct[] = [
   {
     slug: "tirzepatide-10mg",
     name: "Tirzepatide 10mg",
@@ -8,6 +24,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "tirzepatide-40mg",
@@ -18,6 +35,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "retatrutide-10mg",
@@ -28,6 +46,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "retatrutide-40mg",
@@ -38,6 +57,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "sermorelin-10mg",
@@ -48,6 +68,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "ghk-cu-100mg",
@@ -58,6 +79,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "nad-500mg",
@@ -68,6 +90,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
   {
     slug: "bac-water-10ml",
@@ -78,6 +101,7 @@ export const products = [
     highlights: [],
     description: "",
     details: [],
+    checkoutEligible: false,
   },
 ];
 
@@ -108,11 +132,11 @@ export const faqs = [
   },
   {
     q: "When will online ordering be available?",
-    a: "Online ordering will be activated only after the store has completed its business, fulfillment, and payment-provider setup. Until then, the website is a catalog preview.",
+    a: "Online ordering is activated product by product after the store completes its business, fulfillment, compliance, and payment-provider setup.",
   },
   {
     q: "Will payment information be stored on this website?",
-    a: "When ordering is activated, payment should be handled through the approved payment provider rather than stored directly in the storefront code.",
+    a: "Crypto payment details are handled through NOWPayments. Sensitive payment credentials are stored only in secure server-side environment variables, not in the storefront code.",
   },
 ];
 
