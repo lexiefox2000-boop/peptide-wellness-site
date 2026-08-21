@@ -21,6 +21,25 @@ export function getOrderAmounts(productSlug: string) {
   return { product, subtotal, shipping, total };
 }
 
+
+export type OrderItemInput = { slug: string; quantity: number };
+
+export function getCartAmounts(items: OrderItemInput[]) {
+  const normalized = items.flatMap((item) => {
+    const product = products.find((p) => p.slug === item.slug);
+    const quantity = Math.max(1, Math.min(20, Math.floor(Number(item.quantity) || 0)));
+    return product ? [{ product, quantity, unitPrice: parsePrice(product.price) }] : [];
+  });
+  if (!normalized.length) return null;
+  const subtotal = Number(normalized.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0).toFixed(2));
+  const shipping = shippingFor(subtotal);
+  const total = Number((subtotal + shipping).toFixed(2));
+  return { items: normalized, subtotal, shipping, total };
+}
+
+export function areCheckoutItemsAllowed(items: OrderItemInput[]) {
+  return items.length > 0 && items.every((item) => isCheckoutAllowed(item.slug));
+}
 export function isCheckoutAllowed(productSlug: string) {
   const configured = process.env.NOWPAYMENTS_ALLOWED_PRODUCTS?.trim();
   if (!configured) return false;

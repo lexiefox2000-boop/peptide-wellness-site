@@ -1,136 +1,19 @@
-import { NextRequest, NextResponse } from "next/server";
-import { randomUUID } from "node:crypto";
-import { getOrderAmounts, isCheckoutAllowed } from "@/lib/commerce";
-import { createNowPayment } from "@/lib/nowpayments";
-import { getSupabaseAdmin } from "@/lib/supabase-admin";
-
-export const runtime = "nodejs";
-
-type CheckoutBody = {
-  productSlug?: string;
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  phone?: string;
-  address?: string;
-  city?: string;
-  state?: string;
-  postalCode?: string;
-  country?: string;
-};
-
-const clean = (value: unknown, max = 250) =>
-  typeof value === "string" ? value.trim().slice(0, max) : "";
-
-export async function POST(request: NextRequest) {
-  try {
-    const body = (await request.json()) as CheckoutBody;
-    const order = getOrderAmounts(clean(body.productSlug, 100));
-
-    if (!order) {
-      return NextResponse.json({ error: "Product not found." }, { status: 404 });
-    }
-
-    // Production allowlist is enforced server-side. UI changes alone cannot bypass it.
-    if (!isCheckoutAllowed(order.product.slug)) {
-      return NextResponse.json(
-        { error: "Bitcoin checkout is not active for this product yet." },
-        { status: 403 },
-      );
-    }
-
-    const customer = {
-      firstName: clean(body.firstName, 80),
-      lastName: clean(body.lastName, 80),
-      email: clean(body.email, 160).toLowerCase(),
-      phone: clean(body.phone, 40),
-      address: clean(body.address, 200),
-      city: clean(body.city, 100),
-      state: clean(body.state, 100),
-      postalCode: clean(body.postalCode, 30),
-      country: clean(body.country, 100) || "United States",
-    };
-
-    if (
-      !customer.firstName ||
-      !customer.lastName ||
-      !customer.email ||
-      !customer.address ||
-      !customer.city ||
-      !customer.state ||
-      !customer.postalCode
-    ) {
-      return NextResponse.json({ error: "Please complete the required contact and shipping fields." }, { status: 400 });
-    }
-
-    const orderId = randomUUID();
-    const supabase = getSupabaseAdmin();
-
-    const { error: insertError } = await supabase.from("orders").insert({
-      id: orderId,
-      product_slug: order.product.slug,
-      product_name: order.product.name,
-      subtotal_usd: order.subtotal,
-      shipping_usd: order.shipping,
-      total_usd: order.total,
-      first_name: customer.firstName,
-      last_name: customer.lastName,
-      email: customer.email,
-      phone: customer.phone || null,
-      address_line1: customer.address,
-      city: customer.city,
-      state: customer.state,
-      postal_code: customer.postalCode,
-      country: customer.country,
-      payment_provider: "nowpayments",
-      payment_method: "btc",
-      payment_status: "creating",
-    });
-
-    if (insertError) throw new Error(`Unable to save order: ${insertError.message}`);
-
-    const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || request.nextUrl.origin).replace(/\/$/, "");
-
-    try {
-      const payment = await createNowPayment({
-        priceAmount: order.total,
-        orderId,
-        orderDescription: `${order.product.name} order`,
-        callbackUrl: `${siteUrl}/api/nowpayments/ipn`,
-      });
-
-      const { error: updateError } = await supabase
-        .from("orders")
-        .update({
-          nowpayments_payment_id: String(payment.payment_id),
-          payment_status: payment.payment_status || "waiting",
-          crypto_pay_address: payment.pay_address || null,
-          crypto_pay_amount: payment.pay_amount ?? null,
-          crypto_pay_currency: payment.pay_currency || "btc",
-        })
-        .eq("id", orderId);
-
-      if (updateError) throw new Error(`Unable to update order: ${updateError.message}`);
-
-      return NextResponse.json({
-        orderId,
-        paymentId: String(payment.payment_id),
-        status: payment.payment_status,
-        payAddress: payment.pay_address,
-        payAmount: payment.pay_amount,
-        payCurrency: payment.pay_currency || "btc",
-        totalUsd: order.total,
-        productName: order.product.name,
-      });
-    } catch (error) {
-      await supabase.from("orders").update({ payment_status: "create_failed" }).eq("id", orderId);
-      throw error;
-    }
-  } catch (error) {
-    console.error("Crypto checkout error", error);
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Unable to start Bitcoin checkout." },
-      { status: 500 },
-    );
-  }
-}
+import {NextRequest,NextResponse} from "next/server";
+import {randomUUID} from "node:crypto";
+import {areCheckoutItemsAllowed,getCartAmounts,OrderItemInput} from "@/lib/commerce";
+import {createNowPayment} from "@/lib/nowpayments";
+import {getSupabaseAdmin} from "@/lib/supabase-admin";
+export const runtime="nodejs";
+type CheckoutBody={items?:OrderItemInput[];firstName?:string;lastName?:string;email?:string;phone?:string;address?:string;city?:string;state?:string;postalCode?:string;country?:string};
+const clean=(v:unknown,max=250)=>typeof v==="string"?v.trim().slice(0,max):"";
+export async function POST(request:NextRequest){try{const body=(await request.json()) as CheckoutBody;const requested=Array.isArray(body.items)?body.items.slice(0,30):[];const order=getCartAmounts(requested);if(!order)return NextResponse.json({error:"Your cart is empty."},{status:400});
+if(order.items.length!==requested.length)return NextResponse.json({error:"One or more cart items could not be verified."},{status:400});
+if(!areCheckoutItemsAllowed(requested))return NextResponse.json({error:"Bitcoin checkout is temporarily unavailable for one or more items in your cart."},{status:403});
+const customer={firstName:clean(body.firstName,80),lastName:clean(body.lastName,80),email:clean(body.email,160).toLowerCase(),phone:clean(body.phone,40),address:clean(body.address,200),city:clean(body.city,100),state:clean(body.state,100),postalCode:clean(body.postalCode,30),country:clean(body.country,100)||"United States"};
+if(!customer.firstName||!customer.lastName||!customer.email||!customer.address||!customer.city||!customer.state||!customer.postalCode)return NextResponse.json({error:"Please complete the required contact and shipping fields."},{status:400});
+const orderId=randomUUID(),supabase=getSupabaseAdmin();const itemSnapshot=order.items.map(i=>({slug:i.product.slug,name:i.product.name,dosage:i.product.dosage,quantity:i.quantity,unit_price_usd:i.unitPrice,line_total_usd:Number((i.unitPrice*i.quantity).toFixed(2))}));const summary=itemSnapshot.map(i=>`${i.quantity}× ${i.name}`).join(", ").slice(0,500);
+const {error:insertError}=await supabase.from("orders").insert({id:orderId,product_slug:order.items.length===1?order.items[0].product.slug:"multi-item-cart",product_name:summary,items_json:itemSnapshot,subtotal_usd:order.subtotal,shipping_usd:order.shipping,total_usd:order.total,first_name:customer.firstName,last_name:customer.lastName,email:customer.email,phone:customer.phone||null,address_line1:customer.address,city:customer.city,state:customer.state,postal_code:customer.postalCode,country:customer.country,payment_provider:"nowpayments",payment_method:"btc",payment_status:"creating"});
+if(insertError)throw new Error(`Unable to save order: ${insertError.message}`);
+const siteUrl=(process.env.NEXT_PUBLIC_SITE_URL||request.nextUrl.origin).replace(/\/$/,"");
+try{const payment=await createNowPayment({priceAmount:order.total,orderId,orderDescription:`Peptide Friend order — ${summary}`.slice(0,500),callbackUrl:`${siteUrl}/api/nowpayments/ipn`});const{error:updateError}=await supabase.from("orders").update({nowpayments_payment_id:String(payment.payment_id),payment_status:payment.payment_status||"waiting",crypto_pay_address:payment.pay_address||null,crypto_pay_amount:payment.pay_amount??null,crypto_pay_currency:payment.pay_currency||"btc"}).eq("id",orderId);if(updateError)throw new Error(`Unable to update order: ${updateError.message}`);return NextResponse.json({orderId,paymentId:String(payment.payment_id),status:payment.payment_status,payAddress:payment.pay_address,payAmount:payment.pay_amount,payCurrency:payment.pay_currency||"btc",totalUsd:order.total,productName:summary})}catch(error){await supabase.from("orders").update({payment_status:"create_failed"}).eq("id",orderId);throw error}
+}catch(error){console.error("Crypto checkout error",error);return NextResponse.json({error:error instanceof Error?error.message:"Unable to start Bitcoin checkout."},{status:500})}}

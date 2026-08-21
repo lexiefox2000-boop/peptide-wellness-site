@@ -130,14 +130,6 @@ export const faqs = [
     q: "Are refunds or replacements available?",
     a: "Approved order issues may be addressed with a replacement, store credit, partial credit, refund, or another appropriate resolution depending on the situation.",
   },
-  {
-    q: "How can I pay for my order?",
-    a: "Peptide Friend currently accepts Bitcoin payments through our secure crypto checkout.",
-  },
-  {
-    q: "How does Bitcoin checkout work?",
-    a: "At checkout, you’ll receive the exact BTC amount and payment address for your order. The page will update automatically once your payment is confirmed.",
-  },
 ];
 
 export const testimonials = [];

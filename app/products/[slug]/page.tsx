@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/lib/data";
 import { ArrowLeft } from "lucide-react";
+import AddToCart from "./AddToCart";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -50,20 +51,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               {product.price}
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href={`/checkout?product=${product.slug}`}
-                className="inline-flex justify-center rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-medium text-[var(--primary-foreground)]"
-              >
-                Continue to checkout
-              </Link>
-              <Link
-                href="/#products"
-                className="inline-flex justify-center rounded-full border border-black/10 bg-white px-7 py-3.5 text-sm font-medium"
-              >
-                Keep shopping
-              </Link>
-            </div>
+            <AddToCart slug={product.slug} />
           </div>
         </div>
 

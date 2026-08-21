@@ -5,7 +5,7 @@ create table if not exists public.orders (
   id uuid primary key,
   created_at timestamptz not null default now(),
   product_slug text not null,
-  product_name text not null,
+  product_name text not null,\n  items_json jsonb,
   subtotal_usd numeric(10,2) not null,
   shipping_usd numeric(10,2) not null,
   total_usd numeric(10,2) not null,
@@ -36,3 +36,4 @@ alter table public.orders enable row level security;
 create index if not exists orders_payment_id_idx on public.orders(nowpayments_payment_id);
 create index if not exists orders_email_idx on public.orders(email);
 create index if not exists orders_created_at_idx on public.orders(created_at desc);
+\n-- Safe migration for an existing orders table:\nalter table public.orders add column if not exists items_json jsonb;\n

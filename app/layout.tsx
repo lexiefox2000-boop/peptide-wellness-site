@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { CartProvider } from "./CartProvider";
+import CartButton from "./CartButton";
 
 export const metadata: Metadata = {
   title: "Peptide Friend",
@@ -18,7 +20,7 @@ function Logo() {
       />
       <div>
         <div className="text-lg font-semibold tracking-tight">Peptide Friend</div>
-        <div className="text-xs text-[var(--muted)]">Everybody needs a Peptide Friend.</div>
+        <div className="hidden text-xs text-[var(--muted)] sm:block">Everybody needs a Peptide Friend.</div>
       </div>
     </div>
   );
@@ -27,7 +29,7 @@ function Logo() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body><CartProvider>
         <a href="#content" className="sr-only focus:not-sr-only">Skip to content</a>
 
         <header className="sticky top-0 z-50 border-b border-black/5 bg-[rgba(251,250,247,.88)] backdrop-blur-xl">
@@ -45,19 +47,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Shop now
               </Link>
+              <CartButton />
             </nav>
 
-            <details className="relative md:hidden">
-              <summary className="flex cursor-pointer list-none items-center rounded-full border border-black/10 p-2" aria-label="Open menu">
-                <Menu size={18} />
-              </summary>
-              <nav className="absolute right-0 mt-3 w-52 rounded-2xl border border-black/10 bg-white p-3 shadow-lg">
-                <Link className="block rounded-xl px-3 py-2 text-sm" href="/#products">Shop</Link>
-                <Link className="block rounded-xl px-3 py-2 text-sm" href="/about">About</Link>
-                <Link className="block rounded-xl px-3 py-2 text-sm" href="/faq">FAQ</Link>
-                <Link className="block rounded-xl px-3 py-2 text-sm" href="/contact">Contact</Link>
-              </nav>
-            </details>
+            <div className="flex items-center gap-2 md:hidden">
+              <CartButton />
+              <details className="relative">
+                <summary className="flex cursor-pointer list-none items-center rounded-full border border-black/10 p-2" aria-label="Open menu">
+                  <Menu size={18} />
+                </summary>
+                <nav className="absolute right-0 mt-3 w-52 rounded-2xl border border-black/10 bg-white p-3 shadow-lg">
+                  <Link className="block rounded-xl px-3 py-2 text-sm" href="/#products">Shop</Link>
+                  <Link className="block rounded-xl px-3 py-2 text-sm" href="/cart">Cart</Link>
+                  <Link className="block rounded-xl px-3 py-2 text-sm" href="/about">About</Link>
+                  <Link className="block rounded-xl px-3 py-2 text-sm" href="/faq">FAQ</Link>
+                  <Link className="block rounded-xl px-3 py-2 text-sm" href="/contact">Contact</Link>
+                </nav>
+              </details>
+            </div>
           </div>
         </header>
 
@@ -91,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </footer>
-      </body>
+      </CartProvider></body>
     </html>
   );
 }

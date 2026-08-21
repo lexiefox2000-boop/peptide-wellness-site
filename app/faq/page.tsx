@@ -10,7 +10,7 @@ export default function FaqPage() {
         </h1>
 
         <p className="mt-6 text-lg text-[var(--muted)]">
-          Find answers to common questions about product information, catalog pricing, shipping, store status, and policies.
+          A few quick answers about products, pricing, shipping, and store policies.
         </p>
 
         <div className="mt-10 space-y-4">
@@ -18,7 +18,7 @@ export default function FaqPage() {
             .concat([
               {
                 q: "Where can I review current pricing?",
-                a: "Current catalog pricing is shown on the catalog and individual product pages.",
+                a: "Current pricing is shown on the shop and individual product pages.",
               },
               {
                 q: "Where can I find shipping and refund information?",
