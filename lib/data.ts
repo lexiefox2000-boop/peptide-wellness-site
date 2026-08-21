@@ -131,12 +131,12 @@ export const faqs = [
     a: "Approved order issues may be addressed with a replacement, store credit, partial credit, refund, or another appropriate resolution depending on the situation.",
   },
   {
-    q: "When will online ordering be available?",
-    a: "Online ordering is activated product by product after the store completes its business, fulfillment, compliance, and payment-provider setup.",
+    q: "How can I pay for my order?",
+    a: "Peptide Friend currently accepts Bitcoin payments through our secure crypto checkout.",
   },
   {
-    q: "Will payment information be stored on this website?",
-    a: "Crypto payment details are handled through NOWPayments. Sensitive payment credentials are stored only in secure server-side environment variables, not in the storefront code.",
+    q: "How does Bitcoin checkout work?",
+    a: "At checkout, you’ll receive the exact BTC amount and payment address for your order. The page will update automatically once your payment is confirmed.",
   },
 ];
 

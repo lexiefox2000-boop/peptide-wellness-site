@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { products } from "@/lib/data";
 import { getOrderAmounts, isCheckoutAllowed } from "@/lib/commerce";
-import { CreditCard } from "lucide-react";
 import CryptoCheckout from "./CryptoCheckout";
 
 type CheckoutPageProps = {
@@ -50,15 +49,9 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
 
           <div className="mt-8">
             <h2 className="text-lg font-semibold">Payment</h2>
-            <p className="mt-2 text-sm text-[var(--muted)]">Choose how you’d like to pay.</p>
+            <p className="mt-2 text-sm text-[var(--muted)]">Complete your order securely with Bitcoin.</p>
 
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              <div className="rounded-[1.5rem] border-2 border-[var(--primary)]/25 bg-[var(--surface-tint)] p-5">
-                <div className="flex items-center gap-3"><CreditCard size={20} className="text-[var(--primary)]" /><div className="font-semibold">Card</div></div>
-                <p className="mt-2 text-sm text-[var(--muted)]">Credit or debit card</p>
-                <button disabled className="mt-5 w-full cursor-not-allowed rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-white opacity-55">Pay with card</button>
-              </div>
-
+            <div className="mt-4 max-w-xl">
               <CryptoCheckout productSlug={product.slug} productName={product.name} checkoutEligible={checkoutAllowed} />
             </div>
 

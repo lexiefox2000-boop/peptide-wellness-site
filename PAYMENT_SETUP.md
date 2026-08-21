@@ -1,54 +1,42 @@
-# NOWPayments launch setup
+# Peptide Friend — launch checklist
 
-The code is wired for BTC payments through NOWPayments. Production payment creation stays server-side and product eligibility is enforced on the server.
+The storefront is configured for Bitcoin checkout through NOWPayments. Card checkout has been removed.
 
-## 1. Rotate the previously shared API key
-Generate a fresh NOWPayments API key before production. Do not paste the replacement into source code, GitHub, chat, or browser-visible environment variables.
+## Vercel environment variables
+Add these in Vercel → Project → Settings → Environment Variables, then redeploy:
 
-## 2. Create the IPN secret
-In NOWPayments Store Settings / Payment Settings, generate the IPN Secret Key when ready to connect callbacks. Store it immediately; NOWPayments shows it only once before regeneration is required.
+- `NEXT_PUBLIC_SITE_URL` — current HTTPS site origin; switch to the final custom domain after it is connected
+- `NOWPAYMENTS_API_KEY` — production API key (server only)
+- `NOWPAYMENTS_IPN_SECRET` — production IPN secret (server only)
+- `NOWPAYMENTS_API_BASE_URL=https://api.nowpayments.io/v1`
+- `NOWPAYMENTS_ALLOWED_PRODUCTS` — approved product slugs, or `*` only when the entire catalog is approved
+- `NEXT_PUBLIC_SUPABASE_URL` — Supabase project URL
+- `SUPABASE_SERVICE_ROLE_KEY` — Supabase service-role secret (server only)
+- `NEXT_PUBLIC_TELEGRAM_URL` — Telegram bot/support link
 
-## 3. Configure the payout wallet
-Confirm the BTC payout/outcome wallet in NOWPayments belongs to the business and is correct.
+Never place the NOWPayments API key, IPN secret, or Supabase service-role key in browser code, GitHub, chat, or any variable prefixed with `NEXT_PUBLIC_`.
 
-## 4. Create order storage
-Create a Supabase project and run `supabase/schema.sql` in its SQL editor.
+## Order storage
+Create a Supabase project and run `supabase/schema.sql` in the SQL editor before accepting a real order.
 
-## 5. Add Vercel environment variables
-Add these to Production (and Preview if you want preview checkout testing):
+## Bitcoin flow
+1. Customer completes contact and shipping information.
+2. Customer selects Pay with Bitcoin.
+3. The server calculates the order total and creates a NOWPayments BTC payment.
+4. The customer receives the exact BTC amount and address.
+5. The page polls for a customer-facing status update.
+6. NOWPayments sends a signed IPN callback and the server updates the stored order.
 
-- `NEXT_PUBLIC_SITE_URL` = final HTTPS domain
-- `NOWPAYMENTS_API_KEY` = fresh secret API key
-- `NOWPAYMENTS_IPN_SECRET` = IPN secret
-- `NOWPAYMENTS_API_BASE_URL` = `https://api.nowpayments.io/v1` for production
-- `NEXT_PUBLIC_SUPABASE_URL` = Supabase project URL
-- `SUPABASE_SERVICE_ROLE_KEY` = Supabase service-role secret
+## Telegram support
+Set `NEXT_PUBLIC_TELEGRAM_URL` to the business bot link. Until it is set, the Contact page displays a neutral coming-soon message rather than a broken form.
 
-Redeploy after changing environment variables.
-
-## 6. Product eligibility
-Every current product has `checkoutEligible: false` in `lib/data.ts`.
-
-Only after the business independently confirms a specific product can be sold directly online and is accepted by its payment provider, change that product to:
-
-```ts
-checkoutEligible: true
-```
-
-Both the UI and the server API enforce this flag, so changing only the browser is not enough to bypass it.
-
-## 7. Domain
-In Vercel, open the project -> Settings -> Domains -> Add Domain. Enter the final domain and use the exact DNS records Vercel provides at the domain registrar. Once Vercel shows the domain as configured, set the same HTTPS origin in `NEXT_PUBLIC_SITE_URL`.
-
-## 8. Test before opening checkout
-After one eligible product and all environment variables are configured:
-
-1. Deploy.
-2. Place a small test order.
-3. Confirm the order appears in Supabase.
-4. Confirm NOWPayments creates a BTC address/amount.
-5. Confirm the payment status updates on the checkout page.
-6. Confirm the NOWPayments IPN updates `orders.payment_status` in Supabase.
-7. Only then announce checkout as live.
-
-- `NOWPAYMENTS_ALLOWED_PRODUCTS` = comma-separated approved product slugs; `*` only if the whole catalog is approved
+## Before launch
+1. Deploy to a Vercel preview URL.
+2. Verify every page on desktop and mobile.
+3. Run a small real BTC test order.
+4. Confirm the order is created in Supabase.
+5. Confirm NOWPayments creates the correct BTC payment.
+6. Confirm the IPN updates the stored payment status.
+7. Confirm the Telegram button opens the correct bot.
+8. Connect the custom domain and update `NEXT_PUBLIC_SITE_URL`.
+9. Redeploy and run one final production-domain checkout test.
