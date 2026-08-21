@@ -25,17 +25,18 @@ export default function RefundsPage() {
             <h2 className="text-xl font-semibold">Damaged or incomplete orders</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
               If an order arrives damaged, incomplete, or with an item issue,
-              customers should contact support within 48 hours of marked
-              delivery and include the order details needed for review.
+              keep the order number, delivery details, and clear photos of the
+              package and affected items. Issues should be documented within
+              48 hours of marked delivery.
             </p>
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Information required for review</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              To review a request, support may ask for the order number,
-              shipping name, delivery details, photos of the package or items,
-              and any other information reasonably needed to evaluate the issue.
+              A review may require the order number, shipping name, delivery
+              details, photos of the package or items, and any other information
+              reasonably needed to evaluate the issue.
             </p>
           </div>
 
@@ -77,11 +78,11 @@ export default function RefundsPage() {
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Support contact</h2>
+            <h2 className="text-xl font-semibold">How to request a review</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Customers should contact support as soon as possible when an order
-              issue is discovered so the matter can be reviewed while shipping,
-              delivery, and order records are still current and available.
+              Keep all relevant order, shipping, delivery, and photo records.
+              Support instructions will be posted on the Contact page when
+              support becomes available.
             </p>
           </div>
         </div>

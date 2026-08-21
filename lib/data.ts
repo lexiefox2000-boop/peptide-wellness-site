@@ -7,11 +7,6 @@ export type StoreProduct = {
   highlights: string[];
   description: string;
   details: string[];
-  /**
-   * Server-enforced commerce switch. Keep false until the business has
-   * confirmed this specific item is authorized for direct online sale.
-   */
-  checkoutEligible: boolean;
 };
 
 export const products: StoreProduct[] = [
@@ -24,7 +19,6 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
   {
     slug: "tirzepatide-40mg",
@@ -35,7 +29,6 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
   {
     slug: "retatrutide-10mg",
@@ -46,7 +39,6 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
   {
     slug: "retatrutide-40mg",
@@ -57,7 +49,6 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
   {
     slug: "sermorelin-10mg",
@@ -68,7 +59,6 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
   {
     slug: "ghk-cu-100mg",
@@ -79,7 +69,6 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
   {
     slug: "nad-500mg",
@@ -90,30 +79,33 @@ export const products: StoreProduct[] = [
     highlights: [],
     description: "",
     details: [],
-    checkoutEligible: false,
   },
 ];
 
 export const faqs = [
   {
     q: "Where can I see product details?",
-    a: "Tap any product to see the available size and price."
+    a: "Tap any product to see the available size, price, and current product information.",
+  },
+  {
+    q: "How can I pay?",
+    a: "Checkout is currently available with Bitcoin through our secure payment provider.",
   },
   {
     q: "How long does order processing take?",
-    a: "Orders are generally processed within 1 to 3 business days unless a different timeframe is provided during checkout or elsewhere on the site.",
+    a: "Orders are generally processed within 1 to 3 business days unless a different timeframe is shown during checkout or elsewhere on the site.",
   },
   {
-    q: "Will tracking information be sent?",
-    a: "If tracking is available for the shipment, tracking details may be sent by email after the order has been prepared and shipped.",
+    q: "Will I receive tracking information?",
+    a: "If tracking is available for your shipment, tracking details may be sent after the order has been prepared and shipped.",
   },
   {
-    q: "Can a shipping address be changed after ordering?",
-    a: "Address changes may be requested before an order enters fulfillment. Once processing or shipment preparation begins, changes may no longer be possible.",
+    q: "Can I change my shipping address after ordering?",
+    a: "Please double-check your shipping details before placing an order. Once fulfillment begins, address changes may no longer be possible.",
   },
   {
-    q: "What if an order arrives damaged or incomplete?",
-    a: "Please contact support within 48 hours of delivery and include the order details along with any requested photos so the issue can be reviewed.",
+    q: "What if there is an issue with my order?",
+    a: "Keep your order number, delivery details, and any relevant photos. Support instructions will be posted on the Contact page when support becomes available.",
   },
   {
     q: "Are refunds or replacements available?",

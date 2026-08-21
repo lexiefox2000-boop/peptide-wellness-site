@@ -53,9 +53,9 @@ export default function ShippingPage() {
           <div className="card rounded-[1.5rem] p-6">
             <h2 className="text-xl font-semibold">Address changes after ordering</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              If an order has not yet entered fulfillment, customers may contact
-              support to request a shipping-address correction. After an order
-              has been processed or shipped, address changes may not be possible.
+              Please review the shipping address carefully before placing an
+              order. Once an order enters fulfillment or has shipped, address
+              changes may no longer be possible.
             </p>
           </div>
 
@@ -63,10 +63,10 @@ export default function ShippingPage() {
             <h2 className="text-xl font-semibold">Marked as delivered</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
               If a package is marked as delivered by the shipping carrier but is
-              not immediately located, customers should first check around the
-              delivery location, confirm the address used at checkout, and
-              contact the carrier when appropriate. Support requests for
-              delivered-package issues may be reviewed on a case-by-case basis.
+              not immediately located, first check around the delivery location,
+              confirm the address used at checkout, and contact the carrier when
+              appropriate. Keep the order and tracking details available in case
+              additional review is needed.
             </p>
           </div>
 
@@ -81,13 +81,11 @@ export default function ShippingPage() {
           </div>
 
           <div className="card rounded-[1.5rem] p-6">
-            <h2 className="text-xl font-semibold">Support</h2>
+            <h2 className="text-xl font-semibold">Order issues</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              For shipping-related questions, customers should contact support
-              as soon as possible and include the order details needed for
-              review. The business may evaluate shipment issues, address errors,
-              and carrier-delivery concerns based on the available order and
-              tracking information.
+              Keep your order number, shipping details, and tracking information
+              if a delivery issue occurs. Support instructions will be posted on
+              the Contact page when support becomes available.
             </p>
           </div>
         </div>

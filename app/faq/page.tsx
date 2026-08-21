@@ -10,7 +10,7 @@ export default function FaqPage() {
         </h1>
 
         <p className="mt-6 text-lg text-[var(--muted)]">
-          A few quick answers about products, pricing, shipping, and store policies.
+          Quick answers about products, payment, shipping, and store policies.
         </p>
 
         <div className="mt-10 space-y-4">
