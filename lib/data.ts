@@ -92,17 +92,6 @@ export const products: StoreProduct[] = [
     details: [],
     checkoutEligible: false,
   },
-  {
-    slug: "bac-water-10ml",
-    name: "Bac Water 10ml",
-    dosage: "10ml vial",
-    price: "$10",
-    image: "/products/bacwater10ml.png",
-    highlights: [],
-    description: "",
-    details: [],
-    checkoutEligible: false,
-  },
 ];
 
 export const faqs = [
