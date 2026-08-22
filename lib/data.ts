@@ -105,7 +105,7 @@ export const faqs = [
   },
   {
     q: "What if there is an issue with my order?",
-    a: "Keep your order number, delivery details, and any relevant photos. Support instructions will be posted on the Contact page when support becomes available.",
+    a: "Keep your order number, delivery details, and any relevant photos. For help with an order, visit the Contact page to chat with us on Telegram.",
   },
   {
     q: "Are refunds or replacements available?",

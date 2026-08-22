@@ -13,7 +13,7 @@ Next.js storefront with a server-side NOWPayments Bitcoin checkout and Supabase 
 - Supabase order + shipping-detail persistence
 - Server-side price and cart-total calculation
 - Server-side product allowlist through `NOWPAYMENTS_ALLOWED_PRODUCTS`
-- Customer-facing Contact page that currently states support will be available soon
+- Customer-facing Contact page with Telegram support link
 
 ## Production configuration
 
